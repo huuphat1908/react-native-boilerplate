@@ -4,7 +4,7 @@ import { Text, View } from 'react-native'
 const SampleUIComp = () => {
   return (
     <View>
-      <Text>Sample UI Component</Text>
+      <Text>Sample UI</Text>
     </View>
   )
 }
