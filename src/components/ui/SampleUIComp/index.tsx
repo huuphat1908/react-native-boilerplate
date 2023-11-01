@@ -6,7 +6,7 @@ const SampleUIComp = () => {
     <View>
       <Text>Sample UI Component</Text>
     </View>
-  );
-};
+  )
+}
 
-export default SampleUIComp;
+export default SampleUIComp

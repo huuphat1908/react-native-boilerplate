@@ -3,7 +3,7 @@ import React from 'react'
 import SampleUIComp from '@/components/ui/SampleUIComp'
 
 function App(): JSX.Element {
-  return <SampleUIComp />;
+  return <SampleUIComp />
 }
 
-export default App;
+export default App
