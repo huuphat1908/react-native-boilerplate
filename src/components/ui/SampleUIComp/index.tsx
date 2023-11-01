@@ -1,10 +1,15 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Button, Text, View } from 'react-native'
+
+import { useBudget } from '@/store'
 
 const SampleUIComp = () => {
+  const { budget, increase } = useBudget(state => state)
+
   return (
     <View>
-      <Text>Sample UI Component</Text>
+      <Text>Sample UI {budget}</Text>
+      <Button title="Increase" onPress={() => increase(1)} />
     </View>
   )
 }
