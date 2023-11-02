@@ -1,17 +1,17 @@
 import React from 'react'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { UnistylesTheme } from 'react-native-unistyles'
+import { QueryClientProvider } from 'react-query'
 
-import SampleUIComp from '@/components/ui/SampleUIComp'
+import { reactQueryClient } from '@/libs'
+import { theme } from '@/libs/styleManager'
 import { NavigationContainer } from '@react-navigation/native'
-
-const queryClient = new QueryClient()
 
 function App(): JSX.Element {
   return (
-    <QueryClientProvider client={queryClient}>
-      <NavigationContainer>
-        <SampleUIComp />
-      </NavigationContainer>
+    <QueryClientProvider client={reactQueryClient}>
+      <UnistylesTheme theme={theme}>
+        <NavigationContainer></NavigationContainer>
+      </UnistylesTheme>
     </QueryClientProvider>
   )
 }
