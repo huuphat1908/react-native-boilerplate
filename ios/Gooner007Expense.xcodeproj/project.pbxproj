@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* Gooner007ExpenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Gooner007ExpenseTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-Gooner007Expense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Gooner007Expense.a */; };
+		0679FEC63BF1B6F87BF90E48 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B59F8607638C92A7B0E537 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-Gooner007Expense-Gooner007ExpenseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Gooner007Expense-Gooner007ExpenseTests.a */; };
+		30BD9EE662618F571E2159A4 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C18AFD35A050A626DABC64 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.a */; };
+		492DD8AB0F3AE73360187305 /* libPods-Gooner007ExpenseCommonPods-Gooner007Expense.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C422ABA24EC11514727281FE /* libPods-Gooner007ExpenseCommonPods-Gooner007Expense.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B19BDA2282CBC809F359D6E4 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99336FD0C074B7A6D3F77623 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.a */; };
+		D12C9AF52AFAA5CF006C0B0B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		D12C9AF62AFAA5CF006C0B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		D12C9AFA2AFAA5CF006C0B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D12C9AFB2AFAA5CF006C0B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		D12C9B082AFAA5F6006C0B0B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		D12C9B092AFAA5F6006C0B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		D12C9B0D2AFAA5F6006C0B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D12C9B0E2AFAA5F6006C0B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +46,29 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Gooner007Expense/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Gooner007Expense/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Gooner007Expense/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Gooner007Expense-Gooner007ExpenseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gooner007Expense-Gooner007ExpenseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		247857EF6964DAA6E9BF045C /* Pods-Gooner007ExpenseCommonPods-Gooner007Expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007Expense.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense.debug.xcconfig"; sourceTree = "<group>"; };
+		2B68DC2B0641AC28024A0BAA /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Gooner007Expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007Expense.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Gooner007Expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007Expense.release.xcconfig"; path = "Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Gooner007Expense-Gooner007ExpenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007Expense-Gooner007ExpenseTests.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-Gooner007Expense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gooner007Expense.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		646548C9AB1817C49E5DC6CD /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.release.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.release.xcconfig"; sourceTree = "<group>"; };
+		77B0EA2D88E417CBCC501A01 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.release.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B09A70DE425CF7800EF3719 /* Pods-Gooner007ExpenseCommonPods-Gooner007Expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007Expense.release.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Gooner007Expense/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88C18AFD35A050A626DABC64 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Gooner007Expense-Gooner007ExpenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007Expense-Gooner007ExpenseTests.release.xcconfig"; path = "Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests.release.xcconfig"; sourceTree = "<group>"; };
+		90B59F8607638C92A7B0E537 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99336FD0C074B7A6D3F77623 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C422ABA24EC11514727281FE /* libPods-Gooner007ExpenseCommonPods-Gooner007Expense.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gooner007ExpenseCommonPods-Gooner007Expense.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0030521ECF3DC45C6695E6 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig"; sourceTree = "<group>"; };
+		D12C9AF02AFAA5B2006C0B0B /* Gooner007ExpenseDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007ExpenseDev-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007ExpenseDev-Info.plist"; sourceTree = "<absolute>"; };
+		D12C9B022AFAA5CF006C0B0B /* Gooner007ExpenseDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gooner007ExpenseDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D12C9B032AFAA5CF006C0B0B /* Gooner007Expense copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007Expense copy2-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007Expense copy2-Info.plist"; sourceTree = "<absolute>"; };
+		D12C9B152AFAA5F6006C0B0B /* Gooner007ExpenseUAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gooner007ExpenseUAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D12C9B162AFAA5F6006C0B0B /* Gooner007ExpenseDev copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007ExpenseDev copy-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007ExpenseDev copy-Info.plist"; sourceTree = "<absolute>"; };
+		D12C9B292AFAA604006C0B0B /* Gooner007ExpenseUAT copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007ExpenseUAT copy-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007ExpenseUAT copy-Info.plist"; sourceTree = "<absolute>"; };
+		DC51DC2896BE66255AD96602 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig"; sourceTree = "<group>"; };
+		E0C93D2FC24FBABF5275631F /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-Gooner007Expense-Gooner007ExpenseTests.a in Frameworks */,
+				30BD9EE662618F571E2159A4 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +85,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-Gooner007Expense.a in Frameworks */,
+				492DD8AB0F3AE73360187305 /* libPods-Gooner007ExpenseCommonPods-Gooner007Expense.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12C9AF72AFAA5CF006C0B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B19BDA2282CBC809F359D6E4 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12C9B0A2AFAA5F6006C0B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0679FEC63BF1B6F87BF90E48 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-Gooner007Expense.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Gooner007Expense-Gooner007ExpenseTests.a */,
+				C422ABA24EC11514727281FE /* libPods-Gooner007ExpenseCommonPods-Gooner007Expense.a */,
+				99336FD0C074B7A6D3F77623 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.a */,
+				88C18AFD35A050A626DABC64 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.a */,
+				90B59F8607638C92A7B0E537 /* libPods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +166,10 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D12C9AF02AFAA5B2006C0B0B /* Gooner007ExpenseDev-Info.plist */,
+				D12C9B032AFAA5CF006C0B0B /* Gooner007Expense copy2-Info.plist */,
+				D12C9B162AFAA5F6006C0B0B /* Gooner007ExpenseDev copy-Info.plist */,
+				D12C9B292AFAA604006C0B0B /* Gooner007ExpenseUAT copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -133,6 +181,8 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Gooner007Expense.app */,
 				00E356EE1AD99517003FC87E /* Gooner007ExpenseTests.xctest */,
+				D12C9B022AFAA5CF006C0B0B /* Gooner007ExpenseDev.app */,
+				D12C9B152AFAA5F6006C0B0B /* Gooner007ExpenseUAT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +194,14 @@
 				5709B34CF0A7D63546082F79 /* Pods-Gooner007Expense.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-Gooner007Expense-Gooner007ExpenseTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-Gooner007Expense-Gooner007ExpenseTests.release.xcconfig */,
+				247857EF6964DAA6E9BF045C /* Pods-Gooner007ExpenseCommonPods-Gooner007Expense.debug.xcconfig */,
+				7B09A70DE425CF7800EF3719 /* Pods-Gooner007ExpenseCommonPods-Gooner007Expense.release.xcconfig */,
+				DC51DC2896BE66255AD96602 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig */,
+				E0C93D2FC24FBABF5275631F /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig */,
+				2B68DC2B0641AC28024A0BAA /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.debug.xcconfig */,
+				77B0EA2D88E417CBCC501A01 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.release.xcconfig */,
+				CD0030521ECF3DC45C6695E6 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig */,
+				646548C9AB1817C49E5DC6CD /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -194,6 +252,50 @@
 			productReference = 13B07F961A680F5B00A75B9A /* Gooner007Expense.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D12C9AF12AFAA5CF006C0B0B /* Gooner007ExpenseDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D12C9AFF2AFAA5CF006C0B0B /* Build configuration list for PBXNativeTarget "Gooner007ExpenseDev" */;
+			buildPhases = (
+				D12C9AF22AFAA5CF006C0B0B /* [CP] Check Pods Manifest.lock */,
+				D12C9AF32AFAA5CF006C0B0B /* Start Packager */,
+				D12C9AF42AFAA5CF006C0B0B /* Sources */,
+				D12C9AF72AFAA5CF006C0B0B /* Frameworks */,
+				D12C9AF92AFAA5CF006C0B0B /* Resources */,
+				D12C9AFC2AFAA5CF006C0B0B /* Bundle React Native code and images */,
+				D12C9AFD2AFAA5CF006C0B0B /* [CP] Embed Pods Frameworks */,
+				D12C9AFE2AFAA5CF006C0B0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gooner007ExpenseDev;
+			productName = Gooner007Expense;
+			productReference = D12C9B022AFAA5CF006C0B0B /* Gooner007ExpenseDev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D12C9B042AFAA5F6006C0B0B /* Gooner007ExpenseUAT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D12C9B122AFAA5F6006C0B0B /* Build configuration list for PBXNativeTarget "Gooner007ExpenseUAT" */;
+			buildPhases = (
+				D12C9B052AFAA5F6006C0B0B /* [CP] Check Pods Manifest.lock */,
+				D12C9B062AFAA5F6006C0B0B /* Start Packager */,
+				D12C9B072AFAA5F6006C0B0B /* Sources */,
+				D12C9B0A2AFAA5F6006C0B0B /* Frameworks */,
+				D12C9B0C2AFAA5F6006C0B0B /* Resources */,
+				D12C9B0F2AFAA5F6006C0B0B /* Bundle React Native code and images */,
+				D12C9B102AFAA5F6006C0B0B /* [CP] Embed Pods Frameworks */,
+				D12C9B112AFAA5F6006C0B0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gooner007ExpenseUAT;
+			productName = Gooner007Expense;
+			productReference = D12C9B152AFAA5F6006C0B0B /* Gooner007ExpenseUAT.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,6 +328,8 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* Gooner007Expense */,
 				00E356ED1AD99517003FC87E /* Gooner007ExpenseTests */,
+				D12C9AF12AFAA5CF006C0B0B /* Gooner007ExpenseDev */,
+				D12C9B042AFAA5F6006C0B0B /* Gooner007ExpenseUAT */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +348,24 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12C9AF92AFAA5CF006C0B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12C9AFA2AFAA5CF006C0B0B /* LaunchScreen.storyboard in Resources */,
+				D12C9AFB2AFAA5CF006C0B0B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12C9B0C2AFAA5F6006C0B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12C9B0D2AFAA5F6006C0B0B /* LaunchScreen.storyboard in Resources */,
+				D12C9B0E2AFAA5F6006C0B0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +394,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -298,7 +420,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Gooner007Expense-Gooner007ExpenseTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -320,7 +442,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Gooner007Expense-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -333,15 +455,197 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9AF22AFAA5CF006C0B0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9AF32AFAA5CF006C0B0B /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9AFC2AFAA5CF006C0B0B /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		D12C9AFD2AFAA5CF006C0B0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9AFE2AFAA5CF006C0B0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9B052AFAA5F6006C0B0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9B062AFAA5F6006C0B0B /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9B0F2AFAA5F6006C0B0B /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		D12C9B102AFAA5F6006C0B0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12C9B112AFAA5F6006C0B0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -350,15 +654,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense/Pods-Gooner007Expense-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007Expense/Pods-Gooner007ExpenseCommonPods-Gooner007Expense-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -367,15 +671,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007Expense-Gooner007ExpenseTests/Pods-Gooner007Expense-Gooner007ExpenseTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -417,6 +721,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D12C9AF42AFAA5CF006C0B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12C9AF52AFAA5CF006C0B0B /* AppDelegate.mm in Sources */,
+				D12C9AF62AFAA5CF006C0B0B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12C9B072AFAA5F6006C0B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12C9B082AFAA5F6006C0B0B /* AppDelegate.mm in Sources */,
+				D12C9B092AFAA5F6006C0B0B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -430,7 +752,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Gooner007Expense-Gooner007ExpenseTests.debug.xcconfig */;
+			baseConfigurationReference = 2B68DC2B0641AC28024A0BAA /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -457,7 +779,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Gooner007Expense-Gooner007ExpenseTests.release.xcconfig */;
+			baseConfigurationReference = 77B0EA2D88E417CBCC501A01 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -481,24 +803,25 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Gooner007Expense.debug.xcconfig */;
+			baseConfigurationReference = 247857EF6964DAA6E9BF045C /* Pods-Gooner007ExpenseCommonPods-Gooner007Expense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Gooner007Expense/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gooner007 Expense";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooner007.expense;
 				PRODUCT_NAME = Gooner007Expense;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -508,23 +831,24 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Gooner007Expense.release.xcconfig */;
+			baseConfigurationReference = 7B09A70DE425CF7800EF3719 /* Pods-Gooner007ExpenseCommonPods-Gooner007Expense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Gooner007Expense/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gooner007 Expense";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooner007.expense;
 				PRODUCT_NAME = Gooner007Expense;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -683,6 +1007,122 @@
 			};
 			name = Release;
 		};
+		D12C9B002AFAA5CF006C0B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC51DC2896BE66255AD96602 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Gooner007ExpenseDev-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gooner007 Expense Dev";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooner007.expense;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		D12C9B012AFAA5CF006C0B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0C93D2FC24FBABF5275631F /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Gooner007ExpenseDev-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gooner007 Expense Dev";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooner007.expense;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		D12C9B132AFAA5F6006C0B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0030521ECF3DC45C6695E6 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Gooner007ExpenseUAT-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gooner007 Expense UAT";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooner007.expense;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		D12C9B142AFAA5F6006C0B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 646548C9AB1817C49E5DC6CD /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "Gooner007ExpenseUAT-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gooner007 Expense UAT";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooner007.expense;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -709,6 +1149,24 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D12C9AFF2AFAA5CF006C0B0B /* Build configuration list for PBXNativeTarget "Gooner007ExpenseDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D12C9B002AFAA5CF006C0B0B /* Debug */,
+				D12C9B012AFAA5CF006C0B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D12C9B122AFAA5F6006C0B0B /* Build configuration list for PBXNativeTarget "Gooner007ExpenseUAT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D12C9B132AFAA5F6006C0B0B /* Debug */,
+				D12C9B142AFAA5F6006C0B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

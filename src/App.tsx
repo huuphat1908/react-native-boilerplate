@@ -1,4 +1,6 @@
 import React from 'react'
+import { Text } from 'react-native'
+import Config from 'react-native-config'
 import { UnistylesTheme } from 'react-native-unistyles'
 import { QueryClientProvider } from 'react-query'
 
@@ -10,7 +12,9 @@ function App(): JSX.Element {
   return (
     <QueryClientProvider client={reactQueryClient}>
       <UnistylesTheme theme={theme}>
-        <NavigationContainer></NavigationContainer>
+        <NavigationContainer>
+          <Text>{Config.ENV}</Text>
+        </NavigationContainer>
       </UnistylesTheme>
     </QueryClientProvider>
   )
