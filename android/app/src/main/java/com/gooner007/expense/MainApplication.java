@@ -1,4 +1,4 @@
-package com.gooner007expense;
+package com.gooner007.expense;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

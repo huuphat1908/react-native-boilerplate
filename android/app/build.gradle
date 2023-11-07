@@ -68,14 +68,45 @@ def enableProguardInReleaseBuilds = false
  */
 def jscFlavor = 'org.webkit:android-jsc:+'
 
+project.ext.envConfigFiles = [
+    devdebug: ".env.dev",
+    devrelease: ".env.dev",
+    uatdebug: ".env.uat",
+    uatrelease: ".env.uat",
+    proddebug: ".env.prod",
+    prodrelease: ".env.prod",
+]
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.gooner007expense"
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.gooner007.expense"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.gooner007.expense"
+        }
+        uat {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.gooner007.expense"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.gooner007.expense"
+        }
+        prod {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.gooner007.expense"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.gooner007.expense"
+        }
+    }
+
+    namespace "com.gooner007.expense"
     defaultConfig {
-        applicationId "com.gooner007expense"
+        applicationId "com.gooner007.expense"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -92,6 +123,7 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            matchingFallbacks = ['debug', 'release']
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
@@ -121,3 +153,4 @@ dependencies {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle" //react-native-config

@@ -25,7 +25,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'Gooner007Expense' do
+abstract_target 'Gooner007ExpenseCommonPods' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -44,6 +44,15 @@ target 'Gooner007Expense' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+
+  target 'Gooner007ExpenseDev' do
+  end
+ 
+  target 'Gooner007ExpenseUAT' do
+  end
+ 
+  target 'Gooner007Expense' do
+  end
 
   target 'Gooner007ExpenseTests' do
     inherit! :complete

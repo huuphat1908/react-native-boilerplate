@@ -1,4 +1,4 @@
-package com.gooner007expense;
+package com.gooner007.expense;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
