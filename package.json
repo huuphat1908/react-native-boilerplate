@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.9",
+    "lucide-react-native": "^0.292.0",
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-config": "^1.5.1",
