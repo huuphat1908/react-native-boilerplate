@@ -1,7 +1,13 @@
 import React from 'react'
 import { ScrollView, Text, View } from 'react-native'
 
-import { HStack, PrimaryButton, SecondaryButton, VStack } from '@/components/ui'
+import {
+  Center,
+  HStack,
+  PrimaryButton,
+  SecondaryButton,
+  VStack,
+} from '@/components/ui'
 import { colors } from '@/constant'
 import { styleManager } from '@/libs'
 
@@ -42,6 +48,33 @@ const UI = () => {
           <View style={styles.colorBox(colors.red)} />
           <View style={styles.colorBox(colors.darkRed)} />
         </HStack>
+      </VStack>
+
+      <VStack style={styles.groupContainer}>
+        <Text style={theme.text.h3}>HStack</Text>
+        <HStack style={styles.hStackContainter}>
+          <View style={styles.stackItem} />
+          <View style={styles.stackItem} />
+          <View style={styles.stackItem} />
+          <View style={styles.stackItem} />
+        </HStack>
+      </VStack>
+
+      <VStack style={styles.groupContainer}>
+        <Text style={theme.text.h3}>VStack</Text>
+        <VStack style={styles.vStackContainer}>
+          <View style={styles.stackItem} />
+          <View style={styles.stackItem} />
+          <View style={styles.stackItem} />
+          <View style={styles.stackItem} />
+        </VStack>
+      </VStack>
+
+      <VStack style={styles.groupContainer}>
+        <Text style={theme.text.h3}>Center</Text>
+        <Center style={styles.center}>
+          <Text>Center</Text>
+        </Center>
       </VStack>
     </ScrollView>
   )
