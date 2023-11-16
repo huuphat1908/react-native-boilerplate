@@ -2,6 +2,7 @@ import React from 'react'
 import { ScrollView, Text, View } from 'react-native'
 
 import {
+  Accordion,
   Center,
   HStack,
   PrimaryButton,
@@ -75,6 +76,13 @@ const UI = () => {
         <Center style={styles.center}>
           <Text>Center</Text>
         </Center>
+      </VStack>
+
+      <VStack style={styles.groupContainer}>
+        <Text style={theme.text.h3}>Accordion</Text>
+        <Accordion title="Title">
+          <Text>Content</Text>
+        </Accordion>
       </VStack>
     </ScrollView>
   )
