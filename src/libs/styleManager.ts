@@ -12,28 +12,45 @@ export const theme = {
     lg: scale(8),
     xl: scale(12),
   },
-  components: {
+  text: {
     h1: {
+      color: colors.black,
       fontSize: scale(30),
+      fontWeight: 'bold',
     },
     h2: {
+      color: colors.black,
       fontSize: scale(26),
+      fontWeight: 'bold',
     },
     h3: {
+      color: colors.black,
       fontSize: scale(22),
+      fontWeight: 'bold',
     },
     h4: {
+      color: colors.black,
       fontSize: scale(18),
+      fontWeight: 'bold',
     },
     h5: {
-      fontSize: scale(14),
-    },
-    h6: {
-      fontSize: scale(10),
-    },
-    label: {
+      color: colors.black,
       fontSize: scale(14),
       fontWeight: 'bold',
+    },
+    h6: {
+      color: colors.black,
+      fontSize: scale(10),
+      fontWeight: 'bold',
+    },
+    label: {
+      color: colors.black,
+      fontSize: scale(14),
+      fontWeight: 'bold',
+    },
+    body: {
+      color: colors.black,
+      fontSize: scale(14),
     },
     link: {
       fontSize: scale(14),
@@ -41,6 +58,7 @@ export const theme = {
       textDecorationLine: 'underline',
     },
   },
+  components: {},
   utils: {
     hexToRGBA: (hex: string, opacity: number) => {
       const rgb = hex
@@ -50,7 +68,7 @@ export const theme = {
       return `rgba(${rgb.at(0)}, ${rgb.at(1)}, ${rgb.at(2)}, ${opacity})`
     },
   },
-}
+} as const
 
 const breakpoints = {
   xs: 0,

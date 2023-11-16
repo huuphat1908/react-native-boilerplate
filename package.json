@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "react-native start",
+    "pod-install": "cd ios && pod install",
+    "ios-simulator-list": "xcrun simctl list devices",
     "android:dev": "react-native run-android --mode=devdebug",
     "android:dev-release": "react-native run-android --mode=devrelease",
     "android:uat": "react-native run-android --mode=uatdebug",
@@ -16,9 +19,7 @@
     "ios:prod": "react-native run-ios --mode=Debug --scheme=Gooner007Expense",
     "ios:prod-release": "react-native run-ios --mode=Release --scheme=Gooner007Expense",
     "lint": "eslint .",
-    "start": "react-native start",
-    "test": "jest",
-    "simulator-list": "xcrun simctl list devices"
+    "test": "jest"
   },
   "dependencies": {
     "@react-navigation/drawer": "^6.6.6",

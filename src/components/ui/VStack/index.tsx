@@ -2,7 +2,7 @@
 import React, { ComponentProps, FC } from 'react'
 import { View } from 'react-native'
 
-const HStack: FC<ComponentProps<typeof View>> = ({
+const VStack: FC<ComponentProps<typeof View>> = ({
   children,
   style,
   ...rest
@@ -10,7 +10,7 @@ const HStack: FC<ComponentProps<typeof View>> = ({
   <View
     style={[
       {
-        flexDirection: 'row',
+        flexDirection: 'column',
       },
       style,
     ]}
@@ -19,4 +19,4 @@ const HStack: FC<ComponentProps<typeof View>> = ({
   </View>
 )
 
-export default HStack
+export default VStack
