@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, { ComponentProps, FC } from 'react'
 import { View } from 'react-native'
 

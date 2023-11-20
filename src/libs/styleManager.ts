@@ -6,59 +6,18 @@ import scale from './scale'
 
 export const theme = {
   colors,
+  paddings: {
+    sm: scale(2),
+    md: scale(4),
+    lg: scale(8),
+    xl: scale(12),
+  },
   margins: {
     sm: scale(2),
     md: scale(4),
     lg: scale(8),
     xl: scale(12),
   },
-  text: {
-    h1: {
-      color: colors.black,
-      fontSize: scale(30),
-      fontWeight: 'bold',
-    },
-    h2: {
-      color: colors.black,
-      fontSize: scale(26),
-      fontWeight: 'bold',
-    },
-    h3: {
-      color: colors.black,
-      fontSize: scale(22),
-      fontWeight: 'bold',
-    },
-    h4: {
-      color: colors.black,
-      fontSize: scale(18),
-      fontWeight: 'bold',
-    },
-    h5: {
-      color: colors.black,
-      fontSize: scale(14),
-      fontWeight: 'bold',
-    },
-    h6: {
-      color: colors.black,
-      fontSize: scale(10),
-      fontWeight: 'bold',
-    },
-    label: {
-      color: colors.black,
-      fontSize: scale(14),
-      fontWeight: 'bold',
-    },
-    body: {
-      color: colors.black,
-      fontSize: scale(14),
-    },
-    link: {
-      fontSize: scale(14),
-      color: colors.blue,
-      textDecorationLine: 'underline',
-    },
-  },
-  components: {},
   utils: {
     hexToRGBA: (hex: string, opacity: number) => {
       const rgb = hex

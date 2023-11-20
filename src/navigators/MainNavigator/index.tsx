@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Form as FormScreen, UI as UIScreen } from '@/screens'
+import { ButtonScreen } from '@/screens'
 import {
   createDrawerNavigator,
   DrawerNavigationProp,
@@ -10,13 +10,11 @@ import { useNavigation } from '@react-navigation/native'
 const Drawer = createDrawerNavigator<MainParamList>()
 
 enum MainRoutes {
-  UI = 'UI',
-  Form = 'Form',
+  BUTTON = 'Button',
 }
 
 type MainParamList = {
-  [MainRoutes.UI]: undefined
-  [MainRoutes.Form]: undefined
+  [MainRoutes.BUTTON]: undefined
 }
 
 export const useAppNavigation = () => {
@@ -26,8 +24,7 @@ export const useAppNavigation = () => {
 const MainNavigator = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name={MainRoutes.UI} component={UIScreen} />
-      <Drawer.Screen name={MainRoutes.Form} component={FormScreen} />
+      <Drawer.Screen name={MainRoutes.BUTTON} component={ButtonScreen} />
     </Drawer.Navigator>
   )
 }

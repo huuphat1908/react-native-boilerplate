@@ -8,7 +8,7 @@ import { styleManager } from '@/libs'
 import HStack from '../HStack'
 import Icon from '../Icon'
 import VStack from '../VStack'
-import { accordionStyles } from './Accordion.styles'
+import { accordionStyles } from './Accordion.style'
 
 type AccordionProps = {
   title: string
