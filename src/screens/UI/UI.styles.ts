@@ -11,9 +11,6 @@ export const uiStyles = styleManager.createStyleSheet(theme => ({
     gap: scale(5),
   },
   colorBox: (bgColor: string) => ({
-    width: scale(40),
-    height: scale(40),
-    borderRadius: scale(80),
     backgroundColor: bgColor,
   }),
 
