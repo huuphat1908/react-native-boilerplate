@@ -1,20 +1,18 @@
+import 'react-native-gesture-handler'
+
 import React from 'react'
-import { Text } from 'react-native'
-import Config from 'react-native-config'
 import { UnistylesTheme } from 'react-native-unistyles'
 import { QueryClientProvider } from 'react-query'
 
 import { reactQueryClient } from '@/libs'
 import { theme } from '@/libs/styleManager'
-import { NavigationContainer } from '@react-navigation/native'
+import AppNavigator from '@/navigators/AppNavigator'
 
-function App(): JSX.Element {
+const App = () => {
   return (
     <QueryClientProvider client={reactQueryClient}>
       <UnistylesTheme theme={theme}>
-        <NavigationContainer>
-          <Text>{Config.ENV}</Text>
-        </NavigationContainer>
+        <AppNavigator />
       </UnistylesTheme>
     </QueryClientProvider>
   )

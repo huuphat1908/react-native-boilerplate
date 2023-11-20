@@ -8,25 +8,30 @@ import {
 
 import { styleManager } from '@/libs'
 
-import { secondaryButtonStyles } from './styles'
+import { secondaryButtonStyles } from './SecondaryButton.style'
 
 type SecondaryButtonProps = {
   children: string
   disabled?: boolean
+  fullWidth?: boolean
   onPress?: (event: GestureResponderEvent) => void
 }
 
 const SecondaryButton: FC<SecondaryButtonProps> = ({
   children,
   disabled,
+  fullWidth,
   onPress,
 }) => {
   const { styles } = styleManager.useStyles(secondaryButtonStyles)
 
   return (
-    <TouchableOpacity disabled={disabled} onPress={onPress}>
-      <View style={styles.view(disabled)}>
-        <Text style={styles.text}>{children}</Text>
+    <TouchableOpacity
+      disabled={disabled}
+      onPress={onPress}
+      {...(fullWidth ? { style: styles.fullWidth } : {})}>
+      <View style={styles.wrapper(disabled)}>
+        <Text style={styles.title}>{children}</Text>
       </View>
     </TouchableOpacity>
   )

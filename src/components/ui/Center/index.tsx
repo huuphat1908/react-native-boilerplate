@@ -1,7 +1,7 @@
 import React, { ComponentProps, FC } from 'react'
 import { View } from 'react-native'
 
-const HStack: FC<ComponentProps<typeof View>> = ({
+const Center: FC<ComponentProps<typeof View>> = ({
   children,
   style,
   ...rest
@@ -9,7 +9,8 @@ const HStack: FC<ComponentProps<typeof View>> = ({
   <View
     style={[
       {
-        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
       },
       style,
     ]}
@@ -18,4 +19,4 @@ const HStack: FC<ComponentProps<typeof View>> = ({
   </View>
 )
 
-export default HStack
+export default Center

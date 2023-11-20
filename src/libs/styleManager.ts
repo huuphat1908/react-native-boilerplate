@@ -6,40 +6,17 @@ import scale from './scale'
 
 export const theme = {
   colors,
-  margins: {
+  paddings: {
     sm: scale(2),
     md: scale(4),
     lg: scale(8),
     xl: scale(12),
   },
-  components: {
-    h1: {
-      fontSize: scale(30),
-    },
-    h2: {
-      fontSize: scale(26),
-    },
-    h3: {
-      fontSize: scale(22),
-    },
-    h4: {
-      fontSize: scale(18),
-    },
-    h5: {
-      fontSize: scale(14),
-    },
-    h6: {
-      fontSize: scale(10),
-    },
-    label: {
-      fontSize: scale(14),
-      fontWeight: 'bold',
-    },
-    link: {
-      fontSize: scale(14),
-      color: colors.blue,
-      textDecorationLine: 'underline',
-    },
+  margins: {
+    sm: scale(2),
+    md: scale(4),
+    lg: scale(8),
+    xl: scale(12),
   },
   utils: {
     hexToRGBA: (hex: string, opacity: number) => {
@@ -50,7 +27,7 @@ export const theme = {
       return `rgba(${rgb.at(0)}, ${rgb.at(1)}, ${rgb.at(2)}, ${opacity})`
     },
   },
-}
+} as const
 
 const breakpoints = {
   xs: 0,

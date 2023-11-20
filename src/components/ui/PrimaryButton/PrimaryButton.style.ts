@@ -1,15 +1,18 @@
 import { scale, styleManager } from '@/libs'
 
 export const primaryButtonStyles = styleManager.createStyleSheet(theme => ({
-  view: (disabled: boolean | undefined) => ({
+  fullWidth: {
+    flex: 1,
+  },
+  wrapper: (disabled?: boolean) => ({
     backgroundColor: theme.colors.blue,
     padding: scale(12),
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 12,
     opacity: disabled ? 0.7 : 1,
   }),
-  text: {
+  title: {
     color: theme.colors.white,
     fontSize: scale(16),
   },

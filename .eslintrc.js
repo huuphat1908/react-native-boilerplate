@@ -6,5 +6,6 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     semi: ['error', 'never'],
     '@typescript-eslint/no-unused-vars': 'off',
+    'react-native/no-inline-styles': 'off',
   },
 }
