@@ -6,13 +6,13 @@ import { QueryClientProvider } from 'react-query'
 
 import { reactQueryClient } from '@/libs'
 import { theme } from '@/libs/styleManager'
-import ApplicationNavigator from '@/navigators/ApplicationNavigator'
+import AppNavigator from '@/navigators/AppNavigator'
 
 const App = () => {
   return (
     <QueryClientProvider client={reactQueryClient}>
       <UnistylesTheme theme={theme}>
-        <ApplicationNavigator />
+        <AppNavigator />
       </UnistylesTheme>
     </QueryClientProvider>
   )
