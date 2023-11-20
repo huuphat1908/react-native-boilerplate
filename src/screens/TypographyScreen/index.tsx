@@ -43,7 +43,7 @@ const TypographyScreen = () => {
       <Label>Label</Label>
       <Divider />
 
-      <Link>Link</Link>
+      <Link href="https://reactnative.dev/docs/linking">Link</Link>
       <Divider />
 
       <Body>Body</Body>

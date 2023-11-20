@@ -1,17 +1,26 @@
-import React, { ComponentProps, FC } from 'react'
-import { Text } from 'react-native'
+import React, { ComponentProps, FC, useCallback } from 'react'
+import { Linking, Text } from 'react-native'
 
 import { colors } from '@/constant'
 import { scale } from '@/libs'
 
-const Link: FC<ComponentProps<typeof Text>> = ({
-  children,
-  style,
-  ...rest
-}) => {
+type LinkProps = {
+  href: string
+} & ComponentProps<typeof Text>
+
+const Link: FC<LinkProps> = ({ children, style, href, ...rest }) => {
+  const handlePress = useCallback(async () => {
+    const supported = await Linking.canOpenURL(href)
+
+    if (supported) {
+      await Linking.openURL(href)
+    } else {
+      console.log(`Don't know how to open this URL: ${href}`)
+    }
+  }, [href])
+
   return (
     <Text
-      {...rest}
       style={[
         {
           color: colors.blue,
@@ -19,7 +28,9 @@ const Link: FC<ComponentProps<typeof Text>> = ({
           textDecorationLine: 'underline',
         },
         style,
-      ]}>
+      ]}
+      onPress={handlePress}
+      {...rest}>
       {children}
     </Text>
   )
