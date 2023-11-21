@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { ButtonScreen, ColorScreen, TypographyScreen } from '@/screens'
+import {
+  ButtonScreen,
+  ColorScreen,
+  FormElementScreen,
+  TypographyScreen,
+} from '@/screens'
 import {
   createDrawerNavigator,
   DrawerNavigationProp,
@@ -13,12 +18,14 @@ enum MainRoutes {
   BUTTON = 'Button',
   COLOR = 'Color',
   TYPOGRAPHY = 'Typography',
+  FORM_ELEMENT = 'Form Element',
 }
 
 type MainParamList = {
   [MainRoutes.BUTTON]: undefined
   [MainRoutes.COLOR]: undefined
   [MainRoutes.TYPOGRAPHY]: undefined
+  [MainRoutes.FORM_ELEMENT]: undefined
 }
 
 export const useAppNavigation = () => {
@@ -33,6 +40,10 @@ const MainNavigator = () => {
       <Drawer.Screen
         name={MainRoutes.TYPOGRAPHY}
         component={TypographyScreen}
+      />
+      <Drawer.Screen
+        name={MainRoutes.FORM_ELEMENT}
+        component={FormElementScreen}
       />
     </Drawer.Navigator>
   )

@@ -1,7 +1,7 @@
 import React, { ComponentProps, FC, useCallback } from 'react'
 import { Linking, Text } from 'react-native'
 
-import { colors } from '@/constant'
+import { colors } from '@/constants'
 import { scale } from '@/libs'
 
 type LinkProps = {

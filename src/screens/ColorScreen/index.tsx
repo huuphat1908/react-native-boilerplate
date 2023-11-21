@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Divider, HStack, Label } from '@/components/ui'
-import { colors } from '@/constant'
+import { colors } from '@/constants'
 import { styleManager } from '@/libs'
 
 import { colorScreenStyles } from './ColorScreen.style'
