@@ -23,5 +23,6 @@ export { default as VStack } from './ui/VStack'
 //form
 export { default as DateInput } from './form/DateInput'
 export { default as Input } from './form/Input'
+export { default as TimeInput } from './form/TimeInput'
 
 //dialogs
