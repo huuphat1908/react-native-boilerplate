@@ -3,6 +3,7 @@ import { FieldErrors, FieldValues } from 'react-hook-form'
 
 import { Body } from '@/components'
 import { colors } from '@/constants'
+import { scale } from '@/libs'
 
 type ErrorTextProps = {
   name: string
@@ -15,6 +16,7 @@ const ErrorText: FC<ErrorTextProps> = ({ name, errors }) => {
   return hasError ? (
     <Body
       style={{
+        marginTop: scale(2),
         color: colors.red,
       }}>
       {errors[name]?.message as string}

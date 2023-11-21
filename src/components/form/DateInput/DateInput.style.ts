@@ -1,10 +1,25 @@
-import { styleManager } from '@/libs'
+import { scale, styleManager } from '@/libs'
 
 export const dateInputStyles = styleManager.createStyleSheet(theme => ({
   input: {
-    borderWidth: 1,
+    borderWidth: scale(1),
     borderRadius: 10,
     borderColor: theme.colors.black,
     paddingHorizontal: theme.paddings.xl,
+    width: '100%',
+    height: scale(40),
+    fontSize: scale(13),
+    color: theme.colors.black,
+  },
+  readOnlyInput: {
+    opacity: 0.4,
+  },
+  errorInput: {
+    borderColor: theme.colors.red,
+  },
+  iconWrapper: {
+    position: 'absolute',
+    right: 10,
+    height: '100%',
   },
 }))

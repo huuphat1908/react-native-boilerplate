@@ -26,10 +26,10 @@ const ButtonScreen = () => {
     <FormProvider {...methods}>
       <Box style={styles.container}>
         <ScrollView>
-          <Input name="input" />
+          <Input name="input" placeholder="Input" />
           <Divider gap={20} />
 
-          <DateInput name="dateInput" />
+          <DateInput name="dateInput" placeholder="Date Input" />
           <Divider gap={20} />
         </ScrollView>
       </Box>
