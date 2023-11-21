@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { FieldErrors, FieldValues } from 'react-hook-form'
 
-import { Body, HStack, Icon } from '@/components/ui'
+import { Body, HStack, Icon } from '@/components'
 import { colors } from '@/constants'
 import { styleManager } from '@/libs'
 

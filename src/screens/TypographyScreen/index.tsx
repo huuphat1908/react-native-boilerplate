@@ -12,7 +12,7 @@ import {
   H6,
   Label,
   Link,
-} from '@/components/ui'
+} from '@/components'
 import { styleManager } from '@/libs'
 
 import { typographyScreenStyles } from './TypographyScreen.style'

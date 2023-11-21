@@ -1,8 +1,7 @@
 import React from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 
-import { DateInput, Input } from '@/components/form'
-import { Box, Divider } from '@/components/ui'
+import { Box, DateInput, Divider, Input, ScrollView } from '@/components'
 import { styleManager } from '@/libs'
 import { formElementSchema } from '@/validations'
 import { FormElementData } from '@/validations/formElementSchema'
@@ -25,11 +24,13 @@ const ButtonScreen = () => {
   return (
     <FormProvider {...methods}>
       <Box style={styles.container}>
-        <Input name="input" />
-        <Divider />
+        <ScrollView contentContainerStyle={styles.wrapper}>
+          <Input name="input" />
+          <Divider />
 
-        <DateInput name="dateInput" />
-        <Divider />
+          <DateInput name="dateInput" />
+          <Divider />
+        </ScrollView>
       </Box>
     </FormProvider>
   )

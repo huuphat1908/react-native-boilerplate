@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Divider, HStack, Label } from '@/components/ui'
+import { Box, Divider, HStack, Label } from '@/components'
 import { colors } from '@/constants'
 import { styleManager } from '@/libs'
 

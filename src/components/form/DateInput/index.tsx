@@ -4,7 +4,7 @@ import { Controller, useFormContext } from 'react-hook-form'
 import { TextInput, TouchableOpacity } from 'react-native'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
-import { ErrorText, Icon } from '@/components/ui'
+import { ErrorText, Icon } from '@/components'
 import { colors, dateTimeFormat } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'

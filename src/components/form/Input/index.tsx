@@ -2,7 +2,7 @@ import React, { ComponentProps, FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
 import { TextInput } from 'react-native'
 
-import { ErrorText } from '@/components/ui'
+import { ErrorText } from '@/components'
 import { styleManager } from '@/libs'
 
 import { inputStyles } from './Input.style'
