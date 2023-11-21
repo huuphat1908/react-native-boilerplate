@@ -19,17 +19,18 @@ const ButtonScreen = () => {
   const methods = useForm({
     defaultValues,
     resolver: zodResolver(formElementSchema()),
+    mode: 'onChange',
   })
 
   return (
     <FormProvider {...methods}>
       <Box style={styles.container}>
-        <ScrollView contentContainerStyle={styles.wrapper}>
+        <ScrollView>
           <Input name="input" />
-          <Divider />
+          <Divider gap={20} />
 
           <DateInput name="dateInput" />
-          <Divider />
+          <Divider gap={20} />
         </ScrollView>
       </Box>
     </FormProvider>

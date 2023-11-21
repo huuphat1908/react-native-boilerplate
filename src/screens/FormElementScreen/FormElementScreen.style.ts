@@ -7,7 +7,7 @@ export const formElementScreenStyles = styleManager.createStyleSheet(theme => ({
     flex: 1,
     padding: theme.margins.xl,
   },
-  wrapper: {
-    gap: scale(10),
+  gap: {
+    marginVertical: scale(10),
   },
 }))

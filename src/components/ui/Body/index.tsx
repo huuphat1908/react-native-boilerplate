@@ -15,7 +15,7 @@ const Body: FC<ComponentProps<typeof Text>> = ({
       style={[
         {
           color: colors.black,
-          fontSize: scale(14),
+          fontSize: scale(13),
         },
         style,
       ]}>
