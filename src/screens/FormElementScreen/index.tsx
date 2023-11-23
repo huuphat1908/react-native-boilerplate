@@ -3,6 +3,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 
 import {
   Box,
+  Checkbox,
   DateInput,
   Divider,
   Input,
@@ -20,6 +21,7 @@ const defaultValues: FormElementData = {
   input: '',
   dateInput: '',
   timeInput: '',
+  checkbox: false,
 }
 
 const ButtonScreen = () => {
@@ -41,6 +43,9 @@ const ButtonScreen = () => {
           <Divider gap={20} />
 
           <TimeInput name="timeInput" placeholder="Time Input" />
+          <Divider gap={20} />
+
+          <Checkbox name="checkbox" />
           <Divider gap={20} />
         </ScrollView>
       </Box>
