@@ -24,6 +24,7 @@ export { default as VStack } from './ui/VStack'
 export { default as Checkbox } from './form/Checkbox'
 export { default as DateInput } from './form/DateInput'
 export { default as Input } from './form/Input'
+export { default as Switch } from './form/Switch'
 export { default as TimeInput } from './form/TimeInput'
 
 //dialogs

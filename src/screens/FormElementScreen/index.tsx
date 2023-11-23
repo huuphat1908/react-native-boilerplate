@@ -8,6 +8,7 @@ import {
   Divider,
   Input,
   ScrollView,
+  Switch,
   TimeInput,
 } from '@/components'
 import { styleManager } from '@/libs'
@@ -22,6 +23,7 @@ const defaultValues: FormElementData = {
   dateInput: '',
   timeInput: '',
   checkbox: false,
+  switch: false,
 }
 
 const ButtonScreen = () => {
@@ -46,6 +48,9 @@ const ButtonScreen = () => {
           <Divider gap={20} />
 
           <Checkbox name="checkbox" />
+          <Divider gap={20} />
+
+          <Switch name="switch" />
           <Divider gap={20} />
         </ScrollView>
       </Box>
