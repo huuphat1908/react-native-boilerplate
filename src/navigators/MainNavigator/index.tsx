@@ -35,15 +35,15 @@ export const useAppNavigation = () => {
 const MainNavigator = () => {
   return (
     <Drawer.Navigator>
+      <Drawer.Screen
+        name={MainRoutes.FORM_ELEMENT}
+        component={FormElementScreen}
+      />
       <Drawer.Screen name={MainRoutes.BUTTON} component={ButtonScreen} />
       <Drawer.Screen name={MainRoutes.COLOR} component={ColorScreen} />
       <Drawer.Screen
         name={MainRoutes.TYPOGRAPHY}
         component={TypographyScreen}
-      />
-      <Drawer.Screen
-        name={MainRoutes.FORM_ELEMENT}
-        component={FormElementScreen}
       />
     </Drawer.Navigator>
   )

@@ -10,9 +10,10 @@ import { checkboxStyles } from './Checkbox.style'
 
 type CheckboxProps = {
   name: string
+  readOnly?: boolean
 }
 
-const Checkbox: FC<CheckboxProps> = ({ name }) => {
+const Checkbox: FC<CheckboxProps> = ({ name, readOnly }) => {
   const { control } = useFormContext()
   const { styles } = styleManager.useStyles(checkboxStyles)
 
@@ -21,8 +22,13 @@ const Checkbox: FC<CheckboxProps> = ({ name }) => {
       control={control}
       name={name}
       render={({ field: { onChange, value } }) => (
-        <Pressable onPress={() => onChange(!value)}>
-          <Center style={[styles.wrapper, value && styles.wrapperChecked]}>
+        <Pressable onPress={() => readOnly || onChange(!value)}>
+          <Center
+            style={[
+              styles.wrapper,
+              readOnly && styles.wrapperReadOnly,
+              value && styles.wrapperChecked,
+            ]}>
             {value && (
               <Icon
                 name="Check"
@@ -37,4 +43,9 @@ const Checkbox: FC<CheckboxProps> = ({ name }) => {
     />
   )
 }
+
+Checkbox.defaultProps = {
+  readOnly: false,
+}
+
 export default Checkbox
