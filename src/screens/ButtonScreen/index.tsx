@@ -6,7 +6,7 @@ import {
   HStack,
   PrimaryButton,
   SecondaryButton,
-} from '@/components/ui'
+} from '@/components'
 import { styleManager } from '@/libs'
 
 import { buttonScreenStyles } from './ButtonScreen.style'

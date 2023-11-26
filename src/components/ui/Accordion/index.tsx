@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 
-import { colors } from '@/constant'
+import { colors } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 

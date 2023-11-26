@@ -1,6 +1,6 @@
 import { createUnistyles } from 'react-native-unistyles'
 
-import { colors } from '@/constant'
+import { colors } from '@/constants'
 
 import scale from './scale'
 
