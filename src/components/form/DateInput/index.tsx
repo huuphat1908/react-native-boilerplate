@@ -27,11 +27,6 @@ const DateInput: FC<DateInputProps> = ({ name, style, ...rest }) => {
   const { readOnly } = rest
   const hasError = errors[name] ? true : false
 
-  const handlePress = useCallback(
-    () => (readOnly ? null : open()),
-    [open, readOnly],
-  )
-
   return (
     <Controller
       control={control}
@@ -57,9 +52,7 @@ const DateInput: FC<DateInputProps> = ({ name, style, ...rest }) => {
               onBlur()
             }}
           />
-          <TouchableOpacity
-            activeOpacity={readOnly ? 1 : 0.4}
-            onPress={handlePress}>
+          <TouchableOpacity disabled={readOnly} onPress={open}>
             <HStack>
               <TextInput
                 value={value}
