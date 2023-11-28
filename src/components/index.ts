@@ -9,11 +9,11 @@ export { default as TextArea } from './form/TextArea'
 export { default as TimeInput } from './form/TimeInput'
 
 //layout
-export { default as Box } from './layout/Box'
-export { default as Center } from './layout/Center'
-export { default as HStack } from './layout/HStack'
-export { default as ScrollView } from './layout/ScrollView'
-export { default as VStack } from './layout/VStack'
+export { default as Box } from './layouts/Box'
+export { default as Center } from './layouts/Center'
+export { default as HStack } from './layouts/HStack'
+export { default as ScrollView } from './layouts/ScrollView'
+export { default as VStack } from './layouts/VStack'
 
 //typography
 export { default as Body } from './typography/Body'
