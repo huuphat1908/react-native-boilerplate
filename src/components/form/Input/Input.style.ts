@@ -8,6 +8,7 @@ export const inputStyles = styleManager.createStyleSheet(theme => ({
     paddingHorizontal: theme.paddings.xl,
     height: scale(40),
     fontSize: scale(13),
+    fontFamily: 'SFProText-Regular',
   },
   readOnlyInput: {
     opacity: 0.4,

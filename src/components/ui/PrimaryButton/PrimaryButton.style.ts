@@ -15,5 +15,6 @@ export const primaryButtonStyles = styleManager.createStyleSheet(theme => ({
   title: {
     color: theme.colors.white,
     fontSize: scale(16),
+    fontFamily: 'SFProText-Bold',
   },
 }))
