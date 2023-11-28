@@ -6,6 +6,7 @@ import {
   Checkbox,
   DateInput,
   Divider,
+  Dropdown,
   Input,
   ScrollView,
   Switch,
@@ -26,6 +27,7 @@ const defaultValues: FormElementData = {
   checkbox: false,
   switch: false,
   textArea: '',
+  dropdown: '',
 }
 
 const ButtonScreen = () => {
@@ -56,6 +58,22 @@ const ButtonScreen = () => {
           <Divider gap={20} />
 
           <TextArea name="textArea" placeholder="Text Area" />
+          <Divider gap={20} />
+
+          <Dropdown
+            name="dropdown"
+            label="Dropdown"
+            data={[
+              {
+                label: 'Label 1',
+                value: 'Value 1',
+              },
+              {
+                label: 'Label 2',
+                value: 'Value 2',
+              },
+            ]}
+          />
           <Divider gap={20} />
         </ScrollView>
       </Box>

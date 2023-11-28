@@ -8,6 +8,7 @@ const formElementSchema = () => {
     checkbox: z.boolean(),
     switch: z.boolean(),
     textArea: z.string(),
+    dropdown: z.string(),
   })
 }
 
