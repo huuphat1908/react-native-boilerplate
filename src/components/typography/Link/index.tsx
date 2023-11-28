@@ -26,6 +26,7 @@ const Link: FC<LinkProps> = ({ children, style, href, ...rest }) => {
           color: colors.blue,
           fontSize: scale(14),
           textDecorationLine: 'underline',
+          fontFamily: 'SFProText-Regular',
         },
         style,
       ]}
