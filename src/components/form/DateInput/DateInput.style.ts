@@ -9,6 +9,7 @@ export const dateInputStyles = styleManager.createStyleSheet(theme => ({
     width: '100%',
     height: scale(40),
     fontSize: scale(13),
+    fontFamily: 'SFProText-Regular',
     color: theme.colors.black,
   },
   readOnlyInput: {

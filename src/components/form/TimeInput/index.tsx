@@ -9,7 +9,7 @@ import { dateTimeFormat } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { timeInputStyles } from './DateInput.style'
+import { timeInputStyles } from './TimeInput.style'
 
 type DateInputProps = {
   name: string

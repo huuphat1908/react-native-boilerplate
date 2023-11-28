@@ -4,7 +4,7 @@ import { Text } from 'react-native'
 import { colors } from '@/constants'
 import { scale } from '@/libs'
 
-const Label: FC<ComponentProps<typeof Text>> = ({
+const Body: FC<ComponentProps<typeof Text>> = ({
   children,
   style,
   ...rest
@@ -15,8 +15,8 @@ const Label: FC<ComponentProps<typeof Text>> = ({
       style={[
         {
           color: colors.black,
-          fontSize: scale(14),
-          fontWeight: 'bold',
+          fontSize: scale(13),
+          fontFamily: 'SFProText-Regular',
         },
         style,
       ]}>
@@ -25,4 +25,4 @@ const Label: FC<ComponentProps<typeof Text>> = ({
   )
 }
 
-export default Label
+export default Body

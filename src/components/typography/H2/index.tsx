@@ -4,15 +4,15 @@ import { Text } from 'react-native'
 import { colors } from '@/constants'
 import { scale } from '@/libs'
 
-const H6: FC<ComponentProps<typeof Text>> = ({ children, style, ...rest }) => {
+const H2: FC<ComponentProps<typeof Text>> = ({ children, style, ...rest }) => {
   return (
     <Text
       {...rest}
       style={[
         {
           color: colors.black,
-          fontSize: scale(10),
-          fontWeight: 'bold',
+          fontSize: scale(26),
+          fontFamily: 'SFProText-Bold',
         },
         style,
       ]}>
@@ -21,4 +21,4 @@ const H6: FC<ComponentProps<typeof Text>> = ({ children, style, ...rest }) => {
   )
 }
 
-export default H6
+export default H2
