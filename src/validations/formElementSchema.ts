@@ -7,6 +7,7 @@ const formElementSchema = () => {
     timeInput: z.string().max(10),
     checkbox: z.boolean(),
     switch: z.boolean(),
+    textArea: z.string(),
   })
 }
 
