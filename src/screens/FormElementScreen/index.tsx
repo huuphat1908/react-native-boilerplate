@@ -51,15 +51,6 @@ const ButtonScreen = () => {
           <TimeInput name="timeInput" placeholder="Time Input" />
           <Divider gap={20} />
 
-          <Checkbox name="checkbox" />
-          <Divider gap={20} />
-
-          <Switch name="switch" />
-          <Divider gap={20} />
-
-          <TextArea name="textArea" placeholder="Text Area" />
-          <Divider gap={20} />
-
           <Dropdown
             name="dropdown"
             label="Dropdown"
@@ -74,6 +65,15 @@ const ButtonScreen = () => {
               },
             ]}
           />
+          <Divider gap={20} />
+
+          <Checkbox name="checkbox" />
+          <Divider gap={20} />
+
+          <Switch name="switch" />
+          <Divider gap={20} />
+
+          <TextArea name="textArea" placeholder="Text Area" />
           <Divider gap={20} />
         </ScrollView>
       </Box>

@@ -35,7 +35,7 @@ const BareDropdown: FC<BareDropdownProps> = ({
   inputProps,
 }) => {
   const { isOpen, open, close } = useDisclose()
-  const { styles } = styleManager.useStyles(bareDropdownStyles)
+  const { styles, theme } = styleManager.useStyles(bareDropdownStyles)
   const [keyword, setKeyword] = useState('')
   const [dropdownTop, setDropdownTop] = useState(0)
   const [dropdownLeft, setDropdownLeft] = useState(0)
@@ -79,7 +79,7 @@ const BareDropdown: FC<BareDropdownProps> = ({
           style={[
             styles.itemWrapper,
             {
-              backgroundColor: isActiveItem ? colors.gray : colors.white,
+              backgroundColor: isActiveItem ? colors.lightGray : colors.white,
             },
           ]}>
           <Body numberOfLines={1} ellipsizeMode="tail">
@@ -162,7 +162,7 @@ const BareDropdown: FC<BareDropdownProps> = ({
         editable={false}
         placeholderTextColor={colors.gray}
         {...inputProps}
-        style={[styles.dropdownInput, inputProps?.style]}
+        style={[theme.components.input, inputProps?.style]}
       />
     </TouchableOpacity>
   )

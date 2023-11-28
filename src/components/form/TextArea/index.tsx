@@ -38,7 +38,7 @@ const TextArea: FC<InputProps> = ({ name, style, ...rest }) => {
             onFocus={onFocus}
             placeholderTextColor={theme.colors.gray}
             style={[
-              styles.input,
+              styles.textArea,
               rest.readOnly && styles.readOnlyInput,
               isFocused && styles.focusedInput,
               hasError && styles.errorInput,

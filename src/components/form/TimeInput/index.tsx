@@ -61,7 +61,7 @@ const TimeInput: FC<DateInputProps> = ({ name, style, ...rest }) => {
                 pointerEvents="none"
                 placeholderTextColor={theme.colors.gray}
                 style={[
-                  styles.input,
+                  theme.components.input,
                   readOnly && styles.readOnlyInput,
                   hasError && styles.errorInput,
                   style,

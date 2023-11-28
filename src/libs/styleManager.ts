@@ -18,6 +18,19 @@ export const theme = {
     lg: scale(8),
     xl: scale(12),
   },
+  components: {
+    input: {
+      borderWidth: scale(1),
+      borderRadius: 10,
+      borderColor: colors.black,
+      paddingHorizontal: scale(12),
+      height: scale(40),
+      fontSize: scale(13),
+      fontFamily: 'SFProText-Regular',
+      color: colors.black,
+      width: '100%',
+    },
+  },
   utils: {
     hexToRGBA: (hex: string, opacity: number) => {
       const rgb = hex

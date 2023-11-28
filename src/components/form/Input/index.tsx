@@ -38,7 +38,7 @@ const Input: FC<InputProps> = ({ name, style, ...rest }) => {
             onFocus={onFocus}
             placeholderTextColor={theme.colors.gray}
             style={[
-              styles.input,
+              theme.components.input,
               rest.readOnly && styles.readOnlyInput,
               isFocused && styles.focusedInput,
               hasError && styles.errorInput,
