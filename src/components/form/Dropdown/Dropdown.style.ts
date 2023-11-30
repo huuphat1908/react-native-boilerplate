@@ -1,7 +1,7 @@
 import { colors } from '@/constants'
 import { scale, styleManager } from '@/libs'
 
-export const bareDropdownStyles = styleManager.createStyleSheet(theme => ({
+export const dropdownStyles = styleManager.createStyleSheet(theme => ({
   itemWrapper: {
     paddingHorizontal: theme.paddings.lg,
     paddingVertical: theme.paddings.lg,
@@ -24,5 +24,20 @@ export const bareDropdownStyles = styleManager.createStyleSheet(theme => ({
   },
   searchInput: {
     borderWidth: 0,
+  },
+  errorInput: {
+    borderColor: colors.red,
+  },
+  readOnlyInput: {
+    opacity: 0.4,
+  },
+  focusedInput: {
+    borderColor: colors.blue,
+    borderWidth: scale(1.5),
+  },
+  iconWrapper: {
+    position: 'absolute',
+    right: 10,
+    height: '100%',
   },
 }))
