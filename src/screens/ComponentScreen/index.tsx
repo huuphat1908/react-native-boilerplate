@@ -3,7 +3,7 @@ import React from 'react'
 import { Accordion, Body, Box, Divider } from '@/components'
 import { styleManager } from '@/libs'
 
-import { componentScreenStyles } from './ButtonScreen.style'
+import { componentScreenStyles } from './ComponentScreen.style'
 
 const ComponentScreen = () => {
   const { styles } = styleManager.useStyles(componentScreenStyles)

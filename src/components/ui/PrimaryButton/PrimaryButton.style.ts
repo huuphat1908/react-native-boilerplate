@@ -9,6 +9,8 @@ export const primaryButtonStyles = styleManager.createStyleSheet(theme => ({
     padding: scale(12),
     alignItems: 'center',
     justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: theme.colors.blue,
     borderRadius: 12,
     opacity: disabled ? 0.7 : 1,
   }),

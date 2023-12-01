@@ -27,6 +27,7 @@ const SecondaryButton: FC<SecondaryButtonProps> = ({
 
   return (
     <TouchableOpacity
+      activeOpacity={0.7}
       disabled={disabled}
       onPress={onPress}
       {...(fullWidth ? { style: styles.fullWidth } : {})}>

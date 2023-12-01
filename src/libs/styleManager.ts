@@ -11,6 +11,7 @@ export const theme = {
     md: scale(4),
     lg: scale(8),
     xl: scale(12),
+    xxl: scale(16),
   },
   margins: {
     sm: scale(2),
