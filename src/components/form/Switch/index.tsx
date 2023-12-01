@@ -28,7 +28,7 @@ const SWITCH_BUTTON_AREA = BUTTON_HEIGHT - SWITCH_BUTTON_PADDING
 const InterpolateXInput = [0, 1]
 
 const Switch: FC<SwitchProps> = ({ name, readOnly }) => {
-  const { control, getValues, watch } = useFormContext()
+  const { control, getValues } = useFormContext()
   const { styles } = styleManager.useStyles(switchStyles)
 
   const shareValue = useSharedValue(getValues(name) ? 1 : 0)
@@ -92,10 +92,8 @@ const Switch: FC<SwitchProps> = ({ name, readOnly }) => {
       name={name}
       render={({ field: { onChange, value } }) => (
         <Pressable
+          disabled={readOnly}
           onPress={() => {
-            if (readOnly) {
-              return
-            }
             handlePressSwitch()
             onChange(!value)
           }}

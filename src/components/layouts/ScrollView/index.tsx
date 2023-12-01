@@ -10,7 +10,9 @@ const ScrollView: FC<ComponentProps<typeof RNScrollView>> = ({
   ...rest
 }) => (
   <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <RNScrollView {...rest}>{children}</RNScrollView>
+    <RNScrollView {...rest} automaticallyAdjustKeyboardInsets>
+      {children}
+    </RNScrollView>
   </TouchableWithoutFeedback>
 )
 

@@ -6,20 +6,20 @@ import { Box, ErrorText } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { inputStyles } from './Input.style'
+import { textAreaStyles } from './TextArea.style'
 
 type InputProps = {
   name: string
   readOnly?: boolean
 } & ComponentProps<typeof TextInput>
 
-const Input: FC<InputProps> = ({ name, style, ...rest }) => {
+const TextArea: FC<InputProps> = ({ name, style, ...rest }) => {
   const { isOpen: isFocused, open: onFocus, close: onBlur } = useDisclose()
   const {
     control,
     formState: { errors },
   } = useFormContext()
-  const { theme, styles } = styleManager.useStyles(inputStyles)
+  const { theme, styles } = styleManager.useStyles(textAreaStyles)
   const hasError = errors[name] ? true : false
 
   return (
@@ -38,12 +38,14 @@ const Input: FC<InputProps> = ({ name, style, ...rest }) => {
             onFocus={onFocus}
             placeholderTextColor={theme.colors.gray}
             style={[
-              theme.components.input,
+              styles.textArea,
               rest.readOnly && styles.readOnlyInput,
               isFocused && styles.focusedInput,
               hasError && styles.errorInput,
               style,
             ]}
+            textAlignVertical="top"
+            multiline
             {...rest}
           />
           <ErrorText name={name} errors={errors} />
@@ -53,4 +55,4 @@ const Input: FC<InputProps> = ({ name, style, ...rest }) => {
   )
 }
 
-export default Input
+export default TextArea

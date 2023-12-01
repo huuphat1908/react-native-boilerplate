@@ -1,6 +1,11 @@
 import { scale, styleManager } from '@/libs'
 
-export const inputStyles = styleManager.createStyleSheet(theme => ({
+export const textAreaStyles = styleManager.createStyleSheet(theme => ({
+  textArea: {
+    ...theme.components.input,
+    paddingTop: theme.paddings.lg,
+    height: scale(100),
+  },
   readOnlyInput: {
     opacity: 0.4,
   },

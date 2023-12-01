@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { Pressable } from 'react-native'
+import { TouchableWithoutFeedback } from 'react-native'
 
 import { Center, Icon } from '@/components'
 import { colors } from '@/constants'
@@ -22,7 +22,9 @@ const Checkbox: FC<CheckboxProps> = ({ name, readOnly }) => {
       control={control}
       name={name}
       render={({ field: { onChange, value } }) => (
-        <Pressable onPress={() => readOnly || onChange(!value)}>
+        <TouchableWithoutFeedback
+          disabled={readOnly}
+          onPress={() => onChange(!value)}>
           <Center
             style={[
               styles.wrapper,
@@ -38,7 +40,7 @@ const Checkbox: FC<CheckboxProps> = ({ name, readOnly }) => {
               />
             )}
           </Center>
-        </Pressable>
+        </TouchableWithoutFeedback>
       )}
     />
   )

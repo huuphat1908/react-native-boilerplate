@@ -5,9 +5,9 @@ import { colors } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import HStack from '../HStack'
+import HStack from '../../layouts/HStack'
+import VStack from '../../layouts/VStack'
 import Icon from '../Icon'
-import VStack from '../VStack'
 import { accordionStyles } from './Accordion.style'
 
 type AccordionProps = {
