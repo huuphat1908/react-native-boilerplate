@@ -1,4 +1,5 @@
 //dialogs
+export { default as ConfirmationDialog } from './dialogs/ConfirmationDialog'
 
 //form
 export { default as Checkbox } from './form/Checkbox'

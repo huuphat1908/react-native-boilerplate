@@ -4,6 +4,7 @@ import {
   ButtonScreen,
   ColorScreen,
   ComponentScreen,
+  DialogScreen,
   FormElementScreen,
   TypographyScreen,
 } from '@/screens'
@@ -19,6 +20,7 @@ enum MainRoutes {
   BUTTON = 'Button',
   COLOR = 'Color',
   COMPONENT = 'Component',
+  DIALOG = 'Dialog',
   TYPOGRAPHY = 'Typography',
   FORM_ELEMENT = 'Form Element',
 }
@@ -27,6 +29,7 @@ type MainParamList = {
   [MainRoutes.BUTTON]: undefined
   [MainRoutes.COLOR]: undefined
   [MainRoutes.COMPONENT]: undefined
+  [MainRoutes.DIALOG]: undefined
   [MainRoutes.TYPOGRAPHY]: undefined
   [MainRoutes.FORM_ELEMENT]: undefined
 }
@@ -38,6 +41,7 @@ export const useAppNavigation = () => {
 const MainNavigator = () => {
   return (
     <Drawer.Navigator>
+      <Drawer.Screen name={MainRoutes.DIALOG} component={DialogScreen} />
       <Drawer.Screen
         name={MainRoutes.FORM_ELEMENT}
         component={FormElementScreen}

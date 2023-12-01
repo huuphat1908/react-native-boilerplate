@@ -1,5 +1,6 @@
 export { default as ButtonScreen } from './ButtonScreen'
 export { default as ColorScreen } from './ColorScreen'
 export { default as ComponentScreen } from './ComponentScreen'
+export { default as DialogScreen } from './DialogScreen'
 export { default as FormElementScreen } from './FormElementScreen'
 export { default as TypographyScreen } from './TypographyScreen'
