@@ -1,9 +1,9 @@
-import React, { ComponentProps, FC } from 'react'
-import { View } from 'react-native'
+import React, { FC } from 'react'
+import { View, ViewProps } from 'react-native'
 
 import { colors } from '@/constants'
 
-const Box: FC<ComponentProps<typeof View>> = ({ children, style, ...rest }) => (
+const Box: FC<ViewProps> = ({ children, style, ...rest }) => (
   <View
     style={[
       {

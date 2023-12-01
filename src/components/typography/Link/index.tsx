@@ -1,12 +1,12 @@
-import React, { ComponentProps, FC, useCallback } from 'react'
-import { Linking, Text } from 'react-native'
+import React, { FC, useCallback } from 'react'
+import { Linking, Text, TextProps } from 'react-native'
 
 import { colors } from '@/constants'
 import { scale } from '@/libs'
 
 type LinkProps = {
   href: string
-} & ComponentProps<typeof Text>
+} & TextProps
 
 const Link: FC<LinkProps> = ({ children, style, href, ...rest }) => {
   const handlePress = useCallback(async () => {

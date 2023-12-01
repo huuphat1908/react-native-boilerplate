@@ -1,6 +1,5 @@
 import { debounce } from 'lodash'
 import React, {
-  ComponentProps,
   FC,
   ReactElement,
   useEffect,
@@ -9,7 +8,13 @@ import React, {
   useState,
 } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { FlatList, Modal, TextInput, TouchableOpacity } from 'react-native'
+import {
+  FlatList,
+  Modal,
+  TextInput,
+  TextInputProps,
+  TouchableOpacity,
+} from 'react-native'
 
 import { Body, Box, Center, ErrorText, HStack, Icon } from '@/components'
 import { colors } from '@/constants'
@@ -24,7 +29,7 @@ type DropdownProps = {
   data: Array<DropdownItem>
   readOnly?: boolean
   searchable?: boolean
-  inputProps?: ComponentProps<typeof TextInput>
+  inputProps?: TextInputProps
 }
 
 const Dropdown: FC<DropdownProps> = ({

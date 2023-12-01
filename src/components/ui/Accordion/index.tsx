@@ -1,13 +1,16 @@
-import React, { FC, ReactNode } from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import React, { FC, ReactNode, useCallback } from 'react'
+import { Pressable, Text } from 'react-native'
+import Animated, {
+  FadeInUp,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated'
 
-import { colors } from '@/constants'
+import { HStack, Icon, VStack } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import HStack from '../../layouts/HStack'
-import VStack from '../../layouts/VStack'
-import Icon from '../Icon'
 import { accordionStyles } from './Accordion.style'
 
 type AccordionProps = {
@@ -17,21 +20,31 @@ type AccordionProps = {
 
 const Accordion: FC<AccordionProps> = ({ title, children }) => {
   const { isOpen, toggle } = useDisclose()
-  const { styles } = styleManager.useStyles(accordionStyles)
+  const rotateValue = useSharedValue(0)
+  const { styles, theme } = styleManager.useStyles(accordionStyles)
+
+  const handleToggle = useCallback(() => {
+    rotateValue.value = withTiming(isOpen ? 0 : 1)
+    toggle()
+  }, [isOpen, rotateValue, toggle])
+
+  const rotateStyle = useAnimatedStyle(() => {
+    return {
+      transform: [{ rotate: `${rotateValue.value * 90}deg` }],
+    }
+  })
 
   return (
     <VStack>
-      <TouchableOpacity onPress={toggle}>
+      <Pressable onPress={handleToggle}>
         <HStack style={styles.container}>
-          <Icon
-            name={isOpen ? 'ChevronDown' : 'ChevronRight'}
-            size={24}
-            color={colors.blue}
-          />
           <Text style={styles.title}>{title}</Text>
+          <Animated.View style={rotateStyle}>
+            <Icon name="ChevronRight" size={24} color={theme.colors.white} />
+          </Animated.View>
         </HStack>
-      </TouchableOpacity>
-      {isOpen && children}
+      </Pressable>
+      {isOpen && <Animated.View entering={FadeInUp}>{children}</Animated.View>}
     </VStack>
   )
 }

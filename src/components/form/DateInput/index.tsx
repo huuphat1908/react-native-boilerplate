@@ -1,7 +1,7 @@
 import moment from 'moment'
-import React, { ComponentProps, FC, useCallback } from 'react'
+import React, { FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { TextInput, TouchableOpacity } from 'react-native'
+import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
 import { Box, Center, ErrorText, HStack, Icon } from '@/components'
@@ -14,9 +14,9 @@ import { dateInputStyles } from './DateInput.style'
 type DateInputProps = {
   name: string
   readOnly?: boolean
-} & ComponentProps<typeof TextInput>
+} & TextInputProps
 
-const DateInput: FC<DateInputProps> = ({ name, style, ...rest }) => {
+const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
   const { isOpen, open, close } = useDisclose()
   const { theme, styles } = styleManager.useStyles(dateInputStyles)
   const {
@@ -24,7 +24,6 @@ const DateInput: FC<DateInputProps> = ({ name, style, ...rest }) => {
     formState: { errors },
   } = useFormContext()
   const { date: dateFormat } = dateTimeFormat
-  const { readOnly } = rest
   const hasError = errors[name] ? true : false
 
   return (
