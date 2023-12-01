@@ -35,6 +35,11 @@ const ConfirmationDialog: FC<ActionDialogProps> = ({
 }) => {
   const { styles } = styleManager.useStyles(confirmationDialogStyles)
 
+  const handleConfirm = () => {
+    onConfirm()
+    onClose()
+  }
+
   return (
     <Modal visible={isOpen} animationType="fade" transparent>
       <Pressable style={styles.backdrop} onPress={onClose}>
@@ -49,7 +54,7 @@ const ConfirmationDialog: FC<ActionDialogProps> = ({
             <SecondaryButton fullWidth onPress={onClose}>
               {cancelText}
             </SecondaryButton>
-            <PrimaryButton fullWidth onPress={onConfirm}>
+            <PrimaryButton fullWidth onPress={handleConfirm}>
               {confirmText}
             </PrimaryButton>
           </HStack>

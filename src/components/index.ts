@@ -1,4 +1,5 @@
 //dialogs
+export { default as AlertDialog } from './dialogs/AlertDialog'
 export { default as ConfirmationDialog } from './dialogs/ConfirmationDialog'
 
 //form

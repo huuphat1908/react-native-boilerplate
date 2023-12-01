@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { Box, ConfirmationDialog, Divider, PrimaryButton } from '@/components'
+import {
+  AlertDialog,
+  Box,
+  ConfirmationDialog,
+  Divider,
+  PrimaryButton,
+} from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
@@ -12,6 +18,11 @@ const DialogScreen = () => {
     isOpen: isOpenActionDialog,
     open: openActionDialog,
     close: closeActionDialog,
+  } = useDisclose()
+  const {
+    isOpen: isOpenAlertDialog,
+    open: openAlertDialog,
+    close: closeAlertDialog,
   } = useDisclose()
 
   return (
@@ -26,6 +37,16 @@ const DialogScreen = () => {
               data. Are you sure you want to continue?"
         confirmText="Confirm"
         cancelText="Cancel"
+      />
+      <Divider />
+
+      <PrimaryButton onPress={openAlertDialog}>Alert Dialog</PrimaryButton>
+      <AlertDialog
+        isOpen={isOpenAlertDialog}
+        onClose={closeAlertDialog}
+        title="Unable to upload"
+        message="There is not sufficient storage on your device. Please clear up some space and try again."
+        confirmText="Okay"
       />
       <Divider />
     </Box>
