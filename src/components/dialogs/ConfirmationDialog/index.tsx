@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useCallback } from 'react'
 import { Modal, Pressable } from 'react-native'
 
 import {
@@ -35,10 +35,10 @@ const ConfirmationDialog: FC<ActionDialogProps> = ({
 }) => {
   const { styles } = styleManager.useStyles(confirmationDialogStyles)
 
-  const handleConfirm = () => {
+  const handleConfirm = useCallback(() => {
     onConfirm()
     onClose()
-  }
+  }, [onClose, onConfirm])
 
   return (
     <Modal visible={isOpen} animationType="fade" transparent>
@@ -46,7 +46,6 @@ const ConfirmationDialog: FC<ActionDialogProps> = ({
         <Box style={styles.wrapper}>
           <VStack style={styles.textGroupWrapper}>
             <H3>{title}</H3>
-
             <Body style={styles.message}>{message}</Body>
           </VStack>
 

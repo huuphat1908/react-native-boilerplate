@@ -5,6 +5,7 @@ import {
   Box,
   ConfirmationDialog,
   Divider,
+  InputDialog,
   PrimaryButton,
 } from '@/components'
 import { useDisclose } from '@/hooks'
@@ -23,6 +24,11 @@ const DialogScreen = () => {
     isOpen: isOpenAlertDialog,
     open: openAlertDialog,
     close: closeAlertDialog,
+  } = useDisclose()
+  const {
+    isOpen: isOpenInputDialog,
+    open: openInputDialog,
+    close: closeInputDialog,
   } = useDisclose()
 
   return (
@@ -47,6 +53,19 @@ const DialogScreen = () => {
         title="Unable to upload"
         message="There is not sufficient storage on your device. Please clear up some space and try again."
         confirmText="Okay"
+      />
+      <Divider />
+
+      <PrimaryButton onPress={openInputDialog}>Input Dialog</PrimaryButton>
+      <InputDialog
+        isOpen={isOpenInputDialog}
+        onConfirm={value => console.log(`onConfirm InputDialog ${value}`)}
+        onClose={closeInputDialog}
+        title="Change filename"
+        message="When uploading a file, it's a good idea to give it a meaningful title."
+        placeholderInput="Enter file name"
+        confirmText="Save"
+        cancelText="Cancel"
       />
       <Divider />
     </Box>
