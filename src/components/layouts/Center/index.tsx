@@ -1,11 +1,7 @@
-import React, { ComponentProps, FC } from 'react'
-import { View } from 'react-native'
+import React, { FC } from 'react'
+import { View, ViewProps } from 'react-native'
 
-const Center: FC<ComponentProps<typeof View>> = ({
-  children,
-  style,
-  ...rest
-}) => (
+const Center: FC<ViewProps> = ({ children, style, ...rest }) => (
   <View
     style={[
       {

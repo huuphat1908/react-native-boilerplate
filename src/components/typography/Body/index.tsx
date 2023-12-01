@@ -1,14 +1,10 @@
-import React, { ComponentProps, FC } from 'react'
-import { Text } from 'react-native'
+import React, { FC } from 'react'
+import { Text, TextProps } from 'react-native'
 
 import { colors } from '@/constants'
 import { scale } from '@/libs'
 
-const Body: FC<ComponentProps<typeof Text>> = ({
-  children,
-  style,
-  ...rest
-}) => {
+const Body: FC<TextProps> = ({ children, style, ...rest }) => {
   return (
     <Text
       {...rest}

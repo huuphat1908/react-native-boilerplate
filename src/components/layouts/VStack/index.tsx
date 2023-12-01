@@ -1,11 +1,7 @@
-import React, { ComponentProps, FC } from 'react'
-import { View } from 'react-native'
+import React, { FC } from 'react'
+import { View, ViewProps } from 'react-native'
 
-const VStack: FC<ComponentProps<typeof View>> = ({
-  children,
-  style,
-  ...rest
-}) => (
+const VStack: FC<ViewProps> = ({ children, style, ...rest }) => (
   <View
     style={[
       {

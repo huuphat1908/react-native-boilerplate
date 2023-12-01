@@ -1,6 +1,6 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { TextInput } from 'react-native'
+import { TextInput, TextInputProps } from 'react-native'
 
 import { Box, ErrorText } from '@/components'
 import { useDisclose } from '@/hooks'
@@ -11,7 +11,7 @@ import { inputStyles } from './Input.style'
 type InputProps = {
   name: string
   readOnly?: boolean
-} & ComponentProps<typeof TextInput>
+} & TextInputProps
 
 const Input: FC<InputProps> = ({ name, style, ...rest }) => {
   const { isOpen: isFocused, open: onFocus, close: onBlur } = useDisclose()

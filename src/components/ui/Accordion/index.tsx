@@ -1,13 +1,11 @@
 import React, { FC, ReactNode } from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 
+import { HStack, Icon, VStack } from '@/components'
 import { colors } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import HStack from '../../layouts/HStack'
-import VStack from '../../layouts/VStack'
-import Icon from '../Icon'
 import { accordionStyles } from './Accordion.style'
 
 type AccordionProps = {
