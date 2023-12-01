@@ -16,7 +16,7 @@ type TimeInputProps = {
   readOnly?: boolean
 } & ComponentProps<typeof TextInput>
 
-const TimeInput: FC<TimeInputProps> = ({ name, style, ...rest }) => {
+const TimeInput: FC<TimeInputProps> = ({ name, style, readOnly, ...rest }) => {
   const { isOpen, open, close } = useDisclose()
   const { theme, styles } = styleManager.useStyles(timeInputStyles)
   const {
@@ -24,7 +24,6 @@ const TimeInput: FC<TimeInputProps> = ({ name, style, ...rest }) => {
     formState: { errors },
   } = useFormContext()
   const { time: timeFormat } = dateTimeFormat
-  const { readOnly } = rest
   const hasError = errors[name] ? true : false
 
   return (
