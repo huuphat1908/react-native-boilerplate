@@ -3,6 +3,7 @@ import React from 'react'
 import {
   ButtonScreen,
   ColorScreen,
+  ComponentScreen,
   FormElementScreen,
   TypographyScreen,
 } from '@/screens'
@@ -17,6 +18,7 @@ const Drawer = createDrawerNavigator<MainParamList>()
 enum MainRoutes {
   BUTTON = 'Button',
   COLOR = 'Color',
+  COMPONENT = 'Component',
   TYPOGRAPHY = 'Typography',
   FORM_ELEMENT = 'Form Element',
 }
@@ -24,6 +26,7 @@ enum MainRoutes {
 type MainParamList = {
   [MainRoutes.BUTTON]: undefined
   [MainRoutes.COLOR]: undefined
+  [MainRoutes.COMPONENT]: undefined
   [MainRoutes.TYPOGRAPHY]: undefined
   [MainRoutes.FORM_ELEMENT]: undefined
 }
@@ -39,6 +42,7 @@ const MainNavigator = () => {
         name={MainRoutes.FORM_ELEMENT}
         component={FormElementScreen}
       />
+      <Drawer.Screen name={MainRoutes.COMPONENT} component={ComponentScreen} />
       <Drawer.Screen name={MainRoutes.BUTTON} component={ButtonScreen} />
       <Drawer.Screen name={MainRoutes.COLOR} component={ColorScreen} />
       <Drawer.Screen
