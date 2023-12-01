@@ -16,6 +16,7 @@ import { confirmationDialogStyles } from './ConfirmationDialog.style'
 
 type ActionDialogProps = {
   isOpen: boolean
+  onConfirm: () => void
   onClose: () => void
   title: string
   message: string
@@ -25,6 +26,7 @@ type ActionDialogProps = {
 
 const ConfirmationDialog: FC<ActionDialogProps> = ({
   isOpen,
+  onConfirm,
   onClose,
   title,
   message,
@@ -47,7 +49,9 @@ const ConfirmationDialog: FC<ActionDialogProps> = ({
             <SecondaryButton fullWidth onPress={onClose}>
               {cancelText}
             </SecondaryButton>
-            <PrimaryButton fullWidth>{confirmText}</PrimaryButton>
+            <PrimaryButton fullWidth onPress={onConfirm}>
+              {confirmText}
+            </PrimaryButton>
           </HStack>
         </Box>
       </Pressable>

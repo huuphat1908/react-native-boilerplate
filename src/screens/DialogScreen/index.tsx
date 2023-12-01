@@ -19,6 +19,7 @@ const DialogScreen = () => {
       <PrimaryButton onPress={openActionDialog}>Action Dialog</PrimaryButton>
       <ConfirmationDialog
         isOpen={isOpenActionDialog}
+        onConfirm={() => console.log('onConfirm ConfirmationDialog')}
         onClose={closeActionDialog}
         title="Discard changes"
         message="When navigating away without saving, you will discard all unsaved
