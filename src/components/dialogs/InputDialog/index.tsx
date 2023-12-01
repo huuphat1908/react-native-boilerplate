@@ -60,22 +60,24 @@ const InputDialog: FC<InputDialogProps> = ({
         onRequestClose={onClose}
         transparent>
         <Pressable style={styles.backdrop} onPress={onClose}>
-          <Box style={styles.wrapper}>
-            <VStack style={styles.textGroupWrapper}>
-              <H3>{title}</H3>
-              <Body style={styles.message}>{message}</Body>
-              <Input name="input" placeholder={placeholderInput} />
-            </VStack>
+          <Pressable>
+            <Box style={styles.wrapper}>
+              <VStack style={styles.textGroupWrapper}>
+                <H3>{title}</H3>
+                <Body style={styles.message}>{message}</Body>
+                <Input name="input" placeholder={placeholderInput} />
+              </VStack>
 
-            <HStack style={styles.buttonGroupWrapper}>
-              <SecondaryButton fullWidth onPress={onClose}>
-                {cancelText}
-              </SecondaryButton>
-              <PrimaryButton fullWidth onPress={handleConfirm}>
-                {confirmText}
-              </PrimaryButton>
-            </HStack>
-          </Box>
+              <HStack style={styles.buttonGroupWrapper}>
+                <SecondaryButton fullWidth onPress={onClose}>
+                  {cancelText}
+                </SecondaryButton>
+                <PrimaryButton fullWidth onPress={handleConfirm}>
+                  {confirmText}
+                </PrimaryButton>
+              </HStack>
+            </Box>
+          </Pressable>
         </Pressable>
       </Modal>
     </FormProvider>

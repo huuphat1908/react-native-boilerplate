@@ -30,14 +30,16 @@ const AlertDialog: FC<AlertDialogProps> = ({
       onRequestClose={onClose}
       transparent>
       <Pressable style={styles.container} onPress={onClose}>
-        <Box style={styles.wrapper}>
-          <VStack style={styles.textGroupWrapper}>
-            <H3>{title}</H3>
-            <Body style={styles.message}>{message}</Body>
-          </VStack>
+        <Pressable>
+          <Box style={styles.wrapper}>
+            <VStack style={styles.textGroupWrapper}>
+              <H3>{title}</H3>
+              <Body style={styles.message}>{message}</Body>
+            </VStack>
 
-          <PrimaryButton onPress={onClose}>{confirmText}</PrimaryButton>
-        </Box>
+            <PrimaryButton onPress={onClose}>{confirmText}</PrimaryButton>
+          </Box>
+        </Pressable>
       </Pressable>
     </Modal>
   )
