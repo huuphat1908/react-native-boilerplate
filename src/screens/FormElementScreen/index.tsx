@@ -2,35 +2,31 @@ import React from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 
 import {
-  Box,
   Checkbox,
   DateInput,
   Divider,
   Dropdown,
+  HStack,
   Input,
+  PrimaryButton,
+  Radio,
   ScrollView,
+  SecondaryButton,
   Switch,
   TextArea,
   TimeInput,
+  VStack,
 } from '@/components'
+import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
-import { formElementSchema } from '@/validations'
-import { FormElementData } from '@/validations/formElementSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
 
+import { data, defaultValues } from './constants'
+import { formElementSchema } from './formElementSchema'
 import { formElementScreenStyles } from './FormElementScreen.style'
 
-const defaultValues: FormElementData = {
-  input: '',
-  dateInput: '',
-  timeInput: '',
-  checkbox: false,
-  switch: false,
-  textArea: '',
-  dropdown: '',
-}
-
-const ButtonScreen = () => {
+const FormElementScreen = () => {
+  const { isOpen: isReadOnly, toggle } = useDisclose()
   const { styles } = styleManager.useStyles(formElementScreenStyles)
   const methods = useForm({
     defaultValues,
@@ -40,45 +36,63 @@ const ButtonScreen = () => {
 
   return (
     <FormProvider {...methods}>
-      <Box style={styles.container}>
-        <ScrollView>
-          <Input name="input" placeholder="Input" />
-          <Divider gap={20} />
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.contentContainer}>
+        <Input name="input" placeholder="Input" readOnly={isReadOnly} />
+        <Divider gap={20} />
 
-          <DateInput name="dateInput" placeholder="Date Input" />
-          <Divider gap={20} />
+        <DateInput
+          name="dateInput"
+          placeholder="Date Input"
+          readOnly={isReadOnly}
+        />
+        <Divider gap={20} />
 
-          <TimeInput name="timeInput" placeholder="Time Input" />
-          <Divider gap={20} />
+        <TimeInput
+          name="timeInput"
+          placeholder="Time Input"
+          readOnly={isReadOnly}
+        />
+        <Divider gap={20} />
 
-          <Dropdown
-            name="dropdown"
-            label="Dropdown"
-            data={[
-              {
-                label: 'Label 1',
-                value: 'Value 1',
-              },
-              {
-                label: 'Label 2',
-                value: 'Value 2',
-              },
-            ]}
-          />
-          <Divider gap={20} />
+        <Dropdown
+          name="dropdown"
+          label="Dropdown"
+          data={data}
+          readOnly={isReadOnly}
+        />
+        <Divider gap={20} />
 
-          <Checkbox name="checkbox" />
-          <Divider gap={20} />
+        <Checkbox name="checkbox" readOnly={isReadOnly} />
+        <Divider gap={20} />
 
-          <Switch name="switch" />
-          <Divider gap={20} />
+        <Switch name="switch" readOnly={isReadOnly} />
+        <Divider gap={20} />
 
-          <TextArea name="textArea" placeholder="Text Area" />
-          <Divider gap={20} />
-        </ScrollView>
-      </Box>
+        <TextArea
+          name="textArea"
+          placeholder="Text Area"
+          readOnly={isReadOnly}
+        />
+        <Divider gap={20} />
+
+        <Radio name="radio" data={data} readOnly={isReadOnly} />
+        <Divider gap={20} />
+
+        <VStack style={styles.buttonGroupWrapper}>
+          <PrimaryButton
+            onPress={methods.handleSubmit(values => console.log(values))}>
+            Submit
+          </PrimaryButton>
+
+          <SecondaryButton onPress={toggle}>
+            Enable/Disable entire form
+          </SecondaryButton>
+        </VStack>
+      </ScrollView>
     </FormProvider>
   )
 }
 
-export default ButtonScreen
+export default FormElementScreen
