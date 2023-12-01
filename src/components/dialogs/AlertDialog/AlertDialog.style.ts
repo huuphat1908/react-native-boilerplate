@@ -1,7 +1,7 @@
 import { scale, styleManager } from '@/libs'
 
 export const alertDialogStyles = styleManager.createStyleSheet(theme => ({
-  backdrop: {
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',

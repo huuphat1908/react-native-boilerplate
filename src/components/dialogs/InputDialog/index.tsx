@@ -54,7 +54,11 @@ const InputDialog: FC<InputDialogProps> = ({
 
   return (
     <FormProvider {...methods}>
-      <Modal visible={isOpen} animationType="fade" transparent>
+      <Modal
+        visible={isOpen}
+        animationType="fade"
+        onRequestClose={onClose}
+        transparent>
         <Pressable style={styles.backdrop} onPress={onClose}>
           <Box style={styles.wrapper}>
             <VStack style={styles.textGroupWrapper}>

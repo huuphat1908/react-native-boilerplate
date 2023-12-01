@@ -24,8 +24,12 @@ const AlertDialog: FC<AlertDialogProps> = ({
   const { styles } = styleManager.useStyles(alertDialogStyles)
 
   return (
-    <Modal visible={isOpen} animationType="fade" transparent>
-      <Pressable style={styles.backdrop} onPress={onClose}>
+    <Modal
+      visible={isOpen}
+      animationType="fade"
+      onRequestClose={onClose}
+      transparent>
+      <Pressable style={styles.container} onPress={onClose}>
         <Box style={styles.wrapper}>
           <VStack style={styles.textGroupWrapper}>
             <H3>{title}</H3>
