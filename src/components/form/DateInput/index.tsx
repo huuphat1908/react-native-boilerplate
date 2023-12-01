@@ -1,5 +1,5 @@
 import moment from 'moment'
-import React, { ComponentProps, FC, useCallback } from 'react'
+import React, { ComponentProps, FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
 import { TextInput, TouchableOpacity } from 'react-native'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'

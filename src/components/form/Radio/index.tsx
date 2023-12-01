@@ -25,17 +25,17 @@ const Radio: FC<RadioProps> = ({ name, data, readOnly }) => {
     <Controller
       control={control}
       name={name}
-      render={({ field }) => (
+      render={({ field: { value, onChange } }) => (
         <Box style={readOnly && styles.componentContainerReadOnly}>
           <VStack style={styles.radioGroupWrapper}>
             {data.map((item, index) => {
-              const isActiveItem = item.value === field.value
+              const isActiveItem = item.value === value
 
               return (
                 <TouchableOpacity
                   key={index}
                   disabled={readOnly}
-                  onPress={() => field.onChange(item.value)}>
+                  onPress={() => onChange(item.value)}>
                   <HStack style={styles.radioRowWrapper}>
                     <Center
                       style={[
