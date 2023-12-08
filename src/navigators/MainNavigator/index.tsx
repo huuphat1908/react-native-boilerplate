@@ -41,11 +41,11 @@ export const useAppNavigation = () => {
 const MainNavigator = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name={MainRoutes.DIALOG} component={DialogScreen} />
       <Drawer.Screen
         name={MainRoutes.FORM_ELEMENT}
         component={FormElementScreen}
       />
+      <Drawer.Screen name={MainRoutes.DIALOG} component={DialogScreen} />
       <Drawer.Screen name={MainRoutes.COMPONENT} component={ComponentScreen} />
       <Drawer.Screen name={MainRoutes.BUTTON} component={ButtonScreen} />
       <Drawer.Screen name={MainRoutes.COLOR} component={ColorScreen} />

@@ -1,4 +1,4 @@
-import { debounce } from 'lodash'
+import { debounce, find } from 'lodash'
 import React, {
   FC,
   ReactElement,
@@ -168,7 +168,7 @@ const Dropdown: FC<DropdownProps> = ({
     <Controller
       control={control}
       name={name}
-      render={({ field }) => (
+      render={({ field: { value } }) => (
         <Box>
           <TouchableOpacity
             style={{ zIndex: 1 }}
@@ -178,9 +178,12 @@ const Dropdown: FC<DropdownProps> = ({
             {renderDropdown()}
             <HStack>
               <TextInput
-                value={data.find(item => item.value === field.value)?.label}
+                value={
+                  find(data, {
+                    value,
+                  })?.label
+                }
                 placeholder={label}
-                onPressIn={toggleDropdown}
                 pointerEvents="none"
                 editable={false}
                 placeholderTextColor={colors.gray}

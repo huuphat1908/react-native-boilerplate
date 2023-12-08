@@ -1,6 +1,5 @@
-import 'react-native-gesture-handler'
-
 import React from 'react'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { UnistylesTheme } from 'react-native-unistyles'
 import { QueryClientProvider } from 'react-query'
 
@@ -10,11 +9,16 @@ import AppNavigator from '@/navigators/AppNavigator'
 
 const App = () => {
   return (
-    <QueryClientProvider client={reactQueryClient}>
-      <UnistylesTheme theme={theme}>
-        <AppNavigator />
-      </UnistylesTheme>
-    </QueryClientProvider>
+    <GestureHandlerRootView
+      style={{
+        flex: 1,
+      }}>
+      <QueryClientProvider client={reactQueryClient}>
+        <UnistylesTheme theme={theme}>
+          <AppNavigator />
+        </UnistylesTheme>
+      </QueryClientProvider>
+    </GestureHandlerRootView>
   )
 }
 

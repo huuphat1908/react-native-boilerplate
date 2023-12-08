@@ -9,6 +9,7 @@ export const defaultValues: FormElementData = {
   textArea: '',
   dropdown: '',
   radio: '',
+  select: '',
 }
 
 export const data = [
