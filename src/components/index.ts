@@ -1,5 +1,6 @@
 //dialogs
 export { default as AlertDialog } from './dialogs/AlertDialog'
+export { default as BottomSheet } from './dialogs/BottomSheet'
 export { default as ConfirmationDialog } from './dialogs/ConfirmationDialog'
 export { default as InputDialog } from './dialogs/InputDialog'
 
@@ -9,6 +10,7 @@ export { default as DateInput } from './form/DateInput'
 export { default as Dropdown } from './form/Dropdown'
 export { default as Input } from './form/Input'
 export { default as Radio } from './form/Radio'
+export { default as Select } from './form/Select'
 export { default as Switch } from './form/Switch'
 export { default as TextArea } from './form/TextArea'
 export { default as TimeInput } from './form/TimeInput'

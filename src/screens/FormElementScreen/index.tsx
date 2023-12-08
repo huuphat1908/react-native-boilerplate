@@ -11,6 +11,7 @@ import {
   Radio,
   ScrollView,
   SecondaryButton,
+  Select,
   Switch,
   TextArea,
   TimeInput,
@@ -58,6 +59,14 @@ const FormElementScreen = () => {
         <Dropdown
           name="dropdown"
           label="Dropdown"
+          data={data}
+          readOnly={isReadOnly}
+        />
+        <Divider gap={20} />
+
+        <Select
+          name="select"
+          label="Select"
           data={data}
           readOnly={isReadOnly}
         />
