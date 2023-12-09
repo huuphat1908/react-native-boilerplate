@@ -12,9 +12,9 @@ import {
 } from '@/components'
 import { styleManager } from '@/libs'
 
-import { confirmationDialogStyles } from './ConfirmationDialog.style'
+import { stylesheet } from './ConfirmationDialog.style'
 
-type ActionDialogProps = {
+type Props = {
   isOpen: boolean
   onConfirm: () => void
   onClose: () => void
@@ -24,7 +24,7 @@ type ActionDialogProps = {
   cancelText: string
 }
 
-const ConfirmationDialog: FC<ActionDialogProps> = ({
+const ConfirmationDialog: FC<Props> = ({
   isOpen,
   onConfirm,
   onClose,
@@ -33,7 +33,7 @@ const ConfirmationDialog: FC<ActionDialogProps> = ({
   confirmText,
   cancelText,
 }) => {
-  const { styles } = styleManager.useStyles(confirmationDialogStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   const handleConfirm = useCallback(() => {
     onConfirm()

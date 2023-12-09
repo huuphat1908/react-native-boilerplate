@@ -4,9 +4,9 @@ import { Modal, Pressable } from 'react-native'
 import { Body, Box, H3, PrimaryButton, VStack } from '@/components'
 import { styleManager } from '@/libs'
 
-import { alertDialogStyles } from './AlertDialog.style'
+import { stylesheet } from './AlertDialog.style'
 
-type AlertDialogProps = {
+type Props = {
   isOpen: boolean
   onClose: () => void
   title: string
@@ -14,14 +14,14 @@ type AlertDialogProps = {
   confirmText: string
 }
 
-const AlertDialog: FC<AlertDialogProps> = ({
+const AlertDialog: FC<Props> = ({
   isOpen,
   onClose,
   title,
   message,
   confirmText,
 }) => {
-  const { styles } = styleManager.useStyles(alertDialogStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   return (
     <Modal

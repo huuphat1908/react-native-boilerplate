@@ -14,9 +14,9 @@ import {
 } from '@/components'
 import { styleManager } from '@/libs'
 
-import { inputDialogStyles } from './InputDialog.style'
+import { stylesheet } from './InputDialog.style'
 
-type InputDialogProps = {
+type Props = {
   isOpen: boolean
   onConfirm: (value: string) => void
   onClose: () => void
@@ -28,7 +28,7 @@ type InputDialogProps = {
   cancelText: string
 }
 
-const InputDialog: FC<InputDialogProps> = ({
+const InputDialog: FC<Props> = ({
   isOpen,
   onConfirm,
   onClose,
@@ -39,7 +39,7 @@ const InputDialog: FC<InputDialogProps> = ({
   confirmText,
   cancelText,
 }) => {
-  const { styles } = styleManager.useStyles(inputDialogStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
   const methods = useForm({
     defaultValues: {
       input: initialValue || '',

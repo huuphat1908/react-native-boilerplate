@@ -18,9 +18,9 @@ import Animated, {
 import { Box } from '@/components'
 import { styleManager } from '@/libs'
 
-import { bottomSheetStyles } from './BottomSheet.style'
+import { stylesheet } from './BottomSheet.style'
 
-type BottomSheetProps = {
+type Props = {
   isOpen: boolean
   onClose: () => void
   children: ReactNode
@@ -28,8 +28,8 @@ type BottomSheetProps = {
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable)
 
-const BottomSheet: FC<BottomSheetProps> = ({ isOpen, onClose, children }) => {
-  const { styles } = styleManager.useStyles(bottomSheetStyles)
+const BottomSheet: FC<Props> = ({ isOpen, onClose, children }) => {
+  const { styles } = styleManager.useStyles(stylesheet)
   const [height, setHeight] = useState(0)
   const offset = useSharedValue(0)
 
