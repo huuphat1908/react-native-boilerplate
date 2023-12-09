@@ -2,15 +2,20 @@ import React, { FC } from 'react'
 import { FieldErrors, FieldValues } from 'react-hook-form'
 
 import { Body } from '@/components'
-import { colors } from '@/constants'
-import { scale } from '@/libs'
+import { styleManager } from '@/libs'
 
-type ErrorTextProps = {
+type Props = {
   name: string
   errors: FieldErrors<FieldValues>
 }
 
-const ErrorText: FC<ErrorTextProps> = ({ name, errors }) => {
+const ErrorText: FC<Props> = ({ name, errors }) => {
+  const {
+    theme: {
+      colors,
+      utils: { scale },
+    },
+  } = styleManager.useStyles()
   const hasError = errors[name] ? true : false
 
   return hasError ? (

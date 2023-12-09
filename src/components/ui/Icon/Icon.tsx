@@ -1,7 +1,7 @@
 import * as icons from 'lucide-react-native'
 import React, { FC } from 'react'
 
-import { scale } from '@/libs'
+import { styleManager } from '@/libs'
 
 interface IconProps extends icons.LucideProps {
   name: keyof Omit<
@@ -12,6 +12,12 @@ interface IconProps extends icons.LucideProps {
 }
 
 const Icon: FC<IconProps> = ({ name, size, ...rest }) => {
+  const {
+    theme: {
+      utils: { scale },
+    },
+  } = styleManager.useStyles()
+
   const LucideIcon = icons[name]
 
   return <LucideIcon size={scale(size)} {...rest} />

@@ -8,34 +8,40 @@ import {
 
 import { styleManager } from '@/libs'
 
-import { secondaryButtonStyles } from './SecondaryButton.style'
+import { stylesheet } from './PrimaryButton.style'
 
-type SecondaryButtonProps = {
+type Props = {
   children: string
   disabled?: boolean
   fullWidth?: boolean
   onPress?: (event: GestureResponderEvent) => void
 }
 
-const SecondaryButton: FC<SecondaryButtonProps> = ({
+const PrimaryButton: FC<Props> = ({
   children,
   disabled,
   fullWidth,
   onPress,
 }) => {
-  const { styles } = styleManager.useStyles(secondaryButtonStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   return (
     <TouchableOpacity
       activeOpacity={0.7}
       disabled={disabled}
       onPress={onPress}
-      {...(fullWidth ? { style: styles.fullWidth } : {})}>
-      <View style={styles.wrapper(disabled)}>
+      style={fullWidth && styles.fullWidth}>
+      <View
+        style={[
+          {
+            opacity: disabled ? 0.7 : 1,
+          },
+          styles.wrapper,
+        ]}>
         <Text style={styles.title}>{children}</Text>
       </View>
     </TouchableOpacity>
   )
 }
 
-export default SecondaryButton
+export default PrimaryButton

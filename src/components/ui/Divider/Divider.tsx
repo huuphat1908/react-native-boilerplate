@@ -1,16 +1,22 @@
 import React, { FC } from 'react'
 import { View } from 'react-native'
 
-import { colors } from '@/constants'
-import { scale } from '@/libs'
+import { styleManager } from '@/libs'
 
-type DividerProps = {
+type Props = {
   color?: string
   thickness?: number
   gap?: number
 }
 
-const Divider: FC<DividerProps> = ({ color, thickness, gap }) => {
+const Divider: FC<Props> = ({ color, thickness, gap }) => {
+  const {
+    theme: {
+      colors,
+      utils: { scale },
+    },
+  } = styleManager.useStyles()
+
   return (
     <View
       style={{

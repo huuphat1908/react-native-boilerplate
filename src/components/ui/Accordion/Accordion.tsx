@@ -11,17 +11,20 @@ import { HStack, Icon, VStack } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { accordionStyles } from './Accordion.style'
+import { stylesheet } from './Accordion.style'
 
-type AccordionProps = {
+type Props = {
   title: string
   children: ReactNode
 }
 
-const Accordion: FC<AccordionProps> = ({ title, children }) => {
+const Accordion: FC<Props> = ({ title, children }) => {
   const { isOpen, toggle } = useDisclose()
+  const {
+    styles,
+    theme: { colors },
+  } = styleManager.useStyles(stylesheet)
   const rotateValue = useSharedValue(0)
-  const { styles, theme } = styleManager.useStyles(accordionStyles)
 
   const handleToggle = useCallback(() => {
     rotateValue.value = withTiming(isOpen ? 0 : 1)
@@ -40,7 +43,7 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
         <HStack style={styles.container}>
           <Text style={styles.title}>{title}</Text>
           <Animated.View style={rotateStyle}>
-            <Icon name="ChevronRight" size={24} color={theme.colors.white} />
+            <Icon name="ChevronRight" size={24} color={colors.white} />
           </Animated.View>
         </HStack>
       </Pressable>
