@@ -31,6 +31,11 @@ export const theme = {
       color: colors.black,
       width: '100%',
     },
+    inputIcon: {
+      position: 'absolute',
+      right: scale(10),
+      height: '100%',
+    },
   },
   utils: {
     hexToRGBA: (hex: string, opacity: number) => {

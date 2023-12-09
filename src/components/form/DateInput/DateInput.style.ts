@@ -1,15 +1,10 @@
 import { styleManager } from '@/libs'
 
-export const dateInputStyles = styleManager.createStyleSheet(theme => ({
+export const stylesheet = styleManager.createStyleSheet(({ colors }) => ({
   readOnlyInput: {
     opacity: 0.4,
   },
   errorInput: {
-    borderColor: theme.colors.red,
-  },
-  iconWrapper: {
-    position: 'absolute',
-    right: 10,
-    height: '100%',
+    borderColor: colors.red,
   },
 }))

@@ -1,15 +1,15 @@
 import { styleManager } from '@/libs'
 
-export const switchStyles = styleManager.createStyleSheet(theme => ({
+export const stylesheet = styleManager.createStyleSheet(({ colors }) => ({
   wrapper: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 500,
-    borderColor: theme.colors.gray,
+    borderColor: colors.gray,
     borderWidth: 1,
   },
   switchButton: {
-    backgroundColor: theme.colors.red,
+    backgroundColor: colors.red,
     position: 'absolute',
     borderRadius: 100,
   },

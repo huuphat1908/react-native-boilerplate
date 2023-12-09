@@ -3,19 +3,21 @@ import { Controller, useFormContext } from 'react-hook-form'
 import { TouchableWithoutFeedback } from 'react-native'
 
 import { Center, Icon } from '@/components'
-import { colors } from '@/constants'
 import { styleManager } from '@/libs'
 
-import { checkboxStyles } from './Checkbox.style'
+import { stylesheet } from './Checkbox.style'
 
-type CheckboxProps = {
+type Props = {
   name: string
   readOnly?: boolean
 }
 
-const Checkbox: FC<CheckboxProps> = ({ name, readOnly }) => {
+const Checkbox: FC<Props> = ({ name, readOnly }) => {
   const { control } = useFormContext()
-  const { styles } = styleManager.useStyles(checkboxStyles)
+  const {
+    styles,
+    theme: { colors },
+  } = styleManager.useStyles(stylesheet)
 
   return (
     <Controller

@@ -15,9 +15,9 @@ import {
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { selectStyles } from './Select.style'
+import { stylesheet } from './Select.style'
 
-type SelectProps = {
+type Props = {
   name: string
   label: string
   data: Array<SelectItem>
@@ -25,19 +25,16 @@ type SelectProps = {
   inputProps?: TextInputProps
 }
 
-const Select: FC<SelectProps> = ({
-  name,
-  label,
-  data,
-  readOnly,
-  inputProps,
-}) => {
+const Select: FC<Props> = ({ name, label, data, readOnly, inputProps }) => {
   const {
     control,
     setValue,
     formState: { errors },
   } = useFormContext()
-  const { styles, theme } = styleManager.useStyles(selectStyles)
+  const {
+    styles,
+    theme: { colors, components },
+  } = styleManager.useStyles(stylesheet)
   const { isOpen, open, close } = useDisclose()
   const hasError = errors[name] ? true : false
 
@@ -65,18 +62,18 @@ const Select: FC<SelectProps> = ({
                 pointerEvents="none"
                 editable={false}
                 placeholder={label}
-                placeholderTextColor={theme.colors.gray}
+                placeholderTextColor={colors.gray}
                 {...inputProps}
                 style={[
-                  theme.components.input,
+                  components.input,
                   readOnly && styles.readOnlyInput,
                   isOpen && styles.focusedInput,
                   hasError && styles.errorInput,
                   inputProps?.style,
                 ]}
               />
-              <Center style={styles.iconWrapper}>
-                <Icon name="ChevronDown" size={20} color={theme.colors.black} />
+              <Center style={components.inputIcon}>
+                <Icon name="ChevronDown" size={20} color={colors.black} />
               </Center>
             </HStack>
           </TouchableOpacity>
@@ -91,9 +88,7 @@ const Select: FC<SelectProps> = ({
                     styles.itemWrapper,
                     {
                       backgroundColor:
-                        item.value === value
-                          ? theme.colors.lightGray
-                          : theme.colors.white,
+                        item.value === value ? colors.lightGray : colors.white,
                     },
                   ]}>
                   <Body>{item.label}</Body>

@@ -1,20 +1,22 @@
-import { scale, styleManager } from '@/libs'
+import { styleManager } from '@/libs'
 
-export const textAreaStyles = styleManager.createStyleSheet(theme => ({
-  textArea: {
-    ...theme.components.input,
-    paddingTop: theme.paddings.lg,
-    height: scale(100),
-  },
-  readOnlyInput: {
-    opacity: 0.4,
-  },
-  focusedInput: {
-    borderColor: theme.colors.blue,
-    borderWidth: scale(1.5),
-    color: theme.colors.black,
-  },
-  errorInput: {
-    borderColor: theme.colors.red,
-  },
-}))
+export const stylesheet = styleManager.createStyleSheet(
+  ({ components, paddings, colors, utils: { scale } }) => ({
+    textArea: {
+      ...components.input,
+      paddingTop: paddings.lg,
+      height: scale(100),
+    },
+    readOnlyInput: {
+      opacity: 0.4,
+    },
+    focusedInput: {
+      borderColor: colors.blue,
+      borderWidth: scale(1.5),
+      color: colors.black,
+    },
+    errorInput: {
+      borderColor: colors.red,
+    },
+  }),
+)

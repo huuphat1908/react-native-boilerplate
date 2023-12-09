@@ -1,15 +1,17 @@
-import { scale, styleManager } from '@/libs'
+import { styleManager } from '@/libs'
 
-export const inputStyles = styleManager.createStyleSheet(theme => ({
-  readOnlyInput: {
-    opacity: 0.4,
-  },
-  focusedInput: {
-    borderColor: theme.colors.blue,
-    borderWidth: scale(1.5),
-    color: theme.colors.black,
-  },
-  errorInput: {
-    borderColor: theme.colors.red,
-  },
-}))
+export const stylesheet = styleManager.createStyleSheet(
+  ({ colors, utils: { scale } }) => ({
+    readOnlyInput: {
+      opacity: 0.4,
+    },
+    focusedInput: {
+      borderColor: colors.blue,
+      borderWidth: scale(1.5),
+      color: colors.black,
+    },
+    errorInput: {
+      borderColor: colors.red,
+    },
+  }),
+)

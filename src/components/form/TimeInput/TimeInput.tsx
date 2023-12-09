@@ -9,21 +9,24 @@ import { dateTimeFormat } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { dateInputStyles } from './DateInput.style'
+import { stylesheet } from './TimeInput.style'
 
-type DateInputProps = {
+type Props = {
   name: string
   readOnly?: boolean
 } & TextInputProps
 
-const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
+const TimeInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
   const { isOpen, open, close } = useDisclose()
-  const { theme, styles } = styleManager.useStyles(dateInputStyles)
+  const {
+    theme: { colors, components },
+    styles,
+  } = styleManager.useStyles(stylesheet)
   const {
     control,
     formState: { errors },
   } = useFormContext()
-  const { date: dateFormat } = dateTimeFormat
+  const { time: timeFormat } = dateTimeFormat
   const hasError = errors[name] ? true : false
 
   return (
@@ -34,7 +37,7 @@ const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
         <Box>
           <DateTimePickerModal
             isVisible={isOpen}
-            mode="date"
+            mode="time"
             positiveButton={{
               label: 'Confirm',
             }}
@@ -43,11 +46,12 @@ const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
             }}
             confirmTextIOS="Confirm"
             cancelTextIOS="Cancel"
-            date={value ? moment(value, dateFormat).toDate() : new Date()}
+            date={value ? moment(value, timeFormat).toDate() : new Date()}
+            is24Hour
             onCancel={close}
             onConfirm={date => {
               close()
-              onChange(moment(date).format(dateFormat))
+              onChange(moment(date).format(timeFormat))
               onBlur()
             }}
           />
@@ -57,17 +61,17 @@ const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
                 value={value}
                 editable={false}
                 pointerEvents="none"
-                placeholderTextColor={theme.colors.gray}
+                placeholderTextColor={colors.gray}
                 style={[
-                  theme.components.input,
+                  components.input,
                   readOnly && styles.readOnlyInput,
                   hasError && styles.errorInput,
                   style,
                 ]}
                 {...rest}
               />
-              <Center style={styles.iconWrapper}>
-                <Icon name="Calendar" size={20} color={theme.colors.black} />
+              <Center style={components.inputIcon}>
+                <Icon name="Clock" size={20} color={colors.black} />
               </Center>
             </HStack>
           </TouchableOpacity>
@@ -78,4 +82,4 @@ const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
   )
 }
 
-export default DateInput
+export default TimeInput

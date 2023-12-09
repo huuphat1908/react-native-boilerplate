@@ -5,21 +5,21 @@ import { TouchableOpacity } from 'react-native'
 import { Body, Box, Center, ErrorText, HStack, VStack } from '@/components'
 import { styleManager } from '@/libs'
 
-import { radioStyles } from './Radio.style'
+import { stylesheet } from './Radio.style'
 
-type RadioProps = {
+type Props = {
   name: string
   data: Array<RadioItem>
   readOnly?: boolean
 }
 
-const Radio: FC<RadioProps> = ({ name, data, readOnly }) => {
+const Radio: FC<Props> = ({ name, data, readOnly }) => {
   const {
     control,
     formState: { errors },
   } = useFormContext()
   const hasError = errors[name] ? true : false
-  const { styles } = styleManager.useStyles(radioStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   return (
     <Controller

@@ -11,12 +11,11 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated'
 
-import { colors } from '@/constants'
 import { scale, styleManager } from '@/libs'
 
-import { switchStyles } from './Switch.style'
+import { stylesheet } from './Switch.style'
 
-type SwitchProps = {
+type Props = {
   name: string
   readOnly?: boolean
 }
@@ -27,9 +26,12 @@ const BUTTON_HEIGHT = scale(25)
 const SWITCH_BUTTON_AREA = BUTTON_HEIGHT - SWITCH_BUTTON_PADDING
 const InterpolateXInput = [0, 1]
 
-const Switch: FC<SwitchProps> = ({ name, readOnly }) => {
+const Switch: FC<Props> = ({ name, readOnly }) => {
   const { control, getValues } = useFormContext()
-  const { styles } = styleManager.useStyles(switchStyles)
+  const {
+    styles,
+    theme: { colors },
+  } = styleManager.useStyles(stylesheet)
 
   const shareValue = useSharedValue(getValues(name) ? 1 : 0)
 

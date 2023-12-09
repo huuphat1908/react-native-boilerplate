@@ -17,13 +17,12 @@ import {
 } from 'react-native'
 
 import { Body, Box, Center, ErrorText, HStack, Icon } from '@/components'
-import { colors } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { dropdownStyles } from './Dropdown.style'
+import { stylesheet } from './Dropdown.style'
 
-type DropdownProps = {
+type Props = {
   name: string
   label: string
   data: Array<DropdownItem>
@@ -32,7 +31,7 @@ type DropdownProps = {
   inputProps?: TextInputProps
 }
 
-const Dropdown: FC<DropdownProps> = ({
+const Dropdown: FC<Props> = ({
   name,
   label,
   data,
@@ -48,7 +47,10 @@ const Dropdown: FC<DropdownProps> = ({
   } = useFormContext()
   const hasError = errors[name] ? true : false
   const { isOpen, open, close } = useDisclose()
-  const { styles, theme } = styleManager.useStyles(dropdownStyles)
+  const {
+    styles,
+    theme: { colors, components },
+  } = styleManager.useStyles(stylesheet)
   const [keyword, setKeyword] = useState('')
   const [dropdownTop, setDropdownTop] = useState(0)
   const [dropdownLeft, setDropdownLeft] = useState(0)
@@ -189,15 +191,15 @@ const Dropdown: FC<DropdownProps> = ({
                 placeholderTextColor={colors.gray}
                 {...inputProps}
                 style={[
-                  theme.components.input,
+                  components.input,
                   readOnly && styles.readOnlyInput,
                   isOpen && styles.focusedInput,
                   hasError && styles.errorInput,
                   inputProps?.style,
                 ]}
               />
-              <Center style={styles.iconWrapper}>
-                <Icon name="ChevronDown" size={20} color={theme.colors.black} />
+              <Center style={components.inputIcon}>
+                <Icon name="ChevronDown" size={20} color={colors.black} />
               </Center>
             </HStack>
           </TouchableOpacity>
