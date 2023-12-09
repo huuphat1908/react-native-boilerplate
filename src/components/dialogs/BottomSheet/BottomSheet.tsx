@@ -1,5 +1,5 @@
-import React, { FC, ReactNode, useCallback, useState } from 'react'
-import { LayoutChangeEvent, Modal, Pressable } from 'react-native'
+import React, { FC, ReactNode, useCallback } from 'react'
+import { Modal, Pressable } from 'react-native'
 import {
   Gesture,
   GestureDetector,
@@ -16,6 +16,7 @@ import Animated, {
 } from 'react-native-reanimated'
 
 import { Box } from '@/components'
+import { useLayout } from '@/hooks'
 import { styleManager } from '@/libs'
 
 import { stylesheet } from './BottomSheet.style'
@@ -30,7 +31,7 @@ const AnimatedPressable = Animated.createAnimatedComponent(Pressable)
 
 const BottomSheet: FC<Props> = ({ isOpen, onClose, children }) => {
   const { styles } = styleManager.useStyles(stylesheet)
-  const [height, setHeight] = useState(0)
+  const { height, handleLayout } = useLayout()
   const offset = useSharedValue(0)
 
   const bottomSheetAnimatedStyles = useAnimatedStyle(() => ({
@@ -57,10 +58,6 @@ const BottomSheet: FC<Props> = ({ isOpen, onClose, children }) => {
         })
       }
     })
-
-  const handleLayout = useCallback((event: LayoutChangeEvent) => {
-    setHeight(event.nativeEvent.layout.height)
-  }, [])
 
   return (
     <Modal
