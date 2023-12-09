@@ -1,22 +1,24 @@
-import { scale, styleManager } from '@/libs'
+import { styleManager } from '@/libs'
 
-export const alertDialogStyles = styleManager.createStyleSheet(theme => ({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: theme.utils.hexToRGBA(theme.colors.black, 0.4),
-  },
-  wrapper: {
-    borderRadius: 16,
-    padding: theme.paddings.xxl,
-    marginHorizontal: theme.margins.xl,
-    gap: scale(40),
-  },
-  textGroupWrapper: {
-    gap: scale(15),
-  },
-  message: {
-    color: theme.colors.darkGray,
-  },
-}))
+export const stylesheet = styleManager.createStyleSheet(
+  ({ colors, paddings, margins, utils: { scale, hexToRGBA } }) => ({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: hexToRGBA(colors.black, 0.4),
+    },
+    wrapper: {
+      borderRadius: 16,
+      padding: paddings.xxl,
+      marginHorizontal: margins.xl,
+      gap: scale(40),
+    },
+    textGroupWrapper: {
+      gap: scale(15),
+    },
+    message: {
+      color: colors.darkGray,
+    },
+  }),
+)

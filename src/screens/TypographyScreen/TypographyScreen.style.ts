@@ -1,8 +1,10 @@
-import { scale, styleManager } from '@/libs'
+import { styleManager } from '@/libs'
 
-export const typographyScreenStyles = styleManager.createStyleSheet(theme => ({
-  container: {
-    gap: scale(10),
-    margin: theme.margins.xl,
-  },
-}))
+export const stylesheet = styleManager.createStyleSheet(
+  ({ margins, utils: { scale } }) => ({
+    container: {
+      gap: scale(10),
+      margin: margins.xl,
+    },
+  }),
+)

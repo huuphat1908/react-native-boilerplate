@@ -1,13 +1,15 @@
-import { scale, styleManager } from '@/libs'
+import { styleManager } from '@/libs'
 
-export const formElementScreenStyles = styleManager.createStyleSheet(theme => ({
-  container: {
-    flex: 1,
-  },
-  contentContainer: {
-    padding: theme.paddings.xl,
-  },
-  buttonGroupWrapper: {
-    gap: scale(10),
-  },
-}))
+export const stylesheet = styleManager.createStyleSheet(
+  ({ paddings, utils: { scale } }) => ({
+    container: {
+      flex: 1,
+    },
+    contentContainer: {
+      padding: paddings.xl,
+    },
+    buttonGroupWrapper: {
+      gap: scale(10),
+    },
+  }),
+)

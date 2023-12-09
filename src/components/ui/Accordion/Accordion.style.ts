@@ -1,15 +1,17 @@
-import { scale, styleManager } from '@/libs'
+import { styleManager } from '@/libs'
 
-export const accordionStyles = styleManager.createStyleSheet(theme => ({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: theme.paddings.lg,
-    backgroundColor: theme.colors.blue,
-  },
-  title: {
-    color: theme.colors.white,
-    fontSize: scale(16),
-    fontWeight: 'bold',
-  },
-}))
+export const stylesheet = styleManager.createStyleSheet(
+  ({ paddings, colors, utils: { scale } }) => ({
+    container: {
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: paddings.lg,
+      backgroundColor: colors.blue,
+    },
+    title: {
+      color: colors.white,
+      fontSize: scale(16),
+      fontWeight: 'bold',
+    },
+  }),
+)
