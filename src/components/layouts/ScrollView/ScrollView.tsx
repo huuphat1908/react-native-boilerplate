@@ -6,24 +6,10 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native'
 
-import { styleManager } from '@/libs'
-
 const ScrollView: FC<ScrollViewProps> = ({ children, style, ...rest }) => {
-  const {
-    theme: { colors },
-  } = styleManager.useStyles()
-
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <RNScrollView
-        style={[
-          {
-            backgroundColor: colors.white,
-          },
-          style,
-        ]}
-        {...rest}
-        automaticallyAdjustKeyboardInsets>
+      <RNScrollView style={[style]} {...rest} automaticallyAdjustKeyboardInsets>
         {children}
       </RNScrollView>
     </TouchableWithoutFeedback>

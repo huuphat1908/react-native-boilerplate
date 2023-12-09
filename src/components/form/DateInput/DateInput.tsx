@@ -11,12 +11,12 @@ import { styleManager } from '@/libs'
 
 import { stylesheet } from './DateInput.style'
 
-type DateInputProps = {
+type Props = {
   name: string
   readOnly?: boolean
 } & TextInputProps
 
-const DateInput: FC<DateInputProps> = ({ name, style, readOnly, ...rest }) => {
+const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
   const { isOpen, open, close } = useDisclose()
   const {
     theme: { colors, components },
