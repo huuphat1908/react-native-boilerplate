@@ -3,10 +3,10 @@ import React from 'react'
 import { Accordion, Body, Box, Divider } from '@/components'
 import { styleManager } from '@/libs'
 
-import { componentScreenStyles } from './ComponentScreen.style'
+import { stylesheet } from './ComponentScreen.style'
 
 const ComponentScreen = () => {
-  const { styles } = styleManager.useStyles(componentScreenStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   return (
     <Box style={styles.container}>

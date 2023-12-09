@@ -1,13 +1,15 @@
 import React from 'react'
 
 import { Box, Divider, HStack, Label } from '@/components'
-import { colors } from '@/constants'
 import { styleManager } from '@/libs'
 
-import { colorScreenStyles } from './ColorScreen.style'
+import { stylesheet } from './ColorScreen.style'
 
 const ColorScreen = () => {
-  const { styles } = styleManager.useStyles(colorScreenStyles)
+  const {
+    styles,
+    theme: { colors },
+  } = styleManager.useStyles(stylesheet)
 
   return (
     <Box style={styles.container}>

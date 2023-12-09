@@ -15,10 +15,10 @@ import {
 } from '@/components'
 import { styleManager } from '@/libs'
 
-import { typographyScreenStyles } from './TypographyScreen.style'
+import { stylesheet } from './TypographyScreen.style'
 
 const TypographyScreen = () => {
-  const { styles } = styleManager.useStyles(typographyScreenStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   return (
     <Box style={styles.container}>

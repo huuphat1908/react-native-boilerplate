@@ -9,10 +9,10 @@ import {
 } from '@/components'
 import { styleManager } from '@/libs'
 
-import { buttonScreenStyles } from './ButtonScreen.style'
+import { stylesheet } from './ButtonScreen.style'
 
 const ButtonScreen = () => {
-  const { styles } = styleManager.useStyles(buttonScreenStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   return (
     <Box style={styles.container}>

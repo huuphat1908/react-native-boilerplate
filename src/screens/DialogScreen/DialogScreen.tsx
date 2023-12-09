@@ -11,10 +11,10 @@ import {
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { dialogScreenStyles } from './DialogScreen.style'
+import { stylesheet } from './DialogScreen.style'
 
 const DialogScreen = () => {
-  const { styles } = styleManager.useStyles(dialogScreenStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
   const {
     isOpen: isOpenActionDialog,
     open: openActionDialog,

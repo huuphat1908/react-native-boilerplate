@@ -23,11 +23,11 @@ import { zodResolver } from '@hookform/resolvers/zod'
 
 import { data, defaultValues } from './constants'
 import { formElementSchema } from './formElementSchema'
-import { formElementScreenStyles } from './FormElementScreen.style'
+import { stylesheet } from './FormElementScreen.style'
 
 const FormElementScreen = () => {
   const { isOpen: isReadOnly, toggle } = useDisclose()
-  const { styles } = styleManager.useStyles(formElementScreenStyles)
+  const { styles } = styleManager.useStyles(stylesheet)
   const methods = useForm({
     defaultValues,
     resolver: zodResolver(formElementSchema()),
