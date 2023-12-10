@@ -1,0 +1,10 @@
+{
+  "placeholder": {
+    "input": "Input",
+    "dateInput": "Date Input",
+    "timeInput": "Time Input",
+    "dropdown": "Dropdown",
+    "select": "Select",
+    "textArea": "Text Area"
+  }
+}

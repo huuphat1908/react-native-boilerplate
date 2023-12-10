@@ -1,5 +1,6 @@
 import React from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import {
   Checkbox,
@@ -28,6 +29,7 @@ import { stylesheet } from './FormElementScreen.style'
 const FormElementScreen = () => {
   const { isOpen: isReadOnly, toggle } = useDisclose()
   const { styles } = styleManager.useStyles(stylesheet)
+  const { t } = useTranslation('formElementScreen')
   const methods = useForm({
     defaultValues,
     resolver: zodResolver(formElementSchema()),
@@ -39,7 +41,11 @@ const FormElementScreen = () => {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        <Input name="input" placeholder="Input" readOnly={isReadOnly} />
+        <Input
+          name="input"
+          placeholder={t('placeholder.input')}
+          readOnly={isReadOnly}
+        />
         <Divider gap={20} />
 
         <DateInput

@@ -20,6 +20,9 @@ export const theme = {
     xl: scale(12),
   },
   components: {
+    container: {
+      flex: 1,
+    },
     input: {
       borderWidth: scale(1),
       borderRadius: 10,

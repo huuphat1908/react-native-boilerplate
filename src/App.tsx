@@ -1,3 +1,5 @@
+import './i18n'
+
 import React from 'react'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { UnistylesTheme } from 'react-native-unistyles'
