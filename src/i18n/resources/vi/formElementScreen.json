@@ -1,0 +1,10 @@
+{
+  "placeholder": {
+    "input": "Đầu vào",
+    "dateInput": "Ngày đầu vào",
+    "timeInput": "Thời gian đầu vào",
+    "dropdown": "Thả xuống",
+    "select": "Lựa chọn",
+    "textArea": "Vùng văn bản"
+  }
+}
