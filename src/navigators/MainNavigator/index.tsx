@@ -21,12 +21,12 @@ import Header from './Header'
 const Drawer = createDrawerNavigator<MainParamList>()
 
 export enum MainRoutes {
+  FORM_ELEMENT = 'Form Element',
   BUTTON = 'Button',
   COLOR = 'Color',
   COMPONENT = 'Component',
   DIALOG = 'Dialog',
   TYPOGRAPHY = 'Typography',
-  FORM_ELEMENT = 'Form Element',
 }
 
 type MainParamList = {
