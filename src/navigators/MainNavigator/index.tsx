@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 
 import {
   ButtonScreen,
@@ -13,6 +13,8 @@ import {
   DrawerNavigationProp,
 } from '@react-navigation/drawer'
 import { useNavigation } from '@react-navigation/native'
+
+import Header from './Header'
 
 const Drawer = createDrawerNavigator<MainParamList>()
 
@@ -34,13 +36,18 @@ type MainParamList = {
   [MainRoutes.FORM_ELEMENT]: undefined
 }
 
-export const useAppNavigation = () => {
+export const useMainNavigation = () => {
   return useNavigation<DrawerNavigationProp<MainParamList>>()
 }
 
 const MainNavigator = () => {
+  const renderHeader = useCallback(() => <Header />, [])
+
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      screenOptions={{
+        header: renderHeader,
+      }}>
       <Drawer.Screen
         name={MainRoutes.FORM_ELEMENT}
         component={FormElementScreen}

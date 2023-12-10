@@ -19,6 +19,12 @@ export const theme = {
     lg: scale(8),
     xl: scale(12),
   },
+  gutters: {
+    sm: scale(2),
+    md: scale(4),
+    lg: scale(8),
+    xl: scale(12),
+  },
   components: {
     container: {
       flex: 1,
