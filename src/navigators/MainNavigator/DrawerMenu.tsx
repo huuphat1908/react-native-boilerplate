@@ -13,10 +13,7 @@ import DrawerItem from './DrawerItem'
 
 const DrawerMenu = (props: DrawerContentComponentProps) => {
   const navigation = useMainNavigation()
-  const {
-    theme: { colors },
-    styles,
-  } = styleManager.useStyles(stylesheet)
+  const { styles } = styleManager.useStyles(stylesheet)
 
   const currentRoute = props.state.routeNames[props.state.index]
 
