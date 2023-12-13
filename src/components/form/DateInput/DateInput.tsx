@@ -5,9 +5,9 @@ import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
 import { Box, Center, ErrorText, HStack, Icon } from '@/components'
-import { dateTimeFormat } from '@/constants'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
+import { useApplicationState } from '@/store'
 
 import { stylesheet } from './DateInput.style'
 
@@ -26,7 +26,8 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
     control,
     formState: { errors },
   } = useFormContext()
-  const { date: dateFormat } = dateTimeFormat
+  const { dateFormat } = useApplicationState()
+
   const hasError = errors[name] ? true : false
 
   return (
