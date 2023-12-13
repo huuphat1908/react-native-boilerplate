@@ -9,3 +9,10 @@ declare module 'i18next' {
     resources: (typeof resources)['en']
   }
 }
+
+type LanguageCode = keyof typeof resources
+
+export const languages: Record<LanguageCode, string> = {
+  en: 'English',
+  vi: 'Việt Nam',
+}
