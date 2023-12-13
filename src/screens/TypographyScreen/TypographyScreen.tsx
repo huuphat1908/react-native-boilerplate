@@ -43,7 +43,9 @@ const TypographyScreen = () => {
       <Label>Label</Label>
       <Divider />
 
-      <Link href="https://reactnative.dev/docs/linking">Link</Link>
+      <Link href="https://github.com/huuphat1908/react-native-boilerplate">
+        Link
+      </Link>
       <Divider />
 
       <Body>Body</Body>
