@@ -13,6 +13,7 @@ export const stylesheet = styleManager.createStyleSheet(
       padding: paddings.xxl,
       marginHorizontal: margins.xl,
       gap: scale(40),
+      backgroundColor: colors.white,
     },
     textGroupWrapper: {
       gap: scale(15),

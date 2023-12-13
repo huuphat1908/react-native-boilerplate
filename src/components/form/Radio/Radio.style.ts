@@ -17,7 +17,7 @@ export const stylesheet = styleManager.createStyleSheet(
       height: scale(24),
       borderWidth: scale(1),
       borderColor: colors.gray,
-      borderRadius: scale(12),
+      borderRadius: scale(24) / 2,
     },
     radioButtonWrapperActive: {
       borderColor: colors.blue,
@@ -28,7 +28,7 @@ export const stylesheet = styleManager.createStyleSheet(
     radioButtonContent: {
       width: scale(14),
       height: scale(14),
-      borderRadius: scale(7),
+      borderRadius: scale(14) / 2,
     },
     radioButtonContentActive: {
       backgroundColor: colors.blue,
