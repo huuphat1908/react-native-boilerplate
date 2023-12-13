@@ -26,7 +26,7 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
     control,
     formState: { errors },
   } = useFormContext()
-  const { dateFormat } = useApplicationState()
+  const dateFormat = useApplicationState(state => state.dateFormat)
 
   const hasError = errors[name] ? true : false
 

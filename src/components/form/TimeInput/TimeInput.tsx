@@ -26,7 +26,7 @@ const TimeInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
     control,
     formState: { errors },
   } = useFormContext()
-  const { timeFormat } = useApplicationState()
+  const timeFormat = useApplicationState(state => state.timeFormat)
 
   const hasError = errors[name] ? true : false
 
