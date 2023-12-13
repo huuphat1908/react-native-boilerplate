@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { immer } from 'zustand/middleware/immer'
 
 import { LanguageCode } from '@/types/i18next'
 
@@ -26,21 +25,22 @@ type Actions = {
   logout: () => void
 }
 
-const useApplicationState = create<State & Actions>()(
-  immer(set => ({
-    theme: 'Light',
-    language: 'en',
-    dateFormat: 'DD/MM/YYYY',
-    timeFormat: 'HH:mm',
-    isLoggedIn: false,
+const initialState: State = {
+  theme: 'Light',
+  language: 'en',
+  dateFormat: 'DD/MM/YYYY',
+  timeFormat: 'HH:mm',
+  isLoggedIn: false,
+}
 
-    setTheme: theme => set(() => ({ theme })),
-    setLanguage: language => set(() => ({ language })),
-    setDateFormat: dateFormat => set(() => ({ dateFormat })),
-    setTimeFormat: timeFormat => set(() => ({ timeFormat })),
-    login: () => set(() => ({ isLoggedIn: true })),
-    logout: () => set(() => ({ isLoggedIn: false })),
-  })),
-)
+const useApplicationState = create<State & Actions>()(set => ({
+  ...initialState,
+  setTheme: theme => set(() => ({ theme })),
+  setLanguage: language => set(() => ({ language })),
+  setDateFormat: dateFormat => set(() => ({ dateFormat })),
+  setTimeFormat: timeFormat => set(() => ({ timeFormat })),
+  login: () => set(() => ({ isLoggedIn: true })),
+  logout: () => set(() => ({ isLoggedIn: false })),
+}))
 
 export default useApplicationState
