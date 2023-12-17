@@ -5,7 +5,6 @@ export const stylesheet = styleManager.createStyleSheet(
     backdrop: {
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'center',
       backgroundColor: hexToRGBA(colors.black, 0.4),
     },
     wrapper: {
