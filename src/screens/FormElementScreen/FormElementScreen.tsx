@@ -6,7 +6,7 @@ import {
   Checkbox,
   DateInputField,
   Divider,
-  Dropdown,
+  DropdownField,
   InputField,
   PrimaryButton,
   Radio,
@@ -62,7 +62,7 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <Dropdown
+        <DropdownField
           name="dropdown"
           label="Dropdown"
           data={data}

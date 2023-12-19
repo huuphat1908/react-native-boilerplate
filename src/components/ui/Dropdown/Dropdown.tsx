@@ -7,49 +7,42 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { Controller, useFormContext } from 'react-hook-form'
-import {
-  FlatList,
-  Modal,
-  TextInput,
-  TextInputProps,
-  TouchableOpacity,
-} from 'react-native'
+import { FlatList, Modal, TextInputProps, TouchableOpacity } from 'react-native'
 
-import { Body, Box, Center, ErrorText, HStack, Icon } from '@/components'
+import { Body, Box, Input } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
 import { stylesheet } from './Dropdown.style'
 
 type Props = {
-  name: string
   label: string
+  value: string
   data: Array<DropdownItem>
-  readOnly?: boolean
+  onSelect: (item: DropdownItem) => void
   searchable?: boolean
+  noItemFoundText?: string
+  //input props
   inputProps?: TextInputProps
+  readOnly?: boolean
+  hasError?: boolean
 }
 
 const Dropdown: FC<Props> = ({
-  name,
   label,
+  value,
   data,
-  readOnly,
+  onSelect,
   searchable,
+  noItemFoundText,
   inputProps,
+  readOnly,
+  hasError,
 }) => {
-  const {
-    control,
-    setValue,
-    getValues,
-    formState: { errors },
-  } = useFormContext()
-  const hasError = errors[name] ? true : false
   const { isOpen, open, close } = useDisclose()
   const {
     styles,
-    theme: { colors, components },
+    theme: { colors },
   } = styleManager.useStyles(stylesheet)
   const [keyword, setKeyword] = useState('')
   const [dropdownTop, setDropdownTop] = useState(0)
@@ -77,10 +70,7 @@ const Dropdown: FC<Props> = ({
 
   const onItemPress = (item: DropdownItem) => {
     setKeyword('')
-    setValue(name, item.value, {
-      shouldValidate: true,
-      shouldTouch: true,
-    })
+    onSelect(item)
     close()
   }
 
@@ -89,7 +79,7 @@ const Dropdown: FC<Props> = ({
   }: {
     item: DropdownItem
   }): ReactElement<any, any> => {
-    const isActiveItem = item.value === getValues(name)
+    const isActiveItem = item.value === value
 
     return (
       <TouchableOpacity onPress={() => onItemPress(item)}>
@@ -109,6 +99,10 @@ const Dropdown: FC<Props> = ({
   }
 
   const renderDropdown = (): ReactElement<any, any> => {
+    const itemsMatchKeyword = data.filter(item =>
+      item.label.toLowerCase().startsWith(keyword.toLowerCase()),
+    )
+
     return (
       <Modal visible={isOpen} transparent animationType="none">
         <TouchableOpacity
@@ -129,27 +123,25 @@ const Dropdown: FC<Props> = ({
             ]}>
             {searchable && (
               <Box style={styles.searchWrapper}>
-                <TextInput
+                <Input
                   style={styles.searchInput}
                   onChangeText={debouncedResults}
                   placeholder="Search"
-                  placeholderTextColor={colors.gray}
                 />
               </Box>
             )}
             <FlatList
-              data={
-                keyword
-                  ? data.filter(item =>
-                      item.label
-                        .toLowerCase()
-                        .startsWith(keyword.toLowerCase()),
-                    )
-                  : data
-              }
+              data={keyword ? itemsMatchKeyword : data}
               renderItem={renderItem}
               keyExtractor={(item, index) => index.toString()}
             />
+            {keyword && itemsMatchKeyword.length === 0 && (
+              <Box style={styles.itemWrapper}>
+                <Body style={styles.noItemFoundText}>
+                  {noItemFoundText || 'No item found'}
+                </Body>
+              </Box>
+            )}
           </Box>
         </TouchableOpacity>
       </Modal>
@@ -167,46 +159,29 @@ const Dropdown: FC<Props> = ({
   })
 
   return (
-    <Controller
-      control={control}
-      name={name}
-      render={({ field: { value } }) => (
-        <Box>
-          <TouchableOpacity
-            style={{ zIndex: 1 }}
-            disabled={readOnly}
-            ref={DropdownButton}
-            onPress={toggleDropdown}>
-            {renderDropdown()}
-            <HStack>
-              <TextInput
-                value={
-                  find(data, {
-                    value,
-                  })?.label
-                }
-                placeholder={label}
-                pointerEvents="none"
-                editable={false}
-                placeholderTextColor={colors.gray}
-                {...inputProps}
-                style={[
-                  components.input,
-                  readOnly && styles.readOnlyInput,
-                  isOpen && styles.focusedInput,
-                  hasError && styles.errorInput,
-                  inputProps?.style,
-                ]}
-              />
-              <Center style={components.inputIcon}>
-                <Icon name="ChevronDown" size={20} color={colors.black} />
-              </Center>
-            </HStack>
-          </TouchableOpacity>
-          <ErrorText name={name} errors={errors} />
-        </Box>
-      )}
-    />
+    <Box>
+      <TouchableOpacity
+        style={{ zIndex: 1 }}
+        disabled={readOnly}
+        ref={DropdownButton}
+        onPress={toggleDropdown}>
+        {renderDropdown()}
+        <Input
+          value={
+            find(data, {
+              value,
+            })?.label
+          }
+          placeholder={label}
+          pointerEvents="none"
+          editable={false}
+          rightIconName="ChevronDown"
+          hasError={hasError}
+          style={[inputProps?.style, readOnly && { opacity: 0.4 }]}
+          {...inputProps}
+        />
+      </TouchableOpacity>
+    </Box>
   )
 }
 

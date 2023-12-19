@@ -25,15 +25,8 @@ export const stylesheet = styleManager.createStyleSheet(
     searchInput: {
       borderWidth: 0,
     },
-    errorInput: {
-      borderColor: colors.red,
-    },
-    readOnlyInput: {
-      opacity: 0.4,
-    },
-    focusedInput: {
-      borderColor: colors.blue,
-      borderWidth: scale(1.5),
+    noItemFoundText: {
+      fontFamily: 'SFProText-Italic',
     },
   }),
 )
