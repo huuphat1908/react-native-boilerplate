@@ -13,7 +13,7 @@ export { default as Radio } from './form/Radio'
 export { default as Select } from './form/Select'
 export { default as Switch } from './form/Switch'
 export { default as TextArea } from './form/TextArea'
-export { default as TimeInput } from './form/TimeInput'
+export { default as TimeInputField } from './form/TimeInputField'
 
 //layout
 export { default as Box } from './layouts/Box'

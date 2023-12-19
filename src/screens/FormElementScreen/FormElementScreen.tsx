@@ -15,7 +15,7 @@ import {
   Select,
   Switch,
   TextArea,
-  TimeInput,
+  TimeInputField,
   VStack,
 } from '@/components'
 import { useDisclose } from '@/hooks'
@@ -55,7 +55,7 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <TimeInput
+        <TimeInputField
           name="timeInput"
           placeholder="Time Input"
           readOnly={isReadOnly}
