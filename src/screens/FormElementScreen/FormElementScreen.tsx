@@ -7,7 +7,7 @@ import {
   DateInput,
   Divider,
   Dropdown,
-  Input,
+  InputField,
   PrimaryButton,
   Radio,
   ScrollView,
@@ -41,7 +41,7 @@ const FormElementScreen = () => {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        <Input
+        <InputField
           name="input"
           placeholder={t('placeholder.input')}
           readOnly={isReadOnly}
