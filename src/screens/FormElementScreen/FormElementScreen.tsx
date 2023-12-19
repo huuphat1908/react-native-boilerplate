@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 import {
   Checkbox,
-  DateInput,
+  DateInputField,
   Divider,
   Dropdown,
   InputField,
@@ -48,7 +48,7 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <DateInput
+        <DateInputField
           name="dateInput"
           placeholder="Date Input"
           readOnly={isReadOnly}

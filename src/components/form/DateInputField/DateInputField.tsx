@@ -1,27 +1,20 @@
 import moment from 'moment'
 import React, { FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
+import { TextInputProps, TouchableOpacity } from 'react-native'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
-import { Box, Center, ErrorText, HStack, Icon } from '@/components'
+import { Box, ErrorText, Input } from '@/components'
 import { useDisclose } from '@/hooks'
-import { styleManager } from '@/libs'
 import { useApplicationState } from '@/store'
-
-import { stylesheet } from './DateInput.style'
 
 type Props = {
   name: string
   readOnly?: boolean
 } & TextInputProps
 
-const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
+const DateInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
   const { isOpen, open, close } = useDisclose()
-  const {
-    theme: { colors, components },
-    styles,
-  } = styleManager.useStyles(stylesheet)
   const {
     control,
     formState: { errors },
@@ -56,24 +49,16 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
             }}
           />
           <TouchableOpacity disabled={readOnly} onPress={open}>
-            <HStack>
-              <TextInput
-                value={value}
-                editable={false}
-                pointerEvents="none"
-                placeholderTextColor={colors.gray}
-                style={[
-                  components.input,
-                  readOnly && styles.readOnlyInput,
-                  hasError && styles.errorInput,
-                  style,
-                ]}
-                {...rest}
-              />
-              <Center style={components.inputIcon}>
-                <Icon name="Calendar" size={20} color={colors.black} />
-              </Center>
-            </HStack>
+            <Input
+              value={value}
+              editable={false}
+              pointerEvents="none"
+              rightIconName="Calendar"
+              hasError={hasError}
+              style={readOnly && { opacity: 0.4 }}
+              {...rest}
+              //manually add readOnly style as pass readOnly to false editable will disable touchable
+            />
           </TouchableOpacity>
           <ErrorText name={name} errors={errors} />
         </Box>
@@ -82,4 +67,4 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
   )
 }
 
-export default DateInput
+export default DateInputField

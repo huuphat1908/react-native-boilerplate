@@ -6,7 +6,7 @@ export { default as InputDialog } from './dialogs/InputDialog'
 
 //form
 export { default as Checkbox } from './form/Checkbox'
-export { default as DateInput } from './form/DateInput'
+export { default as DateInputField } from './form/DateInputField'
 export { default as Dropdown } from './form/Dropdown'
 export { default as InputField } from './form/InputField'
 export { default as Radio } from './form/Radio'
