@@ -3,19 +3,19 @@ import { FormProvider, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
 import {
+  BottomSheetField,
   Checkbox,
-  DateInput,
+  DateInputField,
   Divider,
-  Dropdown,
-  Input,
+  DropdownField,
+  InputField,
   PrimaryButton,
   Radio,
   ScrollView,
   SecondaryButton,
-  Select,
   Switch,
   TextArea,
-  TimeInput,
+  TimeInputField,
   VStack,
 } from '@/components'
 import { useDisclose } from '@/hooks'
@@ -41,28 +41,28 @@ const FormElementScreen = () => {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        <Input
+        <InputField
           name="input"
           placeholder={t('placeholder.input')}
           readOnly={isReadOnly}
         />
         <Divider gap={20} />
 
-        <DateInput
+        <DateInputField
           name="dateInput"
           placeholder="Date Input"
           readOnly={isReadOnly}
         />
         <Divider gap={20} />
 
-        <TimeInput
+        <TimeInputField
           name="timeInput"
           placeholder="Time Input"
           readOnly={isReadOnly}
         />
         <Divider gap={20} />
 
-        <Dropdown
+        <DropdownField
           name="dropdown"
           label="Dropdown"
           data={data}
@@ -70,9 +70,9 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <Select
-          name="select"
-          label="Select"
+        <BottomSheetField
+          name="bottomSheet"
+          label="Bottom Sheet"
           data={data}
           readOnly={isReadOnly}
         />

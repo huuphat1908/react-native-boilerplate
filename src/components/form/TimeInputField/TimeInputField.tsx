@@ -1,32 +1,25 @@
 import moment from 'moment'
 import React, { FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
+import { TextInputProps, TouchableOpacity } from 'react-native'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
-import { Box, Center, ErrorText, HStack, Icon } from '@/components'
+import { Box, ErrorText, Input } from '@/components'
 import { useDisclose } from '@/hooks'
-import { styleManager } from '@/libs'
 import { useApplicationState } from '@/store'
-
-import { stylesheet } from './DateInput.style'
 
 type Props = {
   name: string
   readOnly?: boolean
 } & TextInputProps
 
-const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
+const TimeInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
   const { isOpen, open, close } = useDisclose()
-  const {
-    theme: { colors, components },
-    styles,
-  } = styleManager.useStyles(stylesheet)
   const {
     control,
     formState: { errors },
   } = useFormContext()
-  const dateFormat = useApplicationState(state => state.dateFormat)
+  const timeFormat = useApplicationState(state => state.timeFormat)
 
   const hasError = errors[name] ? true : false
 
@@ -38,7 +31,7 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
         <Box>
           <DateTimePickerModal
             isVisible={isOpen}
-            mode="date"
+            mode="time"
             positiveButton={{
               label: 'Confirm',
             }}
@@ -47,33 +40,25 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
             }}
             confirmTextIOS="Confirm"
             cancelTextIOS="Cancel"
-            date={value ? moment(value, dateFormat).toDate() : new Date()}
+            date={value ? moment(value, timeFormat).toDate() : new Date()}
+            is24Hour
             onCancel={close}
             onConfirm={date => {
               close()
-              onChange(moment(date).format(dateFormat))
+              onChange(moment(date).format(timeFormat))
               onBlur()
             }}
           />
           <TouchableOpacity disabled={readOnly} onPress={open}>
-            <HStack>
-              <TextInput
-                value={value}
-                editable={false}
-                pointerEvents="none"
-                placeholderTextColor={colors.gray}
-                style={[
-                  components.input,
-                  readOnly && styles.readOnlyInput,
-                  hasError && styles.errorInput,
-                  style,
-                ]}
-                {...rest}
-              />
-              <Center style={components.inputIcon}>
-                <Icon name="Calendar" size={20} color={colors.black} />
-              </Center>
-            </HStack>
+            <Input
+              value={value}
+              editable={false}
+              pointerEvents="none"
+              rightIconName="Clock"
+              hasError={hasError}
+              readOnly={readOnly}
+              {...rest}
+            />
           </TouchableOpacity>
           <ErrorText name={name} errors={errors} />
         </Box>
@@ -82,4 +67,4 @@ const DateInput: FC<Props> = ({ name, style, readOnly, ...rest }) => {
   )
 }
 
-export default DateInput
+export default TimeInputField
