@@ -13,7 +13,7 @@ import {
   Radio,
   ScrollView,
   SecondaryButton,
-  Switch,
+  SwitchField,
   TextArea,
   TimeInputField,
   VStack,
@@ -81,7 +81,7 @@ const FormElementScreen = () => {
         <CheckboxField name="checkbox" readOnly={isReadOnly} />
         <Divider gap={20} />
 
-        <Switch name="switch" readOnly={isReadOnly} />
+        <SwitchField name="switch" readOnly={isReadOnly} />
         <Divider gap={20} />
 
         <TextArea

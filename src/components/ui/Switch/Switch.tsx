@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useMemo } from 'react'
-import { Controller, useFormContext } from 'react-hook-form'
 import { Pressable } from 'react-native'
 import Animated, {
   Easing,
@@ -16,7 +15,8 @@ import { scale, styleManager } from '@/libs'
 import { stylesheet } from './Switch.style'
 
 type Props = {
-  name: string
+  value: boolean
+  onChange: (value: boolean) => void
   readOnly?: boolean
 }
 
@@ -26,14 +26,13 @@ const BUTTON_HEIGHT = scale(25)
 const SWITCH_BUTTON_AREA = BUTTON_HEIGHT - SWITCH_BUTTON_PADDING
 const InterpolateXInput = [0, 1]
 
-const Switch: FC<Props> = ({ name, readOnly }) => {
-  const { control, getValues } = useFormContext()
+const Switch: FC<Props> = ({ value, onChange, readOnly }) => {
   const {
     styles,
     theme: { colors },
   } = styleManager.useStyles(stylesheet)
 
-  const shareValue = useSharedValue(getValues(name) ? 1 : 0)
+  const shareValue = useSharedValue(value ? 1 : 0)
 
   const wrapperScale = useMemo(
     () => ({
@@ -89,37 +88,31 @@ const Switch: FC<Props> = ({ name, readOnly }) => {
   })
 
   return (
-    <Controller
-      control={control}
-      name={name}
-      render={({ field: { onChange, value } }) => (
-        <Pressable
-          disabled={readOnly}
-          onPress={() => {
-            handlePressSwitch()
-            onChange(!value)
-          }}
-          style={[
-            styles.wrapper,
-            readOnly && styles.wrapperReadOnly,
-            wrapperScale,
-            {
-              backgroundColor: value ? colors.blue : colors.gray,
-            },
-          ]}>
-          <Animated.View
-            style={[
-              styles.switchButton,
-              {
-                left: SWITCH_BUTTON_PADDING,
-              },
-              switchScale,
-              switchAreaStyles,
-            ]}
-          />
-        </Pressable>
-      )}
-    />
+    <Pressable
+      disabled={readOnly}
+      onPress={() => {
+        handlePressSwitch()
+        onChange(!value)
+      }}
+      style={[
+        styles.wrapper,
+        readOnly && styles.wrapperReadOnly,
+        wrapperScale,
+        {
+          backgroundColor: value ? colors.blue : colors.gray,
+        },
+      ]}>
+      <Animated.View
+        style={[
+          styles.switchButton,
+          {
+            left: SWITCH_BUTTON_PADDING,
+          },
+          switchScale,
+          switchAreaStyles,
+        ]}
+      />
+    </Pressable>
   )
 }
 
