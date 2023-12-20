@@ -1,5 +1,5 @@
 import * as icons from 'lucide-react-native'
-import React, { FC } from 'react'
+import React, { FC, useMemo } from 'react'
 import { TextInput, TextInputProps } from 'react-native'
 
 import { Center, HStack, Icon } from '@/components'
@@ -28,6 +28,8 @@ const Input: FC<Props> = ({
   onBlur,
   leftIconName,
   rightIconName,
+  editable,
+  readOnly,
   ...rest
 }) => {
   const {
@@ -40,10 +42,16 @@ const Input: FC<Props> = ({
     styles,
   } = styleManager.useStyles(stylesheet)
 
+  // if editable is passed as prop, remove readOnly from prop as readOnly will override editable
+  const readOnlyProp = useMemo(
+    () => (editable === undefined ? { readOnly } : {}),
+    [editable, readOnly],
+  )
+
   return (
     <HStack>
       {leftIconName && (
-        <Center style={styles.rightIcon}>
+        <Center style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}>
           <Icon name={leftIconName} size={20} color={colors.black} />
         </Center>
       )}
@@ -60,16 +68,18 @@ const Input: FC<Props> = ({
         placeholderTextColor={colors.gray}
         style={[
           styles.input,
-          rest.readOnly && styles.readOnlyInput,
+          readOnly && styles.readOnlyInput,
           isFocused && styles.focusedInput,
           hasError && styles.errorInput,
           style,
         ]}
+        editable={editable}
+        {...readOnlyProp}
         {...rest}
       />
 
       {rightIconName && (
-        <Center style={styles.rightIcon}>
+        <Center style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}>
           <Icon name={rightIconName} size={20} color={colors.black} />
         </Center>
       )}

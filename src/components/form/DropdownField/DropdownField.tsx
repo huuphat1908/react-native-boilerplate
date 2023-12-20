@@ -1,4 +1,4 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps, FC, useCallback } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
 
 import { Box, Dropdown, ErrorText } from '@/components'
@@ -15,12 +15,15 @@ const DropdownField: FC<Props> = ({ name, ...rest }) => {
   } = useFormContext()
   const hasError = errors[name] ? true : false
 
-  const onSelect = (item: DropdownItem) => {
-    setValue(name, item.value, {
-      shouldValidate: true,
-      shouldTouch: true,
-    })
-  }
+  const onSelect = useCallback(
+    (item: DropdownItem) => {
+      setValue(name, item.value, {
+        shouldValidate: true,
+        shouldTouch: true,
+      })
+    },
+    [name, setValue],
+  )
 
   return (
     <Controller

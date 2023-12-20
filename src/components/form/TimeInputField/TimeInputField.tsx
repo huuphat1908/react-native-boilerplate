@@ -56,9 +56,8 @@ const TimeInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
               pointerEvents="none"
               rightIconName="Clock"
               hasError={hasError}
-              style={readOnly && { opacity: 0.4 }}
+              readOnly={readOnly}
               {...rest}
-              //manually add readOnly style as pass readOnly to false editable will disable touchable
             />
           </TouchableOpacity>
           <ErrorText name={name} errors={errors} />

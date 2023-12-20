@@ -1,17 +1,9 @@
 import { find } from 'lodash'
-import React, { FC } from 'react'
+import React, { FC, useCallback } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
+import { TextInputProps, TouchableOpacity } from 'react-native'
 
-import {
-  Body,
-  BottomSheet,
-  Box,
-  Center,
-  ErrorText,
-  HStack,
-  Icon,
-} from '@/components'
+import { Body, BottomSheet, Box, ErrorText, Input } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
@@ -25,7 +17,13 @@ type Props = {
   inputProps?: TextInputProps
 }
 
-const Select: FC<Props> = ({ name, label, data, readOnly, inputProps }) => {
+const BottomSheetField: FC<Props> = ({
+  name,
+  label,
+  data,
+  readOnly,
+  inputProps,
+}) => {
   const {
     control,
     setValue,
@@ -33,18 +31,25 @@ const Select: FC<Props> = ({ name, label, data, readOnly, inputProps }) => {
   } = useFormContext()
   const {
     styles,
-    theme: { colors, components },
+    theme: { colors },
   } = styleManager.useStyles(stylesheet)
-  const { isOpen, open, close } = useDisclose()
+  const {
+    isOpen: isOpenBottomSheet,
+    open: openBottomSheet,
+    close: closeBottomSheet,
+  } = useDisclose()
   const hasError = errors[name] ? true : false
 
-  const onItemPress = (item: SelectItem) => {
-    setValue(name, item.value, {
-      shouldValidate: true,
-      shouldTouch: true,
-    })
-    close()
-  }
+  const onItemPress = useCallback(
+    (item: SelectItem) => {
+      setValue(name, item.value, {
+        shouldValidate: true,
+        shouldTouch: true,
+      })
+      closeBottomSheet()
+    },
+    [closeBottomSheet, name, setValue],
+  )
 
   return (
     <Controller
@@ -55,30 +60,20 @@ const Select: FC<Props> = ({ name, label, data, readOnly, inputProps }) => {
           <TouchableOpacity
             style={{ zIndex: 1 }}
             disabled={readOnly}
-            onPress={open}>
-            <HStack>
-              <TextInput
-                value={find(data, { value })?.label}
-                pointerEvents="none"
-                editable={false}
-                placeholder={label}
-                placeholderTextColor={colors.gray}
-                {...inputProps}
-                style={[
-                  components.input,
-                  readOnly && styles.readOnlyInput,
-                  isOpen && styles.focusedInput,
-                  hasError && styles.errorInput,
-                  inputProps?.style,
-                ]}
-              />
-              <Center style={components.inputIcon}>
-                <Icon name="ChevronDown" size={20} color={colors.black} />
-              </Center>
-            </HStack>
+            onPress={openBottomSheet}>
+            <Input
+              value={find(data, { value })?.label}
+              pointerEvents="none"
+              editable={false}
+              placeholder={label}
+              rightIconName="ChevronDown"
+              hasError={hasError}
+              readOnly={readOnly}
+              {...inputProps}
+            />
           </TouchableOpacity>
 
-          <BottomSheet isOpen={isOpen} onClose={close}>
+          <BottomSheet isOpen={isOpenBottomSheet} onClose={closeBottomSheet}>
             {data.map(item => (
               <TouchableOpacity
                 key={item.value}
@@ -104,4 +99,4 @@ const Select: FC<Props> = ({ name, label, data, readOnly, inputProps }) => {
   )
 }
 
-export default Select
+export default BottomSheetField

@@ -177,7 +177,7 @@ const Dropdown: FC<Props> = ({
           editable={false}
           rightIconName="ChevronDown"
           hasError={hasError}
-          style={[inputProps?.style, readOnly && { opacity: 0.4 }]}
+          readOnly={readOnly}
           {...inputProps}
         />
       </TouchableOpacity>

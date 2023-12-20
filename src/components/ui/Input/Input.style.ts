@@ -1,5 +1,7 @@
 import { styleManager } from '@/libs'
 
+const READ_ONLY_OPACITY = 0.4
+
 export const stylesheet = styleManager.createStyleSheet(
   ({ colors, utils: { scale } }) => ({
     input: {
@@ -24,7 +26,7 @@ export const stylesheet = styleManager.createStyleSheet(
       height: '100%',
     },
     readOnlyInput: {
-      opacity: 0.4,
+      opacity: READ_ONLY_OPACITY,
     },
     focusedInput: {
       borderColor: colors.blue,
@@ -33,6 +35,9 @@ export const stylesheet = styleManager.createStyleSheet(
     },
     errorInput: {
       borderColor: colors.red,
+    },
+    readOnlyIcon: {
+      opacity: READ_ONLY_OPACITY,
     },
   }),
 )
