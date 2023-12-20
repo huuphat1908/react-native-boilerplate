@@ -14,7 +14,7 @@ import {
   ScrollView,
   SecondaryButton,
   SwitchField,
-  TextArea,
+  TextAreaField,
   TimeInputField,
   VStack,
 } from '@/components'
@@ -84,7 +84,7 @@ const FormElementScreen = () => {
         <SwitchField name="switch" readOnly={isReadOnly} />
         <Divider gap={20} />
 
-        <TextArea
+        <TextAreaField
           name="textArea"
           placeholder="Text Area"
           readOnly={isReadOnly}
