@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   red: '#ef0107',
   darkRed: '#db0007',
   blue: '#063072',
@@ -11,4 +11,6 @@ const colors = {
   lightGray: '#d9dddc',
 }
 
-export default colors
+export const FORM_FIELD_READ_ONLY_OPACITY = 0.4
+
+export const BACKDROP_OPACITY = 0.4

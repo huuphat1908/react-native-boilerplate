@@ -1,6 +1,5 @@
+import { FORM_FIELD_READ_ONLY_OPACITY } from '@/constants'
 import { styleManager } from '@/libs'
-
-const READ_ONLY_OPACITY = 0.4
 
 export const stylesheet = styleManager.createStyleSheet(
   ({ colors, utils: { scale } }) => ({
@@ -26,7 +25,7 @@ export const stylesheet = styleManager.createStyleSheet(
       height: '100%',
     },
     readOnlyInput: {
-      opacity: READ_ONLY_OPACITY,
+      opacity: FORM_FIELD_READ_ONLY_OPACITY,
     },
     focusedInput: {
       borderColor: colors.blue,
@@ -37,7 +36,7 @@ export const stylesheet = styleManager.createStyleSheet(
       borderColor: colors.red,
     },
     readOnlyIcon: {
-      opacity: READ_ONLY_OPACITY,
+      opacity: FORM_FIELD_READ_ONLY_OPACITY,
     },
   }),
 )
