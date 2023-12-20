@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 import {
   BottomSheetField,
-  Checkbox,
+  CheckboxField,
   DateInputField,
   Divider,
   DropdownField,
@@ -78,7 +78,7 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <Checkbox name="checkbox" readOnly={isReadOnly} />
+        <CheckboxField name="checkbox" readOnly={isReadOnly} />
         <Divider gap={20} />
 
         <Switch name="switch" readOnly={isReadOnly} />
