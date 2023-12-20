@@ -35,7 +35,7 @@ const initialState: State = {
   isLoggedIn: false,
 }
 
-const useApplicationState = create<State & Actions>()(
+const useApplicationSetting = create<State & Actions>()(
   persist(
     set => ({
       ...initialState,
@@ -53,4 +53,4 @@ const useApplicationState = create<State & Actions>()(
   ),
 )
 
-export default useApplicationState
+export default useApplicationSetting
