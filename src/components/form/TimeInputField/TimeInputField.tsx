@@ -14,7 +14,7 @@ type Props = {
 } & TextInputProps
 
 const TimeInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
-  const { isOpen, open, close } = useDisclose()
+  const [isOpenTimePicker, openTimePicker, closeTimePicker] = useDisclose()
   const {
     control,
     formState: { errors },
@@ -30,7 +30,7 @@ const TimeInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
       render={({ field: { onChange, onBlur, value } }) => (
         <Box>
           <DateTimePickerModal
-            isVisible={isOpen}
+            isVisible={isOpenTimePicker}
             mode="time"
             positiveButton={{
               label: 'Confirm',
@@ -42,14 +42,14 @@ const TimeInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
             cancelTextIOS="Cancel"
             date={value ? moment(value, timeFormat).toDate() : new Date()}
             is24Hour
-            onCancel={close}
+            onCancel={closeTimePicker}
             onConfirm={date => {
-              close()
+              closeTimePicker()
               onChange(moment(date).format(timeFormat))
               onBlur()
             }}
           />
-          <TouchableOpacity disabled={readOnly} onPress={open}>
+          <TouchableOpacity disabled={readOnly} onPress={openTimePicker}>
             <Input
               value={value}
               editable={false}

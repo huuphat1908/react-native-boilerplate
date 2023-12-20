@@ -32,11 +32,7 @@ const Input: FC<Props> = ({
   readOnly,
   ...rest
 }) => {
-  const {
-    isOpen: isFocused,
-    open: onFocusInput,
-    close: onBlurInput,
-  } = useDisclose()
+  const [isFocused, onFocusInput, onBlurInput] = useDisclose()
   const {
     theme: { colors },
     styles,

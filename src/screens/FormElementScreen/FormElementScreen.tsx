@@ -27,7 +27,7 @@ import { formElementSchema } from './formElementSchema'
 import { stylesheet } from './FormElementScreen.style'
 
 const FormElementScreen = () => {
-  const { isOpen: isReadOnly, toggle } = useDisclose()
+  const [isReadOnly, , , toggleReadOnly] = useDisclose()
   const { styles } = styleManager.useStyles(stylesheet)
   const { t } = useTranslation('formElementScreen')
   const methods = useForm({
@@ -100,7 +100,7 @@ const FormElementScreen = () => {
             Submit
           </PrimaryButton>
 
-          <SecondaryButton onPress={toggle}>
+          <SecondaryButton onPress={toggleReadOnly}>
             Enable/Disable entire form
           </SecondaryButton>
         </VStack>
