@@ -10,7 +10,7 @@ import {
   DropdownField,
   InputField,
   PrimaryButton,
-  Radio,
+  RadioField,
   ScrollView,
   SecondaryButton,
   SwitchField,
@@ -91,7 +91,7 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <Radio name="radio" data={data} readOnly={isReadOnly} />
+        <RadioField name="radio" data={data} readOnly={isReadOnly} />
         <Divider gap={20} />
 
         <VStack style={styles.buttonGroupWrapper}>
