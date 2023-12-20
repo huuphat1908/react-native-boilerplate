@@ -4,17 +4,17 @@ import { useTranslation } from 'react-i18next'
 
 import {
   BottomSheetField,
-  Checkbox,
+  CheckboxField,
   DateInputField,
   Divider,
   DropdownField,
   InputField,
   PrimaryButton,
-  Radio,
+  RadioField,
   ScrollView,
   SecondaryButton,
-  Switch,
-  TextArea,
+  SwitchField,
+  TextAreaField,
   TimeInputField,
   VStack,
 } from '@/components'
@@ -78,20 +78,20 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <Checkbox name="checkbox" readOnly={isReadOnly} />
+        <CheckboxField name="checkbox" readOnly={isReadOnly} />
         <Divider gap={20} />
 
-        <Switch name="switch" readOnly={isReadOnly} />
+        <SwitchField name="switch" readOnly={isReadOnly} />
         <Divider gap={20} />
 
-        <TextArea
+        <TextAreaField
           name="textArea"
           placeholder="Text Area"
           readOnly={isReadOnly}
         />
         <Divider gap={20} />
 
-        <Radio name="radio" data={data} readOnly={isReadOnly} />
+        <RadioField name="radio" data={data} readOnly={isReadOnly} />
         <Divider gap={20} />
 
         <VStack style={styles.buttonGroupWrapper}>

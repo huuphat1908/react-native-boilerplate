@@ -1,1 +1,1 @@
-export { default as useApplicationState } from './useApplicationState'
+export { default as useApplicationSetting } from './useApplicationSetting'

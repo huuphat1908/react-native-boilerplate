@@ -9,7 +9,7 @@ export const defaultValues: FormElementData = {
   textArea: '',
   dropdown: '',
   radio: '',
-  select: '',
+  bottomSheet: '',
 }
 
 export const data = [

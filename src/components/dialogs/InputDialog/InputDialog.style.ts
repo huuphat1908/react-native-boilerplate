@@ -1,3 +1,4 @@
+import { BACKDROP_OPACITY } from '@/constants'
 import { styleManager } from '@/libs'
 
 export const stylesheet = styleManager.createStyleSheet(
@@ -5,7 +6,7 @@ export const stylesheet = styleManager.createStyleSheet(
     backdrop: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: hexToRGBA(colors.black, 0.4),
+      backgroundColor: hexToRGBA(colors.black, BACKDROP_OPACITY),
     },
     wrapper: {
       borderRadius: 16,

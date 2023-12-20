@@ -6,7 +6,7 @@ import DateTimePickerModal from 'react-native-modal-datetime-picker'
 
 import { Box, ErrorText, Input } from '@/components'
 import { useDisclose } from '@/hooks'
-import { useApplicationState } from '@/store'
+import { useApplicationSetting } from '@/store'
 
 type Props = {
   name: string
@@ -19,7 +19,7 @@ const TimeInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
     control,
     formState: { errors },
   } = useFormContext()
-  const timeFormat = useApplicationState(state => state.timeFormat)
+  const timeFormat = useApplicationSetting(state => state.timeFormat)
 
   const hasError = errors[name] ? true : false
 

@@ -1,9 +1,10 @@
+import { FORM_FIELD_READ_ONLY_OPACITY } from '@/constants'
 import { styleManager } from '@/libs'
 
 export const stylesheet = styleManager.createStyleSheet(
   ({ colors, utils: { scale } }) => ({
     componentContainerReadOnly: {
-      opacity: 0.4,
+      opacity: FORM_FIELD_READ_ONLY_OPACITY,
     },
     radioGroupWrapper: {
       gap: scale(5),
