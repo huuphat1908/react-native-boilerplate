@@ -19,7 +19,7 @@ type Props = {
 }
 
 const Accordion: FC<Props> = ({ title, children }) => {
-  const { isOpen, toggle } = useDisclose()
+  const [isOpen, , , toggle] = useDisclose()
   const {
     styles,
     theme: { colors },

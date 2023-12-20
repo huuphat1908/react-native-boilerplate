@@ -15,21 +15,10 @@ import { stylesheet } from './DialogScreen.style'
 
 const DialogScreen = () => {
   const { styles } = styleManager.useStyles(stylesheet)
-  const {
-    isOpen: isOpenActionDialog,
-    open: openActionDialog,
-    close: closeActionDialog,
-  } = useDisclose()
-  const {
-    isOpen: isOpenAlertDialog,
-    open: openAlertDialog,
-    close: closeAlertDialog,
-  } = useDisclose()
-  const {
-    isOpen: isOpenInputDialog,
-    open: openInputDialog,
-    close: closeInputDialog,
-  } = useDisclose()
+  const [isOpenActionDialog, openActionDialog, closeActionDialog] =
+    useDisclose()
+  const [isOpenAlertDialog, openAlertDialog, closeAlertDialog] = useDisclose()
+  const [isOpenInputDialog, openInputDialog, closeInputDialog] = useDisclose()
 
   return (
     <Box style={styles.container}>

@@ -39,7 +39,7 @@ const Dropdown: FC<Props> = ({
   readOnly,
   hasError,
 }) => {
-  const { isOpen, open, close } = useDisclose()
+  const [isOpen, open, close] = useDisclose()
   const {
     styles,
     theme: { colors },

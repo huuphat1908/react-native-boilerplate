@@ -12,11 +12,7 @@ type Props = {
 } & TextInputProps
 
 const TextArea: FC<Props> = ({ hasError, style, onFocus, onBlur, ...rest }) => {
-  const {
-    isOpen: isFocused,
-    open: onFocusInput,
-    close: onBlurInput,
-  } = useDisclose()
+  const [isFocused, onFocusInput, onBlurInput] = useDisclose()
   const {
     theme: { colors },
     styles,

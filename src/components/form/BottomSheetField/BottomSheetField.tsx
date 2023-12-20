@@ -33,11 +33,7 @@ const BottomSheetField: FC<Props> = ({
     styles,
     theme: { colors },
   } = styleManager.useStyles(stylesheet)
-  const {
-    isOpen: isOpenBottomSheet,
-    open: openBottomSheet,
-    close: closeBottomSheet,
-  } = useDisclose()
+  const [isOpenBottomSheet, openBottomSheet, closeBottomSheet] = useDisclose()
   const hasError = errors[name] ? true : false
 
   const onItemPress = useCallback(

@@ -14,7 +14,7 @@ type Props = {
 } & TextInputProps
 
 const DateInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
-  const { isOpen, open, close } = useDisclose()
+  const [isOpenDatePicker, openDatePicker, closeDatePicker] = useDisclose()
   const {
     control,
     formState: { errors },
@@ -30,7 +30,7 @@ const DateInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
       render={({ field: { onChange, onBlur, value } }) => (
         <Box>
           <DateTimePickerModal
-            isVisible={isOpen}
+            isVisible={isOpenDatePicker}
             mode="date"
             positiveButton={{
               label: 'Confirm',
@@ -41,14 +41,14 @@ const DateInputField: FC<Props> = ({ name, style, readOnly, ...rest }) => {
             confirmTextIOS="Confirm"
             cancelTextIOS="Cancel"
             date={value ? moment(value, dateFormat).toDate() : new Date()}
-            onCancel={close}
+            onCancel={closeDatePicker}
             onConfirm={date => {
-              close()
+              closeDatePicker()
               onChange(moment(date).format(dateFormat))
               onBlur()
             }}
           />
-          <TouchableOpacity disabled={readOnly} onPress={open}>
+          <TouchableOpacity disabled={readOnly} onPress={openDatePicker}>
             <Input
               value={value}
               editable={false}
