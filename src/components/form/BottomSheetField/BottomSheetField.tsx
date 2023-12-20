@@ -15,7 +15,7 @@ import {
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
-import { stylesheet } from './Select.style'
+import { stylesheet } from './BottomSheetField.style'
 
 type Props = {
   name: string

@@ -10,7 +10,7 @@ export const formElementSchema = () => {
     switch: z.boolean(),
     textArea: z.string().max(10),
     radio: z.string().endsWith('2'),
-    select: z.string().endsWith('2'),
+    bottomSheet: z.string().endsWith('2'),
   })
 }
 

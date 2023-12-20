@@ -3,6 +3,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
 import {
+  BottomSheetField,
   Checkbox,
   DateInputField,
   Divider,
@@ -12,7 +13,6 @@ import {
   Radio,
   ScrollView,
   SecondaryButton,
-  Select,
   Switch,
   TextArea,
   TimeInputField,
@@ -70,9 +70,9 @@ const FormElementScreen = () => {
         />
         <Divider gap={20} />
 
-        <Select
-          name="select"
-          label="Select"
+        <BottomSheetField
+          name="bottomSheet"
+          label="Bottom Sheet"
           data={data}
           readOnly={isReadOnly}
         />
