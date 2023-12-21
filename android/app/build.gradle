@@ -86,27 +86,27 @@ android {
     productFlavors {
         dev {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.gooner007.expense"
+            applicationId "com.gooner007.reactnativeboilerplate"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.gooner007.expense"
+            resValue "string", "build_config_package", "com.gooner007.reactnativeboilerplate"
         }
         uat {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.gooner007.expense"
+            applicationId "com.gooner007.reactnativeboilerplate"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.gooner007.expense"
+            resValue "string", "build_config_package", "com.gooner007.reactnativeboilerplate"
         }
         prod {
             minSdkVersion rootProject.ext.minSdkVersion
-            applicationId "com.gooner007.expense"
+            applicationId "com.gooner007.reactnativeboilerplate"
             targetSdkVersion rootProject.ext.targetSdkVersion
-            resValue "string", "build_config_package", "com.gooner007.expense"
+            resValue "string", "build_config_package", "com.gooner007.reactnativeboilerplate"
         }
     }
 
-    namespace "com.gooner007.expense"
+    namespace "com.gooner007.reactnativeboilerplate"
     defaultConfig {
-        applicationId "com.gooner007.expense"
+        applicationId "com.gooner007.reactnativeboilerplate"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
