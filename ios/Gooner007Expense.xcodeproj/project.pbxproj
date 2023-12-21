@@ -107,12 +107,8 @@
 		C66A5C212E0F4030A3FBF55A /* SFProText-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Heavy.otf"; path = "../src/assets/fonts/SFProText-Heavy.otf"; sourceTree = "<group>"; };
 		CB3737ADCBA94D51BF480E77 /* SFProText-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Italic.otf"; path = "../src/assets/fonts/SFProText-Italic.otf"; sourceTree = "<group>"; };
 		CD0030521ECF3DC45C6695E6 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseUAT.debug.xcconfig"; sourceTree = "<group>"; };
-		D12C9AF02AFAA5B2006C0B0B /* Gooner007ExpenseDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007ExpenseDev-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007ExpenseDev-Info.plist"; sourceTree = "<absolute>"; };
 		D12C9B022AFAA5CF006C0B0B /* Gooner007ExpenseDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gooner007ExpenseDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D12C9B032AFAA5CF006C0B0B /* Gooner007Expense copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007Expense copy2-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007Expense copy2-Info.plist"; sourceTree = "<absolute>"; };
 		D12C9B152AFAA5F6006C0B0B /* Gooner007ExpenseUAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gooner007ExpenseUAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D12C9B162AFAA5F6006C0B0B /* Gooner007ExpenseDev copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007ExpenseDev copy-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007ExpenseDev copy-Info.plist"; sourceTree = "<absolute>"; };
-		D12C9B292AFAA604006C0B0B /* Gooner007ExpenseUAT copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Gooner007ExpenseUAT copy-Info.plist"; path = "/Users/nhpa/PO/FE/gooner007-expense/ios/Gooner007ExpenseUAT copy-Info.plist"; sourceTree = "<absolute>"; };
 		D4B673076B144138B8E42AB0 /* SFProText-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Semibold.otf"; path = "../src/assets/fonts/SFProText-Semibold.otf"; sourceTree = "<group>"; };
 		DC51DC2896BE66255AD96602 /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.debug.xcconfig"; sourceTree = "<group>"; };
 		E0C93D2FC24FBABF5275631F /* Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig"; path = "Target Support Files/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev/Pods-Gooner007ExpenseCommonPods-Gooner007ExpenseDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,10 +229,6 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				D12C9AF02AFAA5B2006C0B0B /* Gooner007ExpenseDev-Info.plist */,
-				D12C9B032AFAA5CF006C0B0B /* Gooner007Expense copy2-Info.plist */,
-				D12C9B162AFAA5F6006C0B0B /* Gooner007ExpenseDev copy-Info.plist */,
-				D12C9B292AFAA604006C0B0B /* Gooner007ExpenseUAT copy-Info.plist */,
 				41054C0EFBD3497BB5678108 /* Resources */,
 			);
 			indentWidth = 2;
@@ -1038,7 +1030,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					" ",
+					"-Wl",
+					"-ld_classic",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
@@ -1111,7 +1104,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					" ",
+					"-Wl",
+					"-ld_classic",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;

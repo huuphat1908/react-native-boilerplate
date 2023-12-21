@@ -6,6 +6,8 @@
     "start": "react-native start",
     "pod-install": "cd ios && pod install",
     "ios-simulator-list": "xcrun simctl list devices",
+    "android:clean-build": "cd android && ./gradlew clean",
+    "ios:clean-build": "cd ios && xcodebuild clean", 
     "android:dev": "react-native run-android --mode=devdebug",
     "android:dev-release": "react-native run-android --mode=devrelease",
     "android:uat": "react-native run-android --mode=uatdebug",
