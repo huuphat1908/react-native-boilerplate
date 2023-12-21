@@ -1,4 +1,4 @@
-package com.gooner007.expense;
+package com.gooner007.reactnativeboilerplate;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
