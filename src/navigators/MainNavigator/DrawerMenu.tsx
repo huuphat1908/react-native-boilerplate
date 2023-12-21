@@ -52,10 +52,12 @@ const stylesheet = styleManager.createStyleSheet(
     logoAppNameWrapper: {
       paddingHorizontal: scale(16),
       gap: gutters.lg,
+      alignItems: 'center',
     },
     logo: {
-      width: scale(24),
-      height: scale(24),
+      width: scale(36),
+      height: scale(36),
+      borderRadius: scale(36) / 2,
     },
     appName: {
       color: colors.darkGray,
