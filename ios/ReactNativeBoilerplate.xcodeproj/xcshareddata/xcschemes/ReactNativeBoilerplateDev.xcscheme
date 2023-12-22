@@ -15,9 +15,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-                     BuildableName = "Gooner007ExpenseDev.app"
-                     BlueprintName = "Gooner007ExpenseDev"
-                     ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+                     BuildableName = "ReactNativeBoilerplateDev.app"
+                     BlueprintName = "ReactNativeBoilerplateDev"
+                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-               BuildableName = "Gooner007ExpenseDev.app"
-               BlueprintName = "Gooner007ExpenseDev"
-               ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+               BuildableName = "ReactNativeBoilerplateDev.app"
+               BlueprintName = "ReactNativeBoilerplateDev"
+               ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -56,9 +56,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-                     BuildableName = "Gooner007ExpenseDev.app"
-                     BlueprintName = "Gooner007ExpenseDev"
-                     ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+                     BuildableName = "ReactNativeBoilerplateDev.app"
+                     BlueprintName = "ReactNativeBoilerplateDev"
+                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -85,9 +85,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-                     BuildableName = "Gooner007ExpenseDev.app"
-                     BlueprintName = "Gooner007ExpenseDev"
-                     ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+                     BuildableName = "ReactNativeBoilerplateDev.app"
+                     BlueprintName = "ReactNativeBoilerplateDev"
+                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -98,9 +98,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-            BuildableName = "Gooner007ExpenseDev.app"
-            BlueprintName = "Gooner007ExpenseDev"
-            ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+            BuildableName = "ReactNativeBoilerplateDev.app"
+            BlueprintName = "ReactNativeBoilerplateDev"
+            ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -120,9 +120,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-                     BuildableName = "Gooner007ExpenseDev.app"
-                     BlueprintName = "Gooner007ExpenseDev"
-                     ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+                     BuildableName = "ReactNativeBoilerplateDev.app"
+                     BlueprintName = "ReactNativeBoilerplateDev"
+                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -133,9 +133,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-            BuildableName = "Gooner007ExpenseDev.app"
-            BlueprintName = "Gooner007ExpenseDev"
-            ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+            BuildableName = "ReactNativeBoilerplateDev.app"
+            BlueprintName = "ReactNativeBoilerplateDev"
+            ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -155,9 +155,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "D12C9AF12AFAA5CF006C0B0B"
-                     BuildableName = "Gooner007ExpenseDev.app"
-                     BlueprintName = "Gooner007ExpenseDev"
-                     ReferencedContainer = "container:Gooner007Expense.xcodeproj">
+                     BuildableName = "ReactNativeBoilerplateDev.app"
+                     BlueprintName = "ReactNativeBoilerplateDev"
+                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
