@@ -18,7 +18,6 @@
 		785E3557F151491EA07C27C8 /* SFProText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4B673076B144138B8E42AB0 /* SFProText-Semibold.otf */; };
 		7E64E7D11ADE40CC9C6A9D60 /* SFProText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76D73290738B4ED1917E77E0 /* SFProText-SemiboldItalic.otf */; };
 		80DBAF52CBCC436C9F473D20 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4D026E8EC744F8183F69342 /* SFProText-Bold.otf */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		931F251E02E84B0C8397EB5D /* SFProText-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB3737ADCBA94D51BF480E77 /* SFProText-Italic.otf */; };
 		A62BE6EA6D664018BF5378D5 /* SFProText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C72958D089C4B9E9453DB0F /* SFProText-MediumItalic.otf */; };
 		B19BDA2282CBC809F359D6E4 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99336FD0C074B7A6D3F77623 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateDev.a */; };
@@ -30,11 +29,9 @@
 		D122FAC92B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D122FAC62B3810EE00DF4FD0 /* BootSplash.storyboard */; };
 		D12C9AF52AFAA5CF006C0B0B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		D12C9AF62AFAA5CF006C0B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		D12C9AFA2AFAA5CF006C0B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D12C9AFB2AFAA5CF006C0B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		D12C9B082AFAA5F6006C0B0B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		D12C9B092AFAA5F6006C0B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		D12C9B0D2AFAA5F6006C0B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D12C9B0E2AFAA5F6006C0B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		D190019E2B158F4600A867AE /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4D026E8EC744F8183F69342 /* SFProText-Bold.otf */; };
 		D190019F2B158F4600A867AE /* SFProText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 943F1AD2F75C4FE88023F927 /* SFProText-BoldItalic.otf */; };
@@ -81,7 +78,6 @@
 		76D73290738B4ED1917E77E0 /* SFProText-SemiboldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-SemiboldItalic.otf"; path = "../src/assets/fonts/SFProText-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		77B0EA2D88E417CBCC501A01 /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B09A70DE425CF7800EF3719 /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeBoilerplate/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C18AFD35A050A626DABC64 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C72958D089C4B9E9453DB0F /* SFProText-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-MediumItalic.otf"; path = "../src/assets/fonts/SFProText-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -141,7 +137,6 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = ReactNativeBoilerplate;
@@ -337,7 +332,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D122FAC72B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */,
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				80DBAF52CBCC436C9F473D20 /* SFProText-Bold.otf in Resources */,
 				B2B2995C59404F40A22A4973 /* SFProText-BoldItalic.otf in Resources */,
@@ -371,7 +365,6 @@
 				D19001A72B158F4600A867AE /* SFProText-Regular.otf in Resources */,
 				D19001A82B158F4600A867AE /* SFProText-Semibold.otf in Resources */,
 				D19001A92B158F4600A867AE /* SFProText-SemiboldItalic.otf in Resources */,
-				D12C9AFA2AFAA5CF006C0B0B /* LaunchScreen.storyboard in Resources */,
 				D12C9AFB2AFAA5CF006C0B0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +386,6 @@
 				D19001B32B158F5000A867AE /* SFProText-Regular.otf in Resources */,
 				D19001B42B158F5000A867AE /* SFProText-Semibold.otf in Resources */,
 				D19001B52B158F5000A867AE /* SFProText-SemiboldItalic.otf in Resources */,
-				D12C9B0D2AFAA5F6006C0B0B /* LaunchScreen.storyboard in Resources */,
 				D12C9B0E2AFAA5F6006C0B0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
