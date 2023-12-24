@@ -12,6 +12,7 @@ import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
 import { stylesheet } from './DialogScreen.style'
+import { dialogScreenSchema } from './dialogScreenSchema'
 
 const DialogScreen = () => {
   const { styles } = styleManager.useStyles(stylesheet)
@@ -55,6 +56,7 @@ const DialogScreen = () => {
         placeholderInput="Enter file name"
         confirmText="Save"
         cancelText="Cancel"
+        validationSchema={dialogScreenSchema}
       />
       <Divider />
     </Box>
