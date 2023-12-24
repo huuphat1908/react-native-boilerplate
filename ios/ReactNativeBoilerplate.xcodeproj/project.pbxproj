@@ -12,27 +12,26 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2302DE321C2A47099BB8B7AF /* SFProText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95C70F7FA6C24BA68BB5C3E8 /* SFProText-LightItalic.otf */; };
-		30BD9EE662618F571E2159A4 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C18AFD35A050A626DABC64 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a */; };
 		350C42E1768B43FA874965AA /* SFProText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A678708F0DFA46F18132CEF7 /* SFProText-Light.otf */; };
 		40B56319E19D48A69AD513F9 /* SFProText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73A31BAF485A4EE3BA2C246B /* SFProText-HeavyItalic.otf */; };
 		492DD8AB0F3AE73360187305 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C422ABA24EC11514727281FE /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.a */; };
 		785E3557F151491EA07C27C8 /* SFProText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4B673076B144138B8E42AB0 /* SFProText-Semibold.otf */; };
 		7E64E7D11ADE40CC9C6A9D60 /* SFProText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76D73290738B4ED1917E77E0 /* SFProText-SemiboldItalic.otf */; };
 		80DBAF52CBCC436C9F473D20 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4D026E8EC744F8183F69342 /* SFProText-Bold.otf */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		931F251E02E84B0C8397EB5D /* SFProText-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB3737ADCBA94D51BF480E77 /* SFProText-Italic.otf */; };
 		A62BE6EA6D664018BF5378D5 /* SFProText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C72958D089C4B9E9453DB0F /* SFProText-MediumItalic.otf */; };
 		B19BDA2282CBC809F359D6E4 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99336FD0C074B7A6D3F77623 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateDev.a */; };
 		B2B2995C59404F40A22A4973 /* SFProText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 943F1AD2F75C4FE88023F927 /* SFProText-BoldItalic.otf */; };
 		B7CA1671ED2046AF80295708 /* SFProText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9E07F3D60F148EBBB04F6DB /* SFProText-Regular.otf */; };
 		BE655D5D5D674A009E65D9C4 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4845C46D18614D5894A8ABB5 /* SFProText-Medium.otf */; };
+		D122FAC72B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D122FAC62B3810EE00DF4FD0 /* BootSplash.storyboard */; };
+		D122FAC82B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D122FAC62B3810EE00DF4FD0 /* BootSplash.storyboard */; };
+		D122FAC92B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D122FAC62B3810EE00DF4FD0 /* BootSplash.storyboard */; };
 		D12C9AF52AFAA5CF006C0B0B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		D12C9AF62AFAA5CF006C0B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		D12C9AFA2AFAA5CF006C0B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D12C9AFB2AFAA5CF006C0B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		D12C9B082AFAA5F6006C0B0B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		D12C9B092AFAA5F6006C0B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		D12C9B0D2AFAA5F6006C0B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D12C9B0E2AFAA5F6006C0B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		D190019E2B158F4600A867AE /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4D026E8EC744F8183F69342 /* SFProText-Bold.otf */; };
 		D190019F2B158F4600A867AE /* SFProText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 943F1AD2F75C4FE88023F927 /* SFProText-BoldItalic.otf */; };
@@ -61,18 +60,7 @@
 		F0684CEBF9FF4477AA13C502 /* SFProText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = C66A5C212E0F4030A3FBF55A /* SFProText-Heavy.otf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ReactNativeBoilerplate;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ReactNativeBoilerplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeBoilerplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* ReactNativeBoilerplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeBoilerplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNativeBoilerplate/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ReactNativeBoilerplate/AppDelegate.mm; sourceTree = "<group>"; };
@@ -90,7 +78,6 @@
 		76D73290738B4ED1917E77E0 /* SFProText-SemiboldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-SemiboldItalic.otf"; path = "../src/assets/fonts/SFProText-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		77B0EA2D88E417CBCC501A01 /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B09A70DE425CF7800EF3719 /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeBoilerplate/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C18AFD35A050A626DABC64 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplate-ReactNativeBoilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C72958D089C4B9E9453DB0F /* SFProText-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-MediumItalic.otf"; path = "../src/assets/fonts/SFProText-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -104,6 +91,7 @@
 		C66A5C212E0F4030A3FBF55A /* SFProText-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Heavy.otf"; path = "../src/assets/fonts/SFProText-Heavy.otf"; sourceTree = "<group>"; };
 		CB3737ADCBA94D51BF480E77 /* SFProText-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Italic.otf"; path = "../src/assets/fonts/SFProText-Italic.otf"; sourceTree = "<group>"; };
 		CD0030521ECF3DC45C6695E6 /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateUAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateUAT.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateUAT/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateUAT.debug.xcconfig"; sourceTree = "<group>"; };
+		D122FAC62B3810EE00DF4FD0 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = ReactNativeBoilerplate/BootSplash.storyboard; sourceTree = "<group>"; };
 		D12C9B022AFAA5CF006C0B0B /* ReactNativeBoilerplateDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeBoilerplateDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12C9B152AFAA5F6006C0B0B /* ReactNativeBoilerplateUAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeBoilerplateUAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B673076B144138B8E42AB0 /* SFProText-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Semibold.otf"; path = "../src/assets/fonts/SFProText-Semibold.otf"; sourceTree = "<group>"; };
@@ -114,14 +102,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30BD9EE662618F571E2159A4 /* libPods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,11 +132,11 @@
 		13B07FAE1A68108700A75B9A /* ReactNativeBoilerplate */ = {
 			isa = PBXGroup;
 			children = (
+				D122FAC62B3810EE00DF4FD0 /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = ReactNativeBoilerplate;
@@ -219,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* ReactNativeBoilerplate.app */,
-				00E356EE1AD99517003FC87E /* ReactNativeBoilerplateTests.xctest */,
 				D12C9B022AFAA5CF006C0B0B /* ReactNativeBoilerplateDev.app */,
 				D12C9B152AFAA5F6006C0B0B /* ReactNativeBoilerplateUAT.app */,
 			);
@@ -248,27 +227,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ReactNativeBoilerplateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeBoilerplateTests" */;
-			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = ReactNativeBoilerplateTests;
-			productName = ReactNativeBoilerplateTests;
-			productReference = 00E356EE1AD99517003FC87E /* ReactNativeBoilerplateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* ReactNativeBoilerplate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeBoilerplate" */;
@@ -343,10 +301,6 @@
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
 					};
@@ -366,7 +320,6 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* ReactNativeBoilerplate */,
-				00E356ED1AD99517003FC87E /* ReactNativeBoilerplateTests */,
 				D12C9AF12AFAA5CF006C0B0B /* ReactNativeBoilerplateDev */,
 				D12C9B042AFAA5F6006C0B0B /* ReactNativeBoilerplateUAT */,
 			);
@@ -374,18 +327,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				D122FAC72B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				80DBAF52CBCC436C9F473D20 /* SFProText-Bold.otf in Resources */,
 				B2B2995C59404F40A22A4973 /* SFProText-BoldItalic.otf in Resources */,
@@ -406,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D122FAC82B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */,
 				D190019E2B158F4600A867AE /* SFProText-Bold.otf in Resources */,
 				D190019F2B158F4600A867AE /* SFProText-BoldItalic.otf in Resources */,
 				D19001A02B158F4600A867AE /* SFProText-Heavy.otf in Resources */,
@@ -418,7 +365,6 @@
 				D19001A72B158F4600A867AE /* SFProText-Regular.otf in Resources */,
 				D19001A82B158F4600A867AE /* SFProText-Semibold.otf in Resources */,
 				D19001A92B158F4600A867AE /* SFProText-SemiboldItalic.otf in Resources */,
-				D12C9AFA2AFAA5CF006C0B0B /* LaunchScreen.storyboard in Resources */,
 				D12C9AFB2AFAA5CF006C0B0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D122FAC92B3810EE00DF4FD0 /* BootSplash.storyboard in Resources */,
 				D19001AA2B158F5000A867AE /* SFProText-Bold.otf in Resources */,
 				D19001AB2B158F5000A867AE /* SFProText-BoldItalic.otf in Resources */,
 				D19001AC2B158F5000A867AE /* SFProText-Heavy.otf in Resources */,
@@ -439,7 +386,6 @@
 				D19001B32B158F5000A867AE /* SFProText-Regular.otf in Resources */,
 				D19001B42B158F5000A867AE /* SFProText-Semibold.otf in Resources */,
 				D19001B52B158F5000A867AE /* SFProText-SemiboldItalic.otf in Resources */,
-				D12C9B0D2AFAA5F6006C0B0B /* LaunchScreen.storyboard in Resources */,
 				D12C9B0E2AFAA5F6006C0B0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,28 +426,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,23 +446,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D12C9AF22AFAA5CF006C0B0B /* [CP] Check Pods Manifest.lock */ = {
@@ -740,23 +647,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests/Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -779,13 +669,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -815,66 +698,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ReactNativeBoilerplate */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B68DC2B0641AC28024A0BAA /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ReactNativeBoilerplateTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeBoilerplate.app/ReactNativeBoilerplate";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77B0EA2D88E417CBCC501A01 /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplateTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ReactNativeBoilerplateTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeBoilerplate.app/ReactNativeBoilerplate";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 247857EF6964DAA6E9BF045C /* Pods-ReactNativeBoilerplateCommonPods-ReactNativeBoilerplate.debug.xcconfig */;
@@ -885,6 +709,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReactNativeBoilerplate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "React Native Boilerplate";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -916,6 +741,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = ReactNativeBoilerplate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "React Native Boilerplate";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1104,6 +930,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ReactNativeBoilerplateDev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "React Native Boilerplate Dev";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1139,6 +966,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ReactNativeBoilerplateDev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "React Native Boilerplate Dev";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1171,6 +999,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "ReactNativeBoilerplateUAT-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "React Native Boilerplate UAT";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1202,6 +1031,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "ReactNativeBoilerplateUAT-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "React Native Boilerplate UAT";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1226,15 +1056,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeBoilerplateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeBoilerplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
