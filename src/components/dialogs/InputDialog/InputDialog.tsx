@@ -1,19 +1,21 @@
 import React, { FC, useCallback } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Modal, Platform, Pressable } from 'react-native'
+import { ZodObject } from 'zod'
 
 import {
   Body,
   Box,
   H3,
   HStack,
-  Input,
+  InputField,
   PrimaryButton,
   SecondaryButton,
   VStack,
 } from '@/components'
 import { useKeyboard } from '@/hooks'
 import { styleManager } from '@/libs'
+import { zodResolver } from '@hookform/resolvers/zod'
 
 import { stylesheet } from './InputDialog.style'
 
@@ -27,6 +29,7 @@ type Props = {
   initialValue?: string
   confirmText: string
   cancelText: string
+  validationSchema?: () => ZodObject<any>
 }
 
 const InputDialog: FC<Props> = ({
@@ -39,23 +42,30 @@ const InputDialog: FC<Props> = ({
   initialValue,
   confirmText,
   cancelText,
+  validationSchema,
 }) => {
   const { styles } = styleManager.useStyles(stylesheet)
   const { isKeyboardVisible, keyboardHeight } = useKeyboard()
-  const methods = useForm({
+  const formMethods = useForm({
     defaultValues: {
       input: initialValue || '',
     },
+    ...(validationSchema && { resolver: zodResolver(validationSchema()) }),
   })
 
   const handleConfirm = useCallback(() => {
-    methods.handleSubmit(values => onConfirm(values.input))()
-    methods.reset()
+    formMethods.handleSubmit(values => onConfirm(values.input))()
+    formMethods.reset()
     onClose()
-  }, [methods, onClose, onConfirm])
+  }, [formMethods, onClose, onConfirm])
+
+  const handleCancel = useCallback(() => {
+    formMethods.reset()
+    onClose()
+  }, [formMethods, onClose])
 
   return (
-    <FormProvider {...methods}>
+    <FormProvider {...formMethods}>
       <Modal
         visible={isOpen}
         animationType="fade"
@@ -74,14 +84,21 @@ const InputDialog: FC<Props> = ({
               <VStack style={styles.textGroupWrapper}>
                 <H3>{title}</H3>
                 <Body style={styles.message}>{message}</Body>
-                <Input name="input" placeholder={placeholderInput} autoFocus />
+                <InputField
+                  name="input"
+                  placeholder={placeholderInput}
+                  autoFocus
+                />
               </VStack>
 
               <HStack style={styles.buttonGroupWrapper}>
-                <SecondaryButton fullWidth onPress={onClose}>
+                <SecondaryButton fullWidth onPress={handleCancel}>
                   {cancelText}
                 </SecondaryButton>
-                <PrimaryButton fullWidth onPress={handleConfirm}>
+                <PrimaryButton
+                  fullWidth
+                  onPress={handleConfirm}
+                  disabled={!formMethods.formState.isValid}>
                   {confirmText}
                 </PrimaryButton>
               </HStack>
