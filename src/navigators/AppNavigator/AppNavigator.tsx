@@ -1,9 +1,8 @@
 import React, { useCallback } from 'react'
 import { hide } from 'react-native-bootsplash'
 
+import MainNavigator from '@/navigators/MainNavigator'
 import { NavigationContainer } from '@react-navigation/native'
-
-import MainNavigator from '../MainNavigator'
 
 const AppNavigator = () => {
   const hideSplashScreen = useCallback(async () => {

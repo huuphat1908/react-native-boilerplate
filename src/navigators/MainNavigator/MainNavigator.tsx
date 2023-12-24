@@ -29,17 +29,13 @@ export enum MainRoutes {
   TYPOGRAPHY = 'Typography',
 }
 
-type MainParamList = {
+export type MainParamList = {
   [MainRoutes.FORM_ELEMENT]: undefined
   [MainRoutes.BUTTON]: undefined
   [MainRoutes.COLOR]: undefined
   [MainRoutes.COMPONENT]: undefined
   [MainRoutes.DIALOG]: undefined
   [MainRoutes.TYPOGRAPHY]: undefined
-}
-
-export const useMainNavigation = () => {
-  return useNavigation<DrawerNavigationProp<MainParamList>>()
 }
 
 const MainNavigator = () => {
