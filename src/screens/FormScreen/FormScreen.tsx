@@ -22,14 +22,14 @@ import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
 import { data } from './constants'
-import { stylesheet } from './FormElementScreen.style'
-import { useFormElementForm } from './useFormElementForm'
+import { stylesheet } from './FormScreen.style'
+import { useForm } from './useForm'
 
-const FormElementScreen = () => {
+const FormScreen = () => {
   const [isReadOnly, , , toggleReadOnly] = useDisclose()
   const { styles } = styleManager.useStyles(stylesheet)
   const { t } = useTranslation('formElementScreen')
-  const formMethods = useFormElementForm()
+  const formMethods = useForm()
 
   return (
     <FormProvider {...formMethods}>
@@ -105,4 +105,4 @@ const FormElementScreen = () => {
   )
 }
 
-export default FormElementScreen
+export default FormScreen

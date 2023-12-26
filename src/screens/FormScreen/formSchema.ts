@@ -14,4 +14,4 @@ export const formElementSchema = () => {
   })
 }
 
-export type FormElementData = z.infer<ReturnType<typeof formElementSchema>>
+export type FormData = z.infer<ReturnType<typeof formElementSchema>>
