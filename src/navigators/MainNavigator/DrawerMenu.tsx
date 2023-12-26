@@ -4,6 +4,7 @@ import { Image } from 'react-native'
 import { Box, H4, HStack } from '@/components'
 import { useMainNavigation } from '@/hooks'
 import { styleManager } from '@/libs'
+import { useApplicationSetting } from '@/store'
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
@@ -15,6 +16,7 @@ import { MainRoutes } from './MainNavigator'
 const DrawerMenu = (props: DrawerContentComponentProps) => {
   const { styles } = styleManager.useStyles(stylesheet)
   const navigation = useMainNavigation()
+  const logout = useApplicationSetting(state => state.logout)
 
   const currentRoute = props.state.routeNames[props.state.index]
 
@@ -39,6 +41,7 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
               onPress={() => navigation.navigate(route)}
             />
           ))}
+          <DrawerItem label="Log out" active={false} onPress={logout} />
         </Box>
       </Box>
     </DrawerContentScrollView>
