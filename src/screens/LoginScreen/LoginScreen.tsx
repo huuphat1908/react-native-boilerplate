@@ -5,14 +5,12 @@ import { Image } from 'react-native'
 import {
   Box,
   Center,
-  H2,
   InputField,
   KeyboardAvoidingView,
   Label,
   PrimaryButton,
   TouchableKeyboardDismiss,
 } from '@/components'
-import { useKeyboard } from '@/hooks'
 import { styleManager } from '@/libs'
 import { useApplicationSetting } from '@/store'
 
@@ -24,7 +22,6 @@ const LoginScreen = () => {
   const formMethods = useLoginForm()
   const login = useApplicationSetting(state => state.login)
   const { styles } = styleManager.useStyles(stylesheet)
-  const { isKeyboardVisible } = useKeyboard()
 
   const onSubmit = useCallback(
     (values: LoginFormData) => {
@@ -44,7 +41,6 @@ const LoginScreen = () => {
                 style={styles.logo}
                 source={require('@/assets/images/logo.png')}
               />
-              <H2>RN Boilerplate</H2>
             </Center>
 
             <Box style={styles.formWrapper}>
@@ -61,13 +57,7 @@ const LoginScreen = () => {
                   secureTextEntry
                 />
               </Box>
-            </Box>
 
-            <Box
-              style={[
-                styles.loginButtonWrapper,
-                isKeyboardVisible && { justifyContent: 'flex-start' },
-              ]}>
               <PrimaryButton
                 onPress={formMethods.handleSubmit(values => onSubmit(values))}>
                 Login

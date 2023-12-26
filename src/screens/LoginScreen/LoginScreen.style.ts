@@ -17,18 +17,12 @@ export const stylesheet = styleManager.createStyleSheet(
     logo: {
       width: scale(LOGO_SIZE),
       height: scale(LOGO_SIZE),
-      borderRadius: scale(LOGO_SIZE) / 2,
     },
     formWrapper: {
       gap: scale(FIELD_GAP),
     },
     formGroupWrapper: {
       gap: scale(4),
-    },
-    loginButtonWrapper: {
-      flex: 1,
-      marginTop: scale(FIELD_GAP),
-      justifyContent: 'flex-end',
     },
   }),
 )
