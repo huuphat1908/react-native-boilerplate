@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import { Text, TextProps } from 'react-native'
+import { Text as RNText, TextProps } from 'react-native'
 
 import { styleManager } from '@/libs'
 
-const Body: FC<TextProps> = ({ children, style, ...rest }) => {
+const Text: FC<TextProps> = ({ children, style, ...rest }) => {
   const {
     theme: {
       colors,
@@ -12,7 +12,7 @@ const Body: FC<TextProps> = ({ children, style, ...rest }) => {
   } = styleManager.useStyles()
 
   return (
-    <Text
+    <RNText
       {...rest}
       style={[
         {
@@ -23,8 +23,8 @@ const Body: FC<TextProps> = ({ children, style, ...rest }) => {
         style,
       ]}>
       {children}
-    </Text>
+    </RNText>
   )
 }
 
-export default Body
+export default Text

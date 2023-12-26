@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormProvider, useForm } from 'react-hook-form'
+import { FormProvider } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
 import {
@@ -20,27 +20,23 @@ import {
 } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
-import { zodResolver } from '@hookform/resolvers/zod'
 
-import { data, defaultValues } from './constants'
-import { formElementSchema } from './formElementSchema'
+import { data } from './constants'
 import { stylesheet } from './FormElementScreen.style'
+import { useFormElementForm } from './useFormElementForm'
 
 const FormElementScreen = () => {
   const [isReadOnly, , , toggleReadOnly] = useDisclose()
   const { styles } = styleManager.useStyles(stylesheet)
   const { t } = useTranslation('formElementScreen')
-  const methods = useForm({
-    defaultValues,
-    resolver: zodResolver(formElementSchema()),
-    mode: 'onChange',
-  })
+  const formMethods = useFormElementForm()
 
   return (
-    <FormProvider {...methods}>
+    <FormProvider {...formMethods}>
       <ScrollView
         style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
+        contentContainerStyle={styles.contentContainer}
+        automaticallyAdjustKeyboardInsets>
         <InputField
           name="input"
           placeholder={t('placeholder.input')}
@@ -96,7 +92,7 @@ const FormElementScreen = () => {
 
         <VStack style={styles.buttonGroupWrapper}>
           <PrimaryButton
-            onPress={methods.handleSubmit(values => console.log(values))}>
+            onPress={formMethods.handleSubmit(values => console.log(values))}>
             Submit
           </PrimaryButton>
 

@@ -11,9 +11,7 @@ import {
 import {
   createDrawerNavigator,
   DrawerContentComponentProps,
-  DrawerNavigationProp,
 } from '@react-navigation/drawer'
-import { useNavigation } from '@react-navigation/native'
 
 import DrawerMenu from './DrawerMenu'
 import Header from './Header'

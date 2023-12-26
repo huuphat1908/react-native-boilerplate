@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Modal, Pressable } from 'react-native'
 
-import { Body, Box, H3, PrimaryButton, VStack } from '@/components'
+import { Box, H3, PrimaryButton, Text, VStack } from '@/components'
 import { styleManager } from '@/libs'
 
 import { stylesheet } from './AlertDialog.style'
@@ -34,7 +34,7 @@ const AlertDialog: FC<Props> = ({
           <Box style={styles.wrapper}>
             <VStack style={styles.textGroupWrapper}>
               <H3>{title}</H3>
-              <Body style={styles.message}>{message}</Body>
+              <Text style={styles.message}>{message}</Text>
             </VStack>
 
             <PrimaryButton onPress={onClose}>{confirmText}</PrimaryButton>

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import {
-  Body,
   Box,
   Divider,
   H1,
@@ -12,6 +11,7 @@ import {
   H6,
   Label,
   Link,
+  Text,
 } from '@/components'
 import { styleManager } from '@/libs'
 
@@ -48,7 +48,7 @@ const TypographyScreen = () => {
       </Link>
       <Divider />
 
-      <Body>Body</Body>
+      <Text>Normal text</Text>
       <Divider />
     </Box>
   )

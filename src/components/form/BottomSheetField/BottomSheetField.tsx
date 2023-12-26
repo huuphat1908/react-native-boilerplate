@@ -3,7 +3,7 @@ import React, { FC, useCallback } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
 import { TextInputProps, TouchableOpacity } from 'react-native'
 
-import { Body, BottomSheet, Box, ErrorText, Input } from '@/components'
+import { BottomSheet, Box, ErrorText, Input, Text } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
@@ -82,7 +82,7 @@ const BottomSheetField: FC<Props> = ({
                         item.value === value ? colors.lightGray : colors.white,
                     },
                   ]}>
-                  <Body>{item.label}</Body>
+                  <Text>{item.label}</Text>
                 </Box>
               </TouchableOpacity>
             ))}
