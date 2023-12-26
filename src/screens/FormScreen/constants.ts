@@ -1,6 +1,6 @@
-import { FormElementData } from './formElementSchema'
+import { FormData } from './formSchema'
 
-export const defaultValues: FormElementData = {
+export const defaultValues: FormData = {
   input: '',
   dateInput: '',
   timeInput: '',

@@ -5,7 +5,7 @@ import {
   ColorScreen,
   ComponentScreen,
   DialogScreen,
-  FormElementScreen,
+  FormScreen,
   TypographyScreen,
 } from '@/screens'
 import {
@@ -21,7 +21,7 @@ const Drawer = createDrawerNavigator<MainParamList>()
 export enum MainRoutes {
   COLOR = 'Color',
   TYPOGRAPHY = 'Typography',
-  FORM_ELEMENT = 'Form Element',
+  FORM = 'Form Field',
   BUTTON = 'Button',
   DIALOG = 'Dialog',
   COMPONENT = 'Component',
@@ -30,7 +30,7 @@ export enum MainRoutes {
 export type MainParamList = {
   [MainRoutes.COLOR]: undefined
   [MainRoutes.TYPOGRAPHY]: undefined
-  [MainRoutes.FORM_ELEMENT]: undefined
+  [MainRoutes.FORM]: undefined
   [MainRoutes.BUTTON]: undefined
   [MainRoutes.DIALOG]: undefined
   [MainRoutes.COMPONENT]: undefined
@@ -54,10 +54,7 @@ const MainNavigator = () => {
         name={MainRoutes.TYPOGRAPHY}
         component={TypographyScreen}
       />
-      <Drawer.Screen
-        name={MainRoutes.FORM_ELEMENT}
-        component={FormElementScreen}
-      />
+      <Drawer.Screen name={MainRoutes.FORM} component={FormScreen} />
       <Drawer.Screen name={MainRoutes.BUTTON} component={ButtonScreen} />
       <Drawer.Screen name={MainRoutes.DIALOG} component={DialogScreen} />
       <Drawer.Screen name={MainRoutes.COMPONENT} component={ComponentScreen} />
