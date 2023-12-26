@@ -2,18 +2,19 @@ import React from 'react'
 import { Image } from 'react-native'
 
 import { Box, H4, HStack } from '@/components'
+import { useMainNavigation } from '@/hooks'
 import { styleManager } from '@/libs'
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer'
 
-import { MainRoutes, useMainNavigation } from './'
 import DrawerItem from './DrawerItem'
+import { MainRoutes } from './MainNavigator'
 
 const DrawerMenu = (props: DrawerContentComponentProps) => {
-  const navigation = useMainNavigation()
   const { styles } = styleManager.useStyles(stylesheet)
+  const navigation = useMainNavigation()
 
   const currentRoute = props.state.routeNames[props.state.index]
 

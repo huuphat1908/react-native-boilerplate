@@ -2,12 +2,12 @@ import React, { FC, useCallback } from 'react'
 import { Modal, Pressable } from 'react-native'
 
 import {
-  Body,
   Box,
   H3,
   HStack,
   PrimaryButton,
   SecondaryButton,
+  Text,
   VStack,
 } from '@/components'
 import { styleManager } from '@/libs'
@@ -51,7 +51,7 @@ const ConfirmationDialog: FC<Props> = ({
           <Box style={styles.wrapper}>
             <VStack style={styles.textGroupWrapper}>
               <H3>{title}</H3>
-              <Body style={styles.message}>{message}</Body>
+              <Text style={styles.message}>{message}</Text>
             </VStack>
 
             <HStack style={styles.buttonGroupWrapper}>

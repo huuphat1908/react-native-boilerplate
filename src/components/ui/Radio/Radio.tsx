@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { TouchableOpacity } from 'react-native'
 
-import { Body, Box, Center, HStack, VStack } from '@/components'
+import { Box, Center, HStack, Text, VStack } from '@/components'
 import { styleManager } from '@/libs'
 
 import { stylesheet } from './Radio.style'
@@ -45,7 +45,7 @@ const Radio: FC<Props> = ({ data, value, onChange, readOnly, hasError }) => {
                     ]}
                   />
                 </Center>
-                <Body>{item.label}</Body>
+                <Text>{item.label}</Text>
               </HStack>
             </TouchableOpacity>
           )

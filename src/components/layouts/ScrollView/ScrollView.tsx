@@ -1,19 +1,8 @@
 import React, { FC } from 'react'
-import {
-  Keyboard,
-  ScrollView as RNScrollView,
-  ScrollViewProps,
-  TouchableWithoutFeedback,
-} from 'react-native'
+import { ScrollView as RNScrollView, ScrollViewProps } from 'react-native'
 
-const ScrollView: FC<ScrollViewProps> = ({ children, style, ...rest }) => {
-  return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <RNScrollView style={[style]} {...rest} automaticallyAdjustKeyboardInsets>
-        {children}
-      </RNScrollView>
-    </TouchableWithoutFeedback>
-  )
+const ScrollView: FC<ScrollViewProps> = ({ children, ...rest }) => {
+  return <RNScrollView {...rest}>{children}</RNScrollView>
 }
 
 export default ScrollView

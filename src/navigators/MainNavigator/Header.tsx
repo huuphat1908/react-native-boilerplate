@@ -1,12 +1,11 @@
 import React from 'react'
-import { Pressable, StatusBar } from 'react-native'
+import { Pressable } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import { H4, HStack, Icon } from '@/components'
+import { useMainNavigation } from '@/hooks'
 import { styleManager } from '@/libs'
 import { useRoute } from '@react-navigation/native'
-
-import { useMainNavigation } from './'
 
 const Header = () => {
   const route = useRoute()
@@ -25,7 +24,6 @@ const Header = () => {
           paddingTop: paddings.xl + top,
         },
       ]}>
-      <StatusBar backgroundColor={colors.blue} barStyle="light-content" />
       <Pressable onPress={navigation.toggleDrawer}>
         <Icon name="Menu" color={colors.white} size={24} />
       </Pressable>

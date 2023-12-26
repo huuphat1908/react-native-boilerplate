@@ -9,7 +9,7 @@ import React, {
 } from 'react'
 import { FlatList, Modal, TextInputProps, TouchableOpacity } from 'react-native'
 
-import { Body, Box, Input } from '@/components'
+import { Box, Input, Text } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
@@ -90,9 +90,9 @@ const Dropdown: FC<Props> = ({
               backgroundColor: isActiveItem ? colors.lightGray : colors.white,
             },
           ]}>
-          <Body numberOfLines={1} ellipsizeMode="tail">
+          <Text numberOfLines={1} ellipsizeMode="tail">
             {item.label}
-          </Body>
+          </Text>
         </Box>
       </TouchableOpacity>
     )
@@ -137,9 +137,9 @@ const Dropdown: FC<Props> = ({
             />
             {keyword && itemsMatchKeyword.length === 0 && (
               <Box style={styles.itemWrapper}>
-                <Body style={styles.noItemFoundText}>
+                <Text style={styles.noItemFoundText}>
                   {noItemFoundText || 'No item found'}
-                </Body>
+                </Text>
               </Box>
             )}
           </Box>

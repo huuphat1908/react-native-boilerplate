@@ -4,13 +4,13 @@ import { Modal, Platform, Pressable } from 'react-native'
 import { ZodObject } from 'zod'
 
 import {
-  Body,
   Box,
   H3,
   HStack,
   InputField,
   PrimaryButton,
   SecondaryButton,
+  Text,
   VStack,
 } from '@/components'
 import { useKeyboard } from '@/hooks'
@@ -83,7 +83,7 @@ const InputDialog: FC<Props> = ({
             <Box style={styles.wrapper}>
               <VStack style={styles.textGroupWrapper}>
                 <H3>{title}</H3>
-                <Body style={styles.message}>{message}</Body>
+                <Text style={styles.message}>{message}</Text>
                 <InputField
                   name="input"
                   placeholder={placeholderInput}

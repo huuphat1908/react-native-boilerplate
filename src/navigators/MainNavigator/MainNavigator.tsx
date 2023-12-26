@@ -11,9 +11,7 @@ import {
 import {
   createDrawerNavigator,
   DrawerContentComponentProps,
-  DrawerNavigationProp,
 } from '@react-navigation/drawer'
-import { useNavigation } from '@react-navigation/native'
 
 import DrawerMenu from './DrawerMenu'
 import Header from './Header'
@@ -21,25 +19,21 @@ import Header from './Header'
 const Drawer = createDrawerNavigator<MainParamList>()
 
 export enum MainRoutes {
+  COLOR = 'Color',
+  TYPOGRAPHY = 'Typography',
   FORM_ELEMENT = 'Form Element',
   BUTTON = 'Button',
-  COLOR = 'Color',
-  COMPONENT = 'Component',
   DIALOG = 'Dialog',
-  TYPOGRAPHY = 'Typography',
+  COMPONENT = 'Component',
 }
 
-type MainParamList = {
+export type MainParamList = {
+  [MainRoutes.COLOR]: undefined
+  [MainRoutes.TYPOGRAPHY]: undefined
   [MainRoutes.FORM_ELEMENT]: undefined
   [MainRoutes.BUTTON]: undefined
-  [MainRoutes.COLOR]: undefined
-  [MainRoutes.COMPONENT]: undefined
   [MainRoutes.DIALOG]: undefined
-  [MainRoutes.TYPOGRAPHY]: undefined
-}
-
-export const useMainNavigation = () => {
-  return useNavigation<DrawerNavigationProp<MainParamList>>()
+  [MainRoutes.COMPONENT]: undefined
 }
 
 const MainNavigator = () => {
@@ -55,18 +49,18 @@ const MainNavigator = () => {
       screenOptions={{
         header: renderHeader,
       }}>
+      <Drawer.Screen name={MainRoutes.COLOR} component={ColorScreen} />
+      <Drawer.Screen
+        name={MainRoutes.TYPOGRAPHY}
+        component={TypographyScreen}
+      />
       <Drawer.Screen
         name={MainRoutes.FORM_ELEMENT}
         component={FormElementScreen}
       />
       <Drawer.Screen name={MainRoutes.BUTTON} component={ButtonScreen} />
-      <Drawer.Screen name={MainRoutes.COLOR} component={ColorScreen} />
-      <Drawer.Screen name={MainRoutes.COMPONENT} component={ComponentScreen} />
       <Drawer.Screen name={MainRoutes.DIALOG} component={DialogScreen} />
-      <Drawer.Screen
-        name={MainRoutes.TYPOGRAPHY}
-        component={TypographyScreen}
-      />
+      <Drawer.Screen name={MainRoutes.COMPONENT} component={ComponentScreen} />
     </Drawer.Navigator>
   )
 }

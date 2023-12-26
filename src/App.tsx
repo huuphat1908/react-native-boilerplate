@@ -7,7 +7,7 @@ import { QueryClientProvider } from 'react-query'
 
 import { reactQueryClient } from '@/libs'
 import { theme } from '@/libs/styleManager'
-import AppNavigator from '@/navigators/AppNavigator'
+import { AppNavigator } from '@/navigators'
 
 const App = () => {
   return (
