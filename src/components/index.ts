@@ -19,11 +19,11 @@ export { default as TimeInputField } from './form/TimeInputField'
 export { default as Box } from './layouts/Box'
 export { default as Center } from './layouts/Center'
 export { default as HStack } from './layouts/HStack'
-export { default as KeyboardAvoidingView } from './layouts/KeyboardAvoidingView'
 export { default as ScrollView } from './layouts/ScrollView'
 export { default as VStack } from './layouts/VStack'
 
 //misc
+export { default as KeyboardAvoidingView } from './misc/KeyboardAvoidingView'
 export { default as TouchableKeyboardDismiss } from './misc/TouchableKeyboardDismiss'
 
 //typography
