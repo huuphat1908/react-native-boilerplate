@@ -23,14 +23,17 @@ const SecondaryButton: FC<SecondaryButtonProps> = ({
   fullWidth,
   onPress,
 }) => {
-  const { styles } = styleManager.useStyles(stylesheet)
+  const {
+    styles,
+    theme: { shadow },
+  } = styleManager.useStyles(stylesheet)
 
   return (
     <TouchableOpacity
       activeOpacity={0.7}
       disabled={disabled}
       onPress={onPress}
-      style={fullWidth && styles.fullWidth}>
+      style={[shadow, fullWidth && styles.fullWidth]}>
       <View
         style={[
           {

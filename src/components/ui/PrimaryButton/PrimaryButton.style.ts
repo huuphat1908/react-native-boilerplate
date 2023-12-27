@@ -1,7 +1,7 @@
 import { styleManager } from '@/libs'
 
 export const stylesheet = styleManager.createStyleSheet(
-  ({ colors, shadow, utils: { scale } }) => ({
+  ({ colors, utils: { scale } }) => ({
     fullWidth: {
       flex: 1,
     },
@@ -13,7 +13,6 @@ export const stylesheet = styleManager.createStyleSheet(
       borderWidth: 1,
       borderColor: colors.blue,
       borderRadius: 8,
-      ...shadow,
     },
     title: {
       color: colors.white,
