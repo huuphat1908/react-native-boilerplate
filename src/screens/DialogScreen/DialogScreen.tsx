@@ -10,6 +10,7 @@ import {
 } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
+import { useDialogManager } from '@/store'
 
 import { stylesheet } from './DialogScreen.style'
 import { dialogScreenSchema } from './dialogScreenSchema'
@@ -20,6 +21,7 @@ const DialogScreen = () => {
     useDisclose()
   const [isOpenAlertDialog, openAlertDialog, closeAlertDialog] = useDisclose()
   const [isOpenInputDialog, openInputDialog, closeInputDialog] = useDisclose()
+  const showAlertDialog = useDialogManager(state => state.showAlertDialog)
 
   return (
     <Box style={styles.container}>
@@ -46,6 +48,19 @@ const DialogScreen = () => {
       />
       <Divider />
 
+      <PrimaryButton
+        onPress={() =>
+          showAlertDialog({
+            title: 'Unable to upload',
+            message:
+              'There is not sufficient storage on your device. Please clear up some space and try again.',
+            confirmText: 'Okay',
+          })
+        }>
+        Alert Dialog - Dialog Manager
+      </PrimaryButton>
+      <Divider />
+
       <PrimaryButton onPress={openInputDialog}>Input Dialog</PrimaryButton>
       <InputDialog
         isOpen={isOpenInputDialog}
@@ -58,6 +73,9 @@ const DialogScreen = () => {
         cancelText="Cancel"
         validationSchema={dialogScreenSchema}
       />
+      <Divider />
+
+      <PrimaryButton>Toast</PrimaryButton>
       <Divider />
     </Box>
   )

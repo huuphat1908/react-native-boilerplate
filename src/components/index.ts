@@ -3,6 +3,7 @@ export { default as AlertDialog } from './dialogs/AlertDialog'
 export { default as BottomSheet } from './dialogs/BottomSheet'
 export { default as ConfirmationDialog } from './dialogs/ConfirmationDialog'
 export { default as InputDialog } from './dialogs/InputDialog'
+export { default as Toast } from './dialogs/Toast'
 
 //form
 export { default as BottomSheetField } from './form/BottomSheetField'

@@ -7,6 +7,8 @@ import { AuthNavigator, MainNavigator } from '@/navigators'
 import { useApplicationSetting } from '@/store'
 import { NavigationContainer } from '@react-navigation/native'
 
+import { DialogManager } from './DialogManager'
+
 const AppNavigator = () => {
   const isLoggedIn = useApplicationSetting(state => state.isLoggedIn)
 
@@ -23,6 +25,7 @@ const AppNavigator = () => {
         barStyle={isLoggedIn ? 'light-content' : 'dark-content'}
       />
       {isLoggedIn ? <MainNavigator /> : <AuthNavigator />}
+      <DialogManager />
     </NavigationContainer>
   )
 }
