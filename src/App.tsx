@@ -2,6 +2,7 @@ import './i18n'
 
 import React from 'react'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { UnistylesTheme } from 'react-native-unistyles'
 import { QueryClientProvider } from 'react-query'
 
@@ -17,7 +18,9 @@ const App = () => {
       }}>
       <QueryClientProvider client={reactQueryClient}>
         <UnistylesTheme theme={theme}>
-          <AppNavigator />
+          <SafeAreaProvider>
+            <AppNavigator />
+          </SafeAreaProvider>
         </UnistylesTheme>
       </QueryClientProvider>
     </GestureHandlerRootView>

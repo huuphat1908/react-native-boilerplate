@@ -50,6 +50,7 @@ const InputDialog: FC<Props> = ({
     defaultValues: {
       input: initialValue || '',
     },
+    mode: 'onChange',
     ...(validationSchema && { resolver: zodResolver(validationSchema()) }),
   })
 

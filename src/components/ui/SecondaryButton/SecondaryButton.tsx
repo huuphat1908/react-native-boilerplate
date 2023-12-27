@@ -1,11 +1,7 @@
 import React, { FC } from 'react'
-import {
-  GestureResponderEvent,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native'
+import { GestureResponderEvent, TouchableOpacity } from 'react-native'
 
+import { Text } from '@/components'
 import { styleManager } from '@/libs'
 
 import { stylesheet } from './SecondaryButton.style'
@@ -30,16 +26,14 @@ const SecondaryButton: FC<SecondaryButtonProps> = ({
       activeOpacity={0.7}
       disabled={disabled}
       onPress={onPress}
-      style={fullWidth && styles.fullWidth}>
-      <View
-        style={[
-          {
-            opacity: disabled ? 0.7 : 1,
-          },
-          styles.wrapper,
-        ]}>
-        <Text style={styles.title}>{children}</Text>
-      </View>
+      style={[
+        styles.wrapper,
+        {
+          opacity: disabled ? 0.7 : 1,
+        },
+        fullWidth && styles.fullWidth,
+      ]}>
+      <Text style={styles.title}>{children}</Text>
     </TouchableOpacity>
   )
 }
