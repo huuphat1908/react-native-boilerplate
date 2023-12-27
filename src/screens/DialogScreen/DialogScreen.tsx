@@ -123,21 +123,6 @@ const DialogScreen = () => {
 
       <PrimaryButton
         onPress={() =>
-          showInputDialog({
-            title: 'Title',
-            message: 'Message.',
-            confirmText: 'Confirm',
-            cancelText: 'Cancel',
-            placeholderInput: 'Enter file name',
-            onConfirm: value => console.log(`onConfirm InputDialog ${value}`),
-          })
-        }>
-        Input Dialog
-      </PrimaryButton>
-      <Divider />
-
-      <PrimaryButton
-        onPress={() =>
           showToast({
             message: 'This is toast message',
           })
