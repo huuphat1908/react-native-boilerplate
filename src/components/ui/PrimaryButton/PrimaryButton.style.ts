@@ -1,7 +1,7 @@
 import { styleManager } from '@/libs'
 
 export const stylesheet = styleManager.createStyleSheet(
-  ({ colors, utils: { scale } }) => ({
+  ({ colors, shadow, utils: { scale } }) => ({
     fullWidth: {
       flex: 1,
     },
@@ -12,7 +12,8 @@ export const stylesheet = styleManager.createStyleSheet(
       justifyContent: 'center',
       borderWidth: 1,
       borderColor: colors.blue,
-      borderRadius: 12,
+      borderRadius: 8,
+      ...shadow,
     },
     title: {
       color: colors.white,

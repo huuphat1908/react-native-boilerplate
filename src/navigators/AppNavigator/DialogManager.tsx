@@ -4,12 +4,12 @@ import { AlertDialog, Toast } from '@/components'
 import { useDialogManager } from '@/store'
 
 export const DialogManager = () => {
-  const { alertDialogProps, showAlertDialog, hideAlertDialog } =
+  const { alertDialogProps, toastProps, hideAlertDialog, hideToast } =
     useDialogManager()
 
   return (
     <>
-      {/* <Toast /> */}
+      <Toast {...toastProps} onClose={hideToast} />
       <AlertDialog {...alertDialogProps} onClose={hideAlertDialog} />
     </>
   )

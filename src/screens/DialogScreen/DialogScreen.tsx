@@ -22,6 +22,7 @@ const DialogScreen = () => {
   const [isOpenAlertDialog, openAlertDialog, closeAlertDialog] = useDisclose()
   const [isOpenInputDialog, openInputDialog, closeInputDialog] = useDisclose()
   const showAlertDialog = useDialogManager(state => state.showAlertDialog)
+  const showToast = useDialogManager(state => state.showToast)
 
   return (
     <Box style={styles.container}>
@@ -75,7 +76,14 @@ const DialogScreen = () => {
       />
       <Divider />
 
-      <PrimaryButton>Toast</PrimaryButton>
+      <PrimaryButton
+        onPress={() =>
+          showToast({
+            message: 'This is toast message',
+          })
+        }>
+        Toast
+      </PrimaryButton>
       <Divider />
     </Box>
   )

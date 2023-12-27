@@ -1,52 +1,65 @@
-import React, { FC } from 'react'
-import { Pressable } from 'react-native'
+import React, { FC, useEffect } from 'react'
+import { Platform } from 'react-native'
+import Animated, { FadeInUp, FadeOutUp } from 'react-native-reanimated'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-import { HStack, Text } from '@/components'
+import { Text } from '@/components'
+import { styleManager } from '@/libs'
+
+import { stylesheet } from './Toast.style'
 
 type Props = {
   isOpen: boolean
-  type: ToastType
-  message?: string
-  position: ToastPosition
-  visibilityTime: number
-  topOffset: number
-  bottomOffset: number
-  keyboardOffset: number
-  onShow: () => void
-  onHide: () => void
-  onPress?: () => void
+  onClose: () => void
+  message: string
+  visibilityTime?: number
 }
 
-const Toast: FC<Props> = ({
-  isOpen,
-  type,
-  message,
-  position,
-  visibilityTime,
-  topOffset,
-  bottomOffset,
-  keyboardOffset,
-  onShow,
-  onHide,
-  onPress,
-}) => {
+const Toast: FC<Props> = ({ isOpen, onClose, message, visibilityTime }) => {
+  const {
+    styles,
+    theme: {
+      utils: { scale },
+    },
+  } = styleManager.useStyles(stylesheet)
+  const { bottom } = useSafeAreaInsets()
+
+  useEffect(() => {
+    let autoCloseTimeout: NodeJS.Timeout
+    if (isOpen) {
+      autoCloseTimeout = setTimeout(() => {
+        onClose()
+      }, visibilityTime)
+    }
+
+    return () => {
+      clearTimeout(autoCloseTimeout)
+    }
+  }, [isOpen, onClose, visibilityTime])
+
   if (!isOpen) {
     return null
   }
 
   return (
-    <Pressable onPress={onPress}>
-      <HStack>
-        <Text>{type}</Text>
-        <Text>{message}</Text>
-      </HStack>
-    </Pressable>
+    <Animated.View
+      style={[
+        styles.wrapper,
+        {
+          bottom: Platform.select({
+            android: scale(10),
+            ios: scale(10) + bottom,
+          }),
+        },
+      ]}
+      entering={FadeInUp}
+      exiting={FadeOutUp}>
+      <Text>{message}</Text>
+    </Animated.View>
   )
 }
 
 Toast.defaultProps = {
-  type: 'info',
-  position: 'bottom',
   visibilityTime: 3000,
 }
 

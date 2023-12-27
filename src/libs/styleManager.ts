@@ -25,6 +25,13 @@ export const theme = {
     lg: scale(8),
     xl: scale(12),
   },
+  shadow: {
+    shadowColor: colors.black,
+    shadowOpacity: 0.4,
+    shadowRadius: 2,
+    shadowOffset: { width: 0, height: 1 },
+    elevation: 2,
+  },
   components: {
     container: {
       flex: 1,
