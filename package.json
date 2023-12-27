@@ -6,11 +6,6 @@
     "start": "react-native start",
     "pod-install": "cd ios && pod install",
     "ios-simulator-list": "xcrun simctl list devices",
-    "android:clean-build": "cd android && ./gradlew clean",
-    "android:reset": "rm -rf node_modules && yarn cache clean --force && yarn install",
-    "ios:clean-build": "cd ios && xcodebuild clean",
-    "ios:reset": "cd ios && xcodebuild clean && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && rm -rf ~/Library/Developer/Xcode/DerivedData/* && pod cache clean --all && pod deintegrate && pod setup && pod install",
-    "yarn:clean": "rm -rf node_modules && yarn cache clean --force && yarn install",
     "android:dev": "react-native run-android --mode=devdebug",
     "android:dev-release": "react-native run-android --mode=devrelease",
     "android:uat": "react-native run-android --mode=uatdebug",
@@ -24,7 +19,13 @@
     "ios:prod": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplate",
     "ios:prod-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplate",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "android:clean-build": "cd android && ./gradlew clean",
+    "android:reset": "rm -rf node_modules && yarn cache clean --force && yarn install",
+    "ios:clean-build": "cd ios && xcodebuild clean",
+    "ios:reset": "cd ios && xcodebuild clean && rm -rf ~/Library/Caches/CocoaPods && rm -rf Pods && rm -rf ~/Library/Developer/Xcode/DerivedData/* && pod cache clean --all && pod deintegrate && pod setup && pod install",
+    "yarn:clean": "rm -rf node_modules && yarn cache clean --force && yarn install",
+    "generate-splash-screen": "react-native generate-bootsplash src/assets/images/logo.png --background=F5F5F5"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
