@@ -1,15 +1,22 @@
 import React from 'react'
 
-import { AlertDialog, ConfirmationDialog, Toast } from '@/components'
+import {
+  AlertDialog,
+  ConfirmationDialog,
+  InputDialog,
+  Toast,
+} from '@/components'
 import { useDialogManager } from '@/store'
 
 export const DialogManager = () => {
   const {
     alertDialogProps,
     confirmationDialogProps,
+    inputDialogProps,
     toastProps,
     hideAlertDialog,
     hideConfirmationDialog,
+    hideInputDialog,
     hideToast,
   } = useDialogManager()
 
@@ -20,6 +27,7 @@ export const DialogManager = () => {
         {...confirmationDialogProps}
         onClose={hideConfirmationDialog}
       />
+      <InputDialog {...inputDialogProps} onClose={hideInputDialog} />
       <Toast {...toastProps} onClose={hideToast} />
     </>
   )

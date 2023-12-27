@@ -2,12 +2,12 @@ import React from 'react'
 
 import {
   AlertDialog,
-  Box,
   ConfirmationDialog,
   Divider,
   H4,
   InputDialog,
   PrimaryButton,
+  ScrollView,
 } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
@@ -26,10 +26,11 @@ const DialogScreen = () => {
   const showConfirmationDialog = useDialogManager(
     state => state.showConfirmationDialog,
   )
+  const showInputDialog = useDialogManager(state => state.showInputDialog)
   const showToast = useDialogManager(state => state.showToast)
 
   return (
-    <Box style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <H4>Render dialogs directly</H4>
       <Divider />
 
@@ -72,21 +73,7 @@ const DialogScreen = () => {
       />
       <Divider />
 
-      <PrimaryButton onPress={openInputDialog}>Input Dialog</PrimaryButton>
-      <InputDialog
-        isOpen={isOpenInputDialog}
-        onConfirm={value => console.log(`onConfirm InputDialog ${value}`)}
-        onClose={closeInputDialog}
-        title="Change filename"
-        message="When uploading a file, it's a good idea to give it a meaningful title."
-        placeholderInput="Enter file name"
-        confirmText="Save"
-        cancelText="Cancel"
-        validationSchema={dialogScreenSchema}
-      />
-      <Divider />
-
-      <H4>Use DialogManager to render dialogs</H4>
+      <H4>Render dialogs using DialogManager</H4>
       <Divider />
 
       <PrimaryButton
@@ -117,6 +104,38 @@ const DialogScreen = () => {
       </PrimaryButton>
       <Divider />
 
+      {/* <PrimaryButton
+        onPress={() =>
+          showInputDialog({
+            title: 'Change filename',
+            message:
+              "When uploading a file, it's a good idea to give it a meaningful title.",
+            confirmText: 'Save',
+            cancelText: 'Cancel',
+            placeholderInput: 'Enter file name',
+            onConfirm: value => console.log(`onConfirm InputDialog ${value}`),
+            validationSchema: dialogScreenSchema,
+          })
+        }>
+        Input Dialog
+      </PrimaryButton>
+      <Divider /> */}
+
+      {/* <PrimaryButton
+        onPress={() =>
+          showInputDialog({
+            title: 'Title',
+            message: 'Message.',
+            confirmText: 'Confirm',
+            cancelText: 'Cancel',
+            placeholderInput: 'Enter file name',
+            onConfirm: value => console.log(`onConfirm InputDialog ${value}`),
+          })
+        }>
+        Input Dialog
+      </PrimaryButton>
+      <Divider /> */}
+
       <PrimaryButton
         onPress={() =>
           showToast({
@@ -126,7 +145,7 @@ const DialogScreen = () => {
         Toast
       </PrimaryButton>
       <Divider />
-    </Box>
+    </ScrollView>
   )
 }
 
