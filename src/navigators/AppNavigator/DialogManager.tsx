@@ -27,7 +27,11 @@ export const DialogManager = () => {
         {...confirmationDialogProps}
         onClose={hideConfirmationDialog}
       />
-      <InputDialog {...inputDialogProps} onClose={hideInputDialog} />
+      <InputDialog
+        key={inputDialogProps.renderKey}
+        {...inputDialogProps}
+        onClose={hideInputDialog}
+      />
       <Toast {...toastProps} onClose={hideToast} />
     </>
   )

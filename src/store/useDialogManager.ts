@@ -14,7 +14,9 @@ type ConfirmationDialogProps = Omit<
   ComponentProps<typeof ConfirmationDialog>,
   'onClose'
 >
-type InputDialogProps = Omit<ComponentProps<typeof InputDialog>, 'onClose'>
+type InputDialogProps = Omit<ComponentProps<typeof InputDialog>, 'onClose'> & {
+  renderKey: number
+}
 type ToastProps = Omit<ComponentProps<typeof Toast>, 'onClose'>
 
 type State = {
@@ -33,7 +35,9 @@ type Actions = {
   ) => void
   hideConfirmationDialog: () => void
 
-  showInputDialog: (props: Omit<InputDialogProps, 'isOpen'>) => void
+  showInputDialog: (
+    props: Omit<InputDialogProps, 'isOpen' | 'renderKey'>,
+  ) => void
   hideInputDialog: () => void
 
   showToast: (props: Omit<ToastProps, 'isOpen'>) => void
@@ -63,6 +67,7 @@ const initialState: State = {
     cancelText: '',
     placeholderInput: '',
     onConfirm: () => {},
+    renderKey: 0,
   },
   toastProps: {
     isOpen: false,
@@ -100,11 +105,12 @@ const useDialogManager = create<State & Actions>()(
       }),
 
     showInputDialog: props =>
-      set(() => ({
+      set(state => ({
         inputDialogProps: {
           ...initialState.inputDialogProps,
           ...props,
           isOpen: true,
+          renderKey: state.inputDialogProps.renderKey + 1,
         },
       })),
     hideInputDialog: () =>

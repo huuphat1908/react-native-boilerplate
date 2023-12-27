@@ -104,7 +104,7 @@ const DialogScreen = () => {
       </PrimaryButton>
       <Divider />
 
-      {/* <PrimaryButton
+      <PrimaryButton
         onPress={() =>
           showInputDialog({
             title: 'Change filename',
@@ -119,9 +119,9 @@ const DialogScreen = () => {
         }>
         Input Dialog
       </PrimaryButton>
-      <Divider /> */}
+      <Divider />
 
-      {/* <PrimaryButton
+      <PrimaryButton
         onPress={() =>
           showInputDialog({
             title: 'Title',
@@ -134,7 +134,7 @@ const DialogScreen = () => {
         }>
         Input Dialog
       </PrimaryButton>
-      <Divider /> */}
+      <Divider />
 
       <PrimaryButton
         onPress={() =>
