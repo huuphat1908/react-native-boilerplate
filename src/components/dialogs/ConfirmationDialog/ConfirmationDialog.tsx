@@ -1,8 +1,6 @@
 import React, { FC, useCallback } from 'react'
-import { Modal, Pressable, useWindowDimensions } from 'react-native'
 
 import {
-  Box,
   H3,
   HStack,
   PrimaryButton,
@@ -12,12 +10,11 @@ import {
 } from '@/components'
 import { styleManager } from '@/libs'
 
+import BaseDialog, { BaseDialogProps } from '../BaseDialog'
 import { stylesheet } from './ConfirmationDialog.style'
 
-type Props = {
-  isOpen: boolean
+type Props = Omit<BaseDialogProps, 'children'> & {
   onConfirm: () => void
-  onClose: () => void
   title: string
   message: string
   confirmText: string
@@ -33,11 +30,7 @@ const ConfirmationDialog: FC<Props> = ({
   confirmText,
   cancelText,
 }) => {
-  const {
-    styles,
-    theme: { paddings },
-  } = styleManager.useStyles(stylesheet)
-  const windowDimensions = useWindowDimensions()
+  const { styles } = styleManager.useStyles(stylesheet)
 
   const handleConfirm = useCallback(() => {
     onConfirm()
@@ -45,35 +38,21 @@ const ConfirmationDialog: FC<Props> = ({
   }, [onClose, onConfirm])
 
   return (
-    <Modal
-      visible={isOpen}
-      animationType="fade"
-      onRequestClose={onClose}
-      transparent>
-      <Pressable style={styles.backdrop} onPress={onClose}>
-        <Pressable>
-          <Box
-            style={[
-              styles.wrapper,
-              { width: windowDimensions.width - 2 * paddings.xxl },
-            ]}>
-            <VStack style={styles.textGroupWrapper}>
-              <H3>{title}</H3>
-              <Text style={styles.message}>{message}</Text>
-            </VStack>
+    <BaseDialog isOpen={isOpen} onClose={onClose}>
+      <VStack style={styles.textGroupWrapper}>
+        <H3>{title}</H3>
+        <Text style={styles.message}>{message}</Text>
+      </VStack>
 
-            <HStack style={styles.buttonGroupWrapper}>
-              <SecondaryButton fullWidth onPress={onClose}>
-                {cancelText}
-              </SecondaryButton>
-              <PrimaryButton fullWidth onPress={handleConfirm}>
-                {confirmText}
-              </PrimaryButton>
-            </HStack>
-          </Box>
-        </Pressable>
-      </Pressable>
-    </Modal>
+      <HStack style={styles.buttonGroupWrapper}>
+        <SecondaryButton fullWidth onPress={onClose}>
+          {cancelText}
+        </SecondaryButton>
+        <PrimaryButton fullWidth onPress={handleConfirm}>
+          {confirmText}
+        </PrimaryButton>
+      </HStack>
+    </BaseDialog>
   )
 }
 
