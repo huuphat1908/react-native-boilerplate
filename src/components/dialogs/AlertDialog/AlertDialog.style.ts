@@ -2,7 +2,7 @@ import { BACKDROP_OPACITY } from '@/constants'
 import { styleManager } from '@/libs'
 
 export const stylesheet = styleManager.createStyleSheet(
-  ({ colors, paddings, margins, utils: { scale, hexToRGBA } }) => ({
+  ({ colors, paddings, utils: { scale, hexToRGBA } }) => ({
     container: {
       flex: 1,
       alignItems: 'center',
@@ -12,7 +12,6 @@ export const stylesheet = styleManager.createStyleSheet(
     wrapper: {
       borderRadius: 16,
       padding: paddings.xxl,
-      marginHorizontal: margins.xl,
       gap: scale(40),
       backgroundColor: colors.white,
     },
