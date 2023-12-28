@@ -1,6 +1,6 @@
 import React, { FC, useCallback } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
-import { Modal, Platform, Pressable } from 'react-native'
+import { Modal, Platform, Pressable, useWindowDimensions } from 'react-native'
 import { ZodObject } from 'zod'
 
 import {
@@ -44,7 +44,10 @@ const InputDialog: FC<Props> = ({
   cancelText,
   validationSchema,
 }) => {
-  const { styles } = styleManager.useStyles(stylesheet)
+  const {
+    styles,
+    theme: { paddings },
+  } = styleManager.useStyles(stylesheet)
   const { isKeyboardVisible, keyboardHeight } = useKeyboard()
   const formMethods = useForm({
     defaultValues: {
@@ -53,6 +56,7 @@ const InputDialog: FC<Props> = ({
     mode: 'onChange',
     ...(validationSchema && { resolver: zodResolver(validationSchema()) }),
   })
+  const windowDimensions = useWindowDimensions()
 
   const handleConfirm = useCallback(() => {
     formMethods.handleSubmit(values => onConfirm(values.input))()
@@ -81,7 +85,11 @@ const InputDialog: FC<Props> = ({
           ]}
           onPress={onClose}>
           <Pressable>
-            <Box style={styles.wrapper}>
+            <Box
+              style={[
+                styles.wrapper,
+                { width: windowDimensions.width - 2 * paddings.xxl },
+              ]}>
               <VStack style={styles.textGroupWrapper}>
                 <H3>{title}</H3>
                 <Text style={styles.message}>{message}</Text>

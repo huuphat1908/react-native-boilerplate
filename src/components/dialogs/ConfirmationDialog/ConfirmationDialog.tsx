@@ -1,5 +1,5 @@
 import React, { FC, useCallback } from 'react'
-import { Modal, Pressable } from 'react-native'
+import { Modal, Pressable, useWindowDimensions } from 'react-native'
 
 import {
   Box,
@@ -33,7 +33,11 @@ const ConfirmationDialog: FC<Props> = ({
   confirmText,
   cancelText,
 }) => {
-  const { styles } = styleManager.useStyles(stylesheet)
+  const {
+    styles,
+    theme: { paddings },
+  } = styleManager.useStyles(stylesheet)
+  const windowDimensions = useWindowDimensions()
 
   const handleConfirm = useCallback(() => {
     onConfirm()
@@ -48,7 +52,11 @@ const ConfirmationDialog: FC<Props> = ({
       transparent>
       <Pressable style={styles.backdrop} onPress={onClose}>
         <Pressable>
-          <Box style={styles.wrapper}>
+          <Box
+            style={[
+              styles.wrapper,
+              { width: windowDimensions.width - 2 * paddings.xxl },
+            ]}>
             <VStack style={styles.textGroupWrapper}>
               <H3>{title}</H3>
               <Text style={styles.message}>{message}</Text>

@@ -1,8 +1,8 @@
 import * as icons from 'lucide-react-native'
 import React, { FC, useMemo } from 'react'
-import { TextInput, TextInputProps } from 'react-native'
+import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
 
-import { Center, HStack, Icon } from '@/components'
+import { HStack, Icon } from '@/components'
 import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 
@@ -15,10 +15,12 @@ type Props = {
     Omit<typeof icons, 'createLucideIcon'>,
     'createReactComponent'
   >
+  onLeftIconPress?: () => void
   rightIconName?: keyof Omit<
     Omit<typeof icons, 'createLucideIcon'>,
     'createReactComponent'
   >
+  onRightIconPress?: () => void
 } & TextInputProps
 
 const Input: FC<Props> = ({
@@ -27,7 +29,9 @@ const Input: FC<Props> = ({
   onFocus,
   onBlur,
   leftIconName,
+  onLeftIconPress,
   rightIconName,
+  onRightIconPress,
   editable,
   readOnly,
   ...rest
@@ -47,9 +51,11 @@ const Input: FC<Props> = ({
   return (
     <HStack>
       {leftIconName && (
-        <Center style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}>
+        <TouchableOpacity
+          style={[styles.leftIcon, readOnly && styles.readOnlyIcon]}
+          onPress={onLeftIconPress}>
           <Icon name={leftIconName} size={20} color={colors.black} />
-        </Center>
+        </TouchableOpacity>
       )}
 
       <TextInput
@@ -75,9 +81,11 @@ const Input: FC<Props> = ({
       />
 
       {rightIconName && (
-        <Center style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}>
+        <TouchableOpacity
+          style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}
+          onPress={onRightIconPress}>
           <Icon name={rightIconName} size={20} color={colors.black} />
-        </Center>
+        </TouchableOpacity>
       )}
     </HStack>
   )

@@ -18,11 +18,15 @@ export const stylesheet = styleManager.createStyleSheet(
       position: 'absolute',
       left: scale(10),
       height: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     rightIcon: {
       position: 'absolute',
       right: scale(10),
       height: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     readOnlyInput: {
       opacity: FORM_FIELD_READ_ONLY_OPACITY,

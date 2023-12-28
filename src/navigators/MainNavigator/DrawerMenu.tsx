@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { Image } from 'react-native'
 
 import { Box, H4, HStack } from '@/components'
 import { useMainNavigation } from '@/hooks'
 import { styleManager } from '@/libs'
-import { useApplicationSetting } from '@/store'
+import { useApplicationSetting, useDialogManager } from '@/store'
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
@@ -17,8 +17,21 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
   const { styles } = styleManager.useStyles(stylesheet)
   const navigation = useMainNavigation()
   const logout = useApplicationSetting(state => state.logout)
+  const showConfirmationDialog = useDialogManager(
+    state => state.showConfirmationDialog,
+  )
 
   const currentRoute = props.state.routeNames[props.state.index]
+
+  const handleLogoutPress = useCallback(() => {
+    showConfirmationDialog({
+      title: 'Confirmation',
+      message: 'Are you sure you you want to logout?',
+      confirmText: 'Logout',
+      cancelText: 'Cancel',
+      onConfirm: logout,
+    })
+  }, [logout, showConfirmationDialog])
 
   return (
     <DrawerContentScrollView {...props}>
@@ -26,7 +39,7 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
         <HStack style={styles.logoAppNameWrapper}>
           <Image
             source={require('@/assets/images/logo.png')}
-            alt="sf360-icon"
+            alt="rn-boilerplate-icon"
             style={styles.logo}
           />
           <H4 style={styles.appName}>Gooner007</H4>
@@ -41,7 +54,11 @@ const DrawerMenu = (props: DrawerContentComponentProps) => {
               onPress={() => navigation.navigate(route)}
             />
           ))}
-          <DrawerItem label="Log out" active={false} onPress={logout} />
+          <DrawerItem
+            label="Log out"
+            active={false}
+            onPress={handleLogoutPress}
+          />
         </Box>
       </Box>
     </DrawerContentScrollView>
