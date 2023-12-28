@@ -11,6 +11,7 @@ import {
   PrimaryButton,
   TouchableKeyboardDismiss,
 } from '@/components'
+import { useDisclose } from '@/hooks'
 import { styleManager } from '@/libs'
 import { useApplicationSetting } from '@/store'
 
@@ -21,6 +22,7 @@ import { useLoginForm } from './useLoginForm'
 const LoginScreen = () => {
   const formMethods = useLoginForm()
   const login = useApplicationSetting(state => state.login)
+  const [isPasswordVisibile, , , togglePasswordVisible] = useDisclose()
   const { styles } = styleManager.useStyles(stylesheet)
 
   const onSubmit = useCallback(
@@ -54,7 +56,9 @@ const LoginScreen = () => {
                 <InputField
                   name="password"
                   placeholder="Password"
-                  secureTextEntry
+                  secureTextEntry={!isPasswordVisibile}
+                  rightIconName={isPasswordVisibile ? 'Eye' : 'EyeOff'}
+                  onRightIconPress={togglePasswordVisible}
                 />
               </Box>
 

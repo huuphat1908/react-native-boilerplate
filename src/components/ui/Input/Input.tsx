@@ -1,6 +1,6 @@
 import * as icons from 'lucide-react-native'
 import React, { FC, useMemo } from 'react'
-import { TextInput, TextInputProps } from 'react-native'
+import { TextInput, TextInputProps, TouchableOpacity } from 'react-native'
 
 import { Center, HStack, Icon } from '@/components'
 import { useDisclose } from '@/hooks'
@@ -19,6 +19,7 @@ type Props = {
     Omit<typeof icons, 'createLucideIcon'>,
     'createReactComponent'
   >
+  onRightIconPress?: () => void
 } & TextInputProps
 
 const Input: FC<Props> = ({
@@ -30,6 +31,7 @@ const Input: FC<Props> = ({
   rightIconName,
   editable,
   readOnly,
+  onRightIconPress,
   ...rest
 }) => {
   const [isFocused, onFocusInput, onBlurInput] = useDisclose()
@@ -75,9 +77,11 @@ const Input: FC<Props> = ({
       />
 
       {rightIconName && (
-        <Center style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}>
-          <Icon name={rightIconName} size={20} color={colors.black} />
-        </Center>
+        <TouchableOpacity onPress={onRightIconPress}>
+          <Center style={[styles.rightIcon, readOnly && styles.readOnlyIcon]}>
+            <Icon name={rightIconName} size={20} color={colors.black} />
+          </Center>
+        </TouchableOpacity>
       )}
     </HStack>
   )

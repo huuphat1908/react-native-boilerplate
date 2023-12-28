@@ -1,13 +1,11 @@
-import React, { FC } from 'react'
+import React, { ComponentProps, FC } from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
-import { TextInputProps } from 'react-native'
 
 import { Box, ErrorText, Input } from '@/components'
 
 type Props = {
   name: string
-  readOnly?: boolean
-} & TextInputProps
+} & ComponentProps<typeof Input>
 
 const InputField: FC<Props> = ({ name, style, ...rest }) => {
   const {
