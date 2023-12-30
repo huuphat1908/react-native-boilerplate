@@ -4,7 +4,6 @@
 
 1. Set up the [React Native development environment](https://reactnative.dev/docs/environment-setup)
 2. Install dependencies
-   &nbsp;
    ```
    yarn install
    ```
@@ -75,7 +74,7 @@ In this project, usually 3 different builds are created:
 - `.env.prod`
 
 ### Android
-1. Associating builds with env files in `android/app/build.gradle`
+1. Associating builds with .env files in `android/app/build.gradle`
    ```
    project.ext.envConfigFiles = [
       devdebug: ".env.dev",
@@ -127,7 +126,67 @@ In this project, usually 3 different builds are created:
    - `android/app/src/prod`
 
 ### iOS
+1. Define schemes
+   ![ios schemes](https://github.com/huuphat1908/react-native-boilerplate/assets/62057004/8d16be25-5ac1-4a33-a718-4cb78ba6273a)
+2. Associating schemes with .env files in `Pre-actions`
+   ![pre-action schemes](https://github.com/huuphat1908/react-native-boilerplate/assets/62057004/1177129e-f6e2-4bfa-a323-ad64d1be11d3)
+3. Manage targets in `Podfile`
+   ```
+   abstract_target 'ReactNativeBoilerplateCommonPods' do
+   config = use_native_modules!
 
+   # Flags change depending on the env values.
+   flags = get_default_flags()
+
+   use_react_native!(
+      :path => config[:reactNativePath],
+      # Hermes is now enabled by default. Disable by setting this flag to false.
+      :hermes_enabled => flags[:hermes_enabled],
+      :fabric_enabled => flags[:fabric_enabled],
+      # Enables Flipper.
+      #
+      # Note that if you have use_frameworks! enabled, Flipper will not work and
+      # you should disable the next line.
+      :flipper_configuration => flipper_config,
+      # An absolute path to your application root.
+      :app_path => "#{Pod::Config.instance.installation_root}/.."
+   )
+
+   target 'ReactNativeBoilerplateDev' do
+   end
+   
+   target 'ReactNativeBoilerplateUAT' do
+   end
+   
+   target 'ReactNativeBoilerplate' do
+   end
+
+   target 'ReactNativeBoilerplateTests' do
+      inherit! :complete
+      # Pods for testing
+   end
+
+   post_install do |installer|
+      # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
+      react_native_post_install(
+         installer,
+         config[:reactNativePath],
+         :mac_catalyst_enabled => false
+      )
+      __apply_Xcode_12_5_M1_post_install_workaround(installer)
+   end
+   end
+   ```
+4. Create scripts on `package.json`
+   ```
+   "ios:dev": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplateDev",
+   "ios:dev-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplateDev",
+   "ios:uat": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplateUAT",
+   "ios:uat-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplateUAT",
+   "ios:prod": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplate",
+   "ios:prod-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplate",
+   ```
+   
 
 
 ## Rename the project
