@@ -186,11 +186,21 @@ In this project, usually 3 different builds are created:
    "ios:prod": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplate",
    "ios:prod-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplate",
    ```
-   
-
-
 ## Rename the project
 
 
-## Features
+## Libraries
+- [Zustand](https://github.com/pmndrs/zustand) - Client state management
+- [Tanstack Query](https://github.com/TanStack/query) - Server state management
+- [React Navigation](https://github.com/react-navigation/react-navigation) - Navigation library
+- [React Native Bootsplash](https://github.com/zoontek/react-native-bootsplash) - Splash screen generator
+- [React Native Config](https://github.com/lugg/react-native-config) - Multiple environments management
+- [React Native MMKV](https://github.com/mrousavy/react-native-mmkv) - Local storage
+- [React Native Keychain](https://github.com/oblador/react-native-keychain)- Secure storage
+- [React Hook Form](https://github.com/react-hook-form/react-hook-form) - Form management
+- [Zod](https://github.com/colinhacks/zod) - Validation schema management
+- [i18next](https://github.com/i18next) - Internationalism
+- [Lucide React Native](https://github.com/lucide-icons/lucide) - Icon library
+- [React Native Unistyles](https://github.com/jpudysz/react-native-unistyles) - Styling utility
+- [React Native Size Matters](https://github.com/nirsky/react-native-size-matters) - Scaling utility
 
