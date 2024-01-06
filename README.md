@@ -11,7 +11,8 @@
    ```
    yarn pod-install
    ```
-4. Create environment variable files based on the sample `.env` file
+4. Create environment variable files based on the interface NativeConfig in `src/types/react-native-config.d.ts` file
+   - `.env`
    - `.env.dev`
    - `.env.uat`
    - `.env.prod` 
@@ -186,8 +187,6 @@ In this project, usually 3 different builds are created:
    "ios:prod": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplate",
    "ios:prod-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplate",
    ```
-## Rename the project
-
 
 ## Libraries
 - [Zustand](https://github.com/pmndrs/zustand) - Client state management
