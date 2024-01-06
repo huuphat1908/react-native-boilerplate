@@ -1,79 +1,205 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Boilerplate
 
-# Getting Started
+## Running the app
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+1. Set up the [React Native development environment](https://reactnative.dev/docs/environment-setup)
+2. Install dependencies
+   ```
+   yarn install
+   ```
+3. Pod linking
+   ```
+   yarn pod-install
+   ```
+4. Create environment variable files based on the interface NativeConfig in `src/types/react-native-config.d.ts` file
+   - `.env`
+   - `.env.dev`
+   - `.env.uat`
+   - `.env.prod` 
+5. Start the app in debug mode
+   - Dev environment
+      ```
+      yarn android:dev
+      ``` 
+      ```
+      yarn ios:dev
+      ```
+   - UAT environment
+      ```
+      yarn android:uat
+      ``` 
+      ```
+      yarn ios:uat
+      ```
+   - Prod environment
+      ```
+      yarn android:prod
+      ``` 
+      ```
+      yarn ios:prod
+      ```
 
-## Step 1: Start the Metro Server
+## Change app icon
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+1. Prepare a 512x512 app icon
+2. Generate app icon. Suggest using the default name _ic_launcher_
+   - [Tool for generating app icon](https://appicon.co/)
+   - [Tool for generating round app icon](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=circle&effects=none&name=ic_launcher)
+3. Replace the default icon files with new generated icon in following folders
+   - Android:
+     - `android/app/src/main/res`
+     - `android/app/src/dev/res`
+     - `android/app/src/uat/res`
+     - `android/app/src/prod/res`
+   - iOS: `ios/<project-name>/Image.xassets/AppIcon.appiconset`
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Change app launch screen
 
-```bash
-# using npm
-npm start
+1. Prepare a 512x512 app icon 
+2. Replace the default app icon with new app icon in `src/assets/images/logo.png`
+3. Generating new app splash screen
+   ```
+   yarn generate-splash-screen
+   ```
+## Multiple environments
+Flavors/Schemes are used to create different versions of the app.
+In this project, usually 3 different builds are created:
 
-# OR using Yarn
-yarn start
-```
+- Development
+- UAT
+- Production
 
-## Step 2: Start your Application
+### .env files for each configuration
+- `.env.dev`
+- `.env.uat`
+- `.env.prod`
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### Android
+1. Associating builds with .env files in `android/app/build.gradle`
+   ```
+   project.ext.envConfigFiles = [
+      devdebug: ".env.dev",
+      devrelease: ".env.dev",
+      uatdebug: ".env.uat",
+      uatrelease: ".env.uat",
+      proddebug: ".env.prod",
+      prodrelease: ".env.prod"
+   ]
+   ```
+2. Define product flavors in `android/app/build.gradle`
+   ```
+   productFlavors {
+         dev {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.gooner007.reactnativeboilerplate"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.gooner007.reactnativeboilerplate"
+        }
+         uat {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.gooner007.reactnativeboilerplate"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.gooner007.reactnativeboilerplate"
+         }
+         prod {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.gooner007.reactnativeboilerplate"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.gooner007.reactnativeboilerplate"
+         }
+    }
+   ```
+3. Create scripts on `package.json`
+   ```
+   "android:dev": "react-native run-android --mode=devdebug",
+   "android:dev-release": "react-native run-android --mode=devrelease",
+   "android:dev-build": "cd android && ./gradlew app:bundleDevRelease -PversionName=$VERSION_NAME -PversionCode=$VERSION_CODE",
+   "android:uat": "react-native run-android --mode=uatdebug",
+   "android:uat-release": "react-native run-android --mode=uatrelease",
+   "android:uat-build": "cd android && ./gradlew app:bundleUatRelease -PversionName=$VERSION_NAME -PversionCode=$VERSION_CODE",
+   "android:prod": "react-native run-android --mode=proddebug",
+   "android:prod-release": "react-native run-android --mode=prodrelease",
+   "android:prod-build": "cd android && ./gradlew app:bundleProdRelease -PversionName=$VERSION_NAME -PversionCode=$VERSION_CODE",
+   ```
+4. Manage resource files
+   - `android/app/src/dev`
+   - `android/app/src/uat`
+   - `android/app/src/prod`
 
-### For Android
+### iOS
+1. Define schemes
+   ![ios schemes](https://github.com/huuphat1908/react-native-boilerplate/assets/62057004/8d16be25-5ac1-4a33-a718-4cb78ba6273a)
+2. Associating schemes with .env files in `Pre-actions`
+   ![pre-action schemes](https://github.com/huuphat1908/react-native-boilerplate/assets/62057004/1177129e-f6e2-4bfa-a323-ad64d1be11d3)
+3. Manage targets in `Podfile`
+   ```
+   abstract_target 'ReactNativeBoilerplateCommonPods' do
+   config = use_native_modules!
 
-```bash
-# using npm
-npm run android
+   # Flags change depending on the env values.
+   flags = get_default_flags()
 
-# OR using Yarn
-yarn android
-```
+   use_react_native!(
+      :path => config[:reactNativePath],
+      # Hermes is now enabled by default. Disable by setting this flag to false.
+      :hermes_enabled => flags[:hermes_enabled],
+      :fabric_enabled => flags[:fabric_enabled],
+      # Enables Flipper.
+      #
+      # Note that if you have use_frameworks! enabled, Flipper will not work and
+      # you should disable the next line.
+      :flipper_configuration => flipper_config,
+      # An absolute path to your application root.
+      :app_path => "#{Pod::Config.instance.installation_root}/.."
+   )
 
-### For iOS
+   target 'ReactNativeBoilerplateDev' do
+   end
+   
+   target 'ReactNativeBoilerplateUAT' do
+   end
+   
+   target 'ReactNativeBoilerplate' do
+   end
 
-```bash
-# using npm
-npm run ios
+   target 'ReactNativeBoilerplateTests' do
+      inherit! :complete
+      # Pods for testing
+   end
 
-# OR using Yarn
-yarn ios
-```
+   post_install do |installer|
+      # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
+      react_native_post_install(
+         installer,
+         config[:reactNativePath],
+         :mac_catalyst_enabled => false
+      )
+      __apply_Xcode_12_5_M1_post_install_workaround(installer)
+   end
+   end
+   ```
+4. Create scripts on `package.json`
+   ```
+   "ios:dev": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplateDev",
+   "ios:dev-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplateDev",
+   "ios:uat": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplateUAT",
+   "ios:uat-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplateUAT",
+   "ios:prod": "react-native run-ios --mode=Debug --scheme=ReactNativeBoilerplate",
+   "ios:prod-release": "react-native run-ios --mode=Release --scheme=ReactNativeBoilerplate",
+   ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Libraries
+- [Zustand](https://github.com/pmndrs/zustand) - Client state management
+- [Tanstack Query](https://github.com/TanStack/query) - Server state management
+- [React Navigation](https://github.com/react-navigation/react-navigation) - Navigation library
+- [React Native Bootsplash](https://github.com/zoontek/react-native-bootsplash) - Splash screen generator
+- [React Native Config](https://github.com/lugg/react-native-config) - Multiple environments management
+- [React Native MMKV](https://github.com/mrousavy/react-native-mmkv) - Local storage
+- [React Native Keychain](https://github.com/oblador/react-native-keychain)- Secure storage
+- [React Hook Form](https://github.com/react-hook-form/react-hook-form) - Form management
+- [Zod](https://github.com/colinhacks/zod) - Validation schema management
+- [i18next](https://github.com/i18next) - Internationalism
+- [Lucide React Native](https://github.com/lucide-icons/lucide) - Icon library
+- [React Native Unistyles](https://github.com/jpudysz/react-native-unistyles) - Styling utility
+- [React Native Size Matters](https://github.com/nirsky/react-native-size-matters) - Scaling utility
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
